@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>محمد أمين سجاد — Mohammed Ameen Sajjad</title>
+<meta name="description" content="مهندس إلكترونيات واتصالات، مؤسس MAS Business Solutions، ومدرّب في توظيف الذكاء الاصطناعي.">
+<meta property="og:title" content="محمد أمين سجاد — Mohammed Ameen Sajjad">
+<meta property="og:description" content="هندسة · ذكاء اصطناعي · ريادة أعمال">
+<meta property="og:image" content="assets/hero.webp">
+<meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="assets/mas-logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f5f7;--surface:#ffffff;--glass:rgba(255,255,255,.72);--glass-line:rgba(0,0,0,.08);
+  --ink:#1d1d1f;--ink-2:#424245;--muted:#6e6e73;--faint:#86868b;--line:#d2d2d7;
+  --accent:#a8761f;--btn:#1d1d1f;--btn-ink:#fff;--soft:#f5f5f7;
+  --shadow:0 2px 8px rgba(0,0,0,.04),0 12px 32px rgba(0,0,0,.06);
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#000;--surface:#161617;--glass:rgba(22,22,23,.72);--glass-line:rgba(255,255,255,.1);
+  --ink:#f5f5f7;--ink-2:#d2d2d7;--muted:#a1a1a6;--faint:#86868b;--line:#38383d;
+  --accent:#e0b25a;--btn:#f5f5f7;--btn-ink:#1d1d1f;--soft:#1d1d1f;--shadow:0 12px 32px rgba(0,0,0,.5)}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.7 "IBM Plex Sans Arabic","SF Pro Text",-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html[lang="en"] body{font-family:Inter,-apple-system,"Segoe UI",sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+h1,h2,h3{margin:0;font-weight:700;letter-spacing:-.015em;line-height:1.2}
+html[lang="en"] h1,html[lang="en"] h2{letter-spacing:-.03em}
+.eyebrow{display:block;font-size:14px;font-weight:600;color:var(--accent);margin-bottom:10px;letter-spacing:.02em}
+/* glass nav */
+.nav{position:sticky;top:0;z-index:50;background:var(--glass);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--glass-line)}
+.nav .wrap{display:flex;align-items:center;gap:8px;height:52px}
+.brand{display:flex;align-items:center;gap:9px;font-weight:600;font-size:15px}
+.brand img{width:24px;height:24px;border-radius:6px}
+.links{display:flex;gap:2px;margin-inline-start:auto}
+.links a{padding:6px 11px;font-size:13.5px;color:var(--ink-2);border-radius:8px}
+.links a:hover{color:var(--ink)}
+.tbtn{border:0;background:none;color:var(--ink-2);font:600 13px/1 Inter,sans-serif;padding:8px 10px;border-radius:8px;cursor:pointer}
+.tbtn:hover{background:var(--soft)}
+.menu{display:none}
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;font-weight:500;font-size:16px;cursor:pointer;border:0;font-family:inherit;transition:transform .15s,opacity .15s}
+.btn:hover{transform:scale(1.02)}
+.btn.dark{background:var(--btn);color:var(--btn-ink)}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
+.lnk{color:var(--accent);font-weight:500;font-size:15.5px;display:inline-flex;align-items:center;gap:4px;cursor:pointer;background:none;border:0;padding:0;font-family:inherit}
+.lnk:hover{text-decoration:underline}
+/* hero */
+.hero{padding:88px 0 40px;text-align:center}
+.avatar{width:132px;height:132px;border-radius:50%;margin:0 auto 26px;overflow:hidden;box-shadow:0 0 0 6px var(--surface),var(--shadow)}
+.avatar img{width:100%;height:100%;object-fit:cover;object-position:center 18%}
+.hero h1{font-size:clamp(44px,7.4vw,84px);font-weight:700}
+.hero .role{font-size:clamp(19px,2.4vw,25px);color:var(--muted);margin:14px auto 0;max-width:760px;font-weight:400}
+.hero .lead{font-size:19px;color:var(--ink-2);max-width:640px;margin:22px auto 32px}
+.ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;color:var(--muted);margin-bottom:22px}
+.status i{width:8px;height:8px;border-radius:50%;background:#30d158;box-shadow:0 0 0 4px rgba(48,209,88,.18)}
+/* stat strip */
+.strip{display:grid;grid-template-columns:repeat(4,1fr);margin:56px auto 0;max-width:860px;background:var(--surface);border-radius:22px;box-shadow:var(--shadow);overflow:hidden}
+.strip div{padding:22px 10px;text-align:center}
+.strip div+div{border-inline-start:1px solid var(--line)}
+.strip b{display:block;font:700 30px/1.15 Inter,sans-serif;letter-spacing:-.02em}
+.strip span{font-size:13.5px;color:var(--muted)}
+/* sections */
+section{padding:92px 0}
+.head{text-align:center;max-width:680px;margin:0 auto 46px}
+.head h2{font-size:clamp(32px,4.6vw,48px)}
+.head p{color:var(--muted);font-size:19px;margin:14px 0 0}
+.tile{background:var(--surface);border-radius:22px;padding:30px;box-shadow:var(--shadow)}
+.grid{display:grid;gap:18px}.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.tile h3{font-size:21px;margin-bottom:8px}
+.tile p{color:var(--muted);margin:0;font-size:16px}
+.ic{font-size:30px;line-height:1;margin-bottom:16px}
+/* about */
+.about{max-width:760px;margin:0 auto;font-size:19.5px;color:var(--ink-2);text-align:center}
+.about p{margin:0 0 18px}
+.about strong{color:var(--ink);font-weight:600}
+.pillars{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:26px}
+.pillars span{padding:9px 18px;border-radius:999px;background:var(--surface);box-shadow:var(--shadow);font-weight:500;font-size:15.5px}
+/* services */
+.svc .tile{display:flex;flex-direction:column}
+.svc .tile .lnk{margin-top:auto;padding-top:18px}
+/* timeline */
+.tl{max-width:760px;margin:0 auto;background:var(--surface);border-radius:22px;box-shadow:var(--shadow);overflow:hidden}
+.tl .row{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:24px 30px}
+.tl .row+.row{border-top:1px solid var(--line)}
+.tl .yr{font:600 15px/1.5 Inter,sans-serif;color:var(--faint);padding-top:2px}
+.tl h3{font-size:18.5px;margin-bottom:4px}
+.tl .org{font-size:14.5px;color:var(--accent);font-weight:500;margin-bottom:6px}
+.tl p{margin:0;color:var(--muted);font-size:16px}
+/* projects */
+.proj .tile{display:flex;flex-direction:column}
+.tag{display:inline-block;font-size:12.5px;font-weight:600;padding:4px 10px;border-radius:999px;background:var(--soft);color:var(--ink-2);margin-bottom:14px;align-self:flex-start}
+.tag.g{color:#1f8f3d;background:rgba(48,209,88,.12)}.tag.a{color:var(--accent);background:rgba(168,118,31,.12)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.chips span{font:500 12.5px/1 Inter,"IBM Plex Sans Arabic",sans-serif;padding:7px 10px;border-radius:8px;background:var(--soft);color:var(--ink-2)}
+.proj .acts{margin-top:auto;padding-top:18px;display:flex;gap:18px;flex-wrap:wrap}
+/* workshops list */
+.list{background:var(--surface);border-radius:22px;box-shadow:var(--shadow);overflow:hidden}
+.li{display:grid;grid-template-columns:110px 1fr auto;gap:20px;align-items:center;padding:22px 28px}
+.li+.li{border-top:1px solid var(--line)}
+.li .d{font:600 14px/1.4 Inter,sans-serif;color:var(--faint)}
+.li h3{font-size:18px;margin-bottom:3px}
+.li .o{font-size:14.5px;color:var(--muted)}
+.li .acts{display:flex;gap:16px;flex-wrap:wrap;justify-content:flex-end}
+/* certs */
+.cgroup h3{font-size:15px;color:var(--faint);font-weight:600;margin:0 0 10px;padding-inline-start:6px}
+.cgroup+.cgroup{margin-top:30px}
+.ci{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;padding:16px 26px}
+.ci+.ci{border-top:1px solid var(--line)}
+.ci b{font-weight:600;font-size:16.5px;display:block}
+.ci small{color:var(--muted);font-size:14px}
+.certbar{display:flex;justify-content:space-between;align-items:center;margin:0 6px 14px;color:var(--muted);font-size:15px}
+.cvcard{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:34px}
+.cvcard h3{font-size:24px}.cvcard p{color:var(--muted);margin:6px 0 0}
+/* skills & books */
+.skills .tile h3{font-size:17px;margin-bottom:14px}
+.books{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;max-width:860px;margin:0 auto}
+.books span{padding:9px 15px;border-radius:999px;background:var(--surface);box-shadow:var(--shadow);font:500 14.5px/1.3 Inter,sans-serif}
+.books span em{font-style:normal;color:var(--faint);font-weight:400}
+/* content posts */
+.post .n{font:700 13px/1 Inter,sans-serif;color:var(--faint);margin-bottom:14px;display:block}
+.post .lnk{margin-top:16px}
+/* final CTA */
+.cta{text-align:center;padding:110px 0}
+.cta h2{font-size:clamp(36px,5.6vw,60px)}
+.cta p{color:var(--muted);font-size:20px;max-width:620px;margin:18px auto 32px}
+.contact{display:grid;grid-template-columns:1fr 260px;gap:18px;max-width:860px;margin:44px auto 0;text-align:start}
+.ch{display:flex;justify-content:space-between;align-items:center;padding:15px 24px;gap:12px}
+.ch+.ch{border-top:1px solid var(--line)}
+.ch b{font-weight:600;font-size:15.5px}.ch small{color:var(--muted);direction:ltr;font:14px Inter,sans-serif}
+.qr{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;padding:26px}
+#qr{width:180px;height:180px;background:#fff;border-radius:14px;padding:12px}
+#qr svg{width:100%;height:100%}
+.qr small{color:var(--muted);font-size:13.5px}
+footer{padding:28px 0 40px;color:var(--faint);font-size:13px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+/* document viewer (view-only page images) */
+.viewer{position:fixed;inset:0;z-index:90;background:rgba(0,0,0,.55);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);display:none;flex-direction:column}
+.viewer.on{display:flex}
+.vbar{display:flex;align-items:center;gap:12px;padding:12px 18px;background:var(--glass);border-bottom:1px solid var(--glass-line);color:var(--ink)}
+.vbar b{font-size:15px;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vbar small{color:var(--muted);font:13px Inter,sans-serif}
+.vclose{border:0;background:var(--soft);color:var(--ink);width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:18px}
+.vpages{flex:1;overflow:auto;padding:22px 16px 60px;display:flex;flex-direction:column;align-items:center;gap:16px;-webkit-user-select:none;user-select:none}
+.vpages img{width:min(900px,100%);border-radius:10px;box-shadow:0 10px 40px rgba(0,0,0,.35);background:#fff;pointer-events:none;-webkit-user-drag:none}
+.vnote{color:#fff;opacity:.75;font-size:13.5px;text-align:center}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+@media (max-width:900px){
+  .g3,.g4{grid-template-columns:1fr 1fr}.contact{grid-template-columns:1fr}
+  .links{display:none;position:absolute;top:52px;inset-inline:0;flex-direction:column;background:var(--glass);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--glass-line);padding:8px 14px 14px}
+  .links.on{display:flex}.menu{display:inline-block}
+}
+@media (max-width:640px){
+  body{font-size:16px}section{padding:68px 0}.hero{padding-top:56px}
+  .g2,.g3,.g4{grid-template-columns:1fr}
+  .strip{grid-template-columns:1fr 1fr}.strip div:nth-child(3){border-inline-start:0}.strip div:nth-child(n+3){border-top:1px solid var(--line)}
+  .tl .row{grid-template-columns:1fr;gap:4px;padding:20px 22px}
+  .li{grid-template-columns:1fr;gap:6px;padding:20px 22px}.li .acts{justify-content:flex-start}
+  .ci{padding:15px 20px}.tile{padding:24px}
+}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="#top"><img src="assets/mas-logo.webp" alt=""><span data-en="Mohammed Ameen">محمد أمين</span></a>
+  <nav class="links" id="links">
+    <a href="#about" data-en="About">عني</a><a href="#services" data-en="Services">الخدمات</a><a href="#experience" data-en="Experience">الخبرة</a>
+    <a href="#projects" data-en="Projects">المشاريع</a><a href="#workshops" data-en="Workshops">الورش</a><a href="#credentials" data-en="Credentials">الشهادات</a><a href="#contact" data-en="Contact">تواصل</a>
+  </nav>
+  <button class="tbtn" id="lang">EN</button>
+  <button class="tbtn menu" id="menu" aria-label="menu">☰</button>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+  <div class="avatar"><img src="assets/hero.webp" alt="Mohammed Ameen Sajjad" fetchpriority="high"></div>
+  <div class="status"><i></i><span data-en="Available for workshops, projects & consulting">متاح للورش والمشاريع والاستشارات</span></div>
+  <h1 data-en="Mohammed Ameen Sajjad">محمد أمين سجاد</h1>
+  <p class="role" data-en="Electronics & Communications Engineer. Founder of MAS Business Solutions. AI Trainer.">مهندس إلكترونيات واتصالات. مؤسس MAS Business Solutions. مدرّب في توظيف الذكاء الاصطناعي.</p>
+  <p class="lead" data-en="I combine engineering with AI and entrepreneurship to build systems that run themselves — and I teach others to do the same.">أجمع بين الهندسة والذكاء الاصطناعي وريادة الأعمال، لأبني أنظمة تشتغل وحدها، وأعلّم غيري يبنيها.</p>
+  <div class="ctas">
+    <a class="btn dark" id="wa" href="https://wa.me/9647818716667" target="_blank" data-en="Start a project with me">ابدأ مشروعك معي</a>
+    <button class="btn ghost" data-doc="cv" data-en="View my CV">اعرض سيرتي الذاتية</button>
+  </div>
+  <div class="strip">
+    <div><b>800+</b><span data-en="people trained">متدرّب</span></div>
+    <div><b>25</b><span data-en="certificates">شهادة ودورة</span></div>
+    <div><b>2</b><span data-en="research papers">بحث علمي</span></div>
+    <div><b>12</b><span data-en="books applied">كتاباً طبّقته</span></div>
+  </div>
+</div></section>
+
+<section id="about"><div class="wrap">
+  <div class="head reveal"><span class="eyebrow" data-en="About">من أنا</span><h2 data-en="Technology should serve people.">التكنولوجيا لازم تخدم الإنسان.</h2></div>
+  <div class="about reveal">
+    <p data-en="I'm Mohammed Ameen, an Electronics & Communications Engineering student at the University of Kufa and a former student of the School for the Gifted in Najaf. I moved from traditional engineering into entrepreneurship and AI, carrying an engineer's mindset with me: every system can be measured and improved.">أنا محمد أمين، طالب هندسة إلكترونيات واتصالات في <strong>جامعة الكوفة</strong>، ودرست سابقاً في مدرسة الموهوبين في النجف. انتقلت من الهندسة التقليدية إلى ريادة الأعمال والذكاء الاصطناعي، وحملت ويّاي عقلية المهندس: كل نظام ممكن نقيسه ونحسّنه.</p>
+    <p data-en="Through MAS Business Solutions I help businesses automate their operations with modern AI tools, saving time and raising efficiency — and through workshops I help students and engineers use AI with method and verification.">من خلال <strong>MAS Business Solutions</strong> أساعد الشركات تؤتمت عملياتها بأحدث أدوات الذكاء الاصطناعي، فتوفّر الوقت وترفع الكفاءة. ومن خلال الورش أساعد الطلبة والمهندسين يستخدمون الذكاء الاصطناعي بمنهجية وتحقق.</p>
+  </div>
+  <div class="pillars reveal"><span data-en="Electronics & Communications">هندسة إلكترونيات واتصالات</span><span data-en="AI & Automation">ذكاء اصطناعي وأتمتة</span><span data-en="Entrepreneurship">ريادة أعمال وإدارة مشاريع</span><span data-en="Marketing & Sales">تسويق ومبيعات</span></div>
+</div></section>
+
+<section id="services" style="padding-top:20px"><div class="wrap">
+  <div class="head reveal"><span class="eyebrow" data-en="Services">الخدمات</span><h2 data-en="What I can do for you.">شنو أگدر أسويلك.</h2></div>
+  <div class="grid g2 svc">
+    <div class="tile reveal"><div class="ic">🎓</div><h3 data-en="AI workshops & training">ورش وتدريب الذكاء الاصطناعي</h3><p data-en="Hands-on workshops for universities, students and teams — study, research, reports, presentations and graduation projects, with free tools available in Iraq.">ورش تطبيقية للجامعات والطلبة والفرق: الدراسة، والبحث، والتقارير، والعروض، ومشاريع التخرج، بأدوات مجانية متاحة داخل العراق.</p><a class="lnk wa-svc" data-msg="ورشة" href="#" target="_blank" data-en="Request a workshop ›">اطلب ورشة ‹</a></div>
+    <div class="tile reveal"><div class="ic">⚙️</div><h3 data-en="Business automation">أتمتة أنظمة الأعمال</h3><p data-en="Workflows and AI agents that remove repetitive work — messaging bots, reporting, sales and operations. Send me a process and get an initial automation plan within 48 hours.">سير عمل ووكلاء ذكاء اصطناعي يشيلون الشغل المتكرر: بوتات، وتقارير، ومبيعات، وعمليات. ابعثلي العملية اللي تستهلك وقتك، وأرد عليك بتصوّر أتمتة أولي خلال 48 ساعة.</p><a class="lnk wa-svc" data-msg="أتمتة" href="#" target="_blank" data-en="Automate a process ›">أتمت عملية ‹</a></div>
+    <div class="tile reveal"><div class="ic">🧩</div><h3 data-en="Digital platforms & MVPs">منصات رقمية ونماذج أولية</h3><p data-en="From idea to a working prototype: requirements, architecture and AI-assisted development — like the CAS platform.">من الفكرة إلى نموذج أولي يشتغل: المتطلبات، والمعمارية، والتطوير بمساعدة الذكاء الاصطناعي، مثل منصة CAS.</p><a class="lnk wa-svc" data-msg="منصة رقمية" href="#" target="_blank" data-en="Discuss your idea ›">ناقش فكرتك ‹</a></div>
+    <div class="tile reveal"><div class="ic">📈</div><h3 data-en="Strategy, marketing & sales">استراتيجية وتسويق ومبيعات</h3><p data-en="Market research, feasibility, marketing plans and sales systems for startups — tested in my own projects first.">دراسة السوق والجدوى، وخطط التسويق، وأنظمة المبيعات للمشاريع الناشئة، مجرّبة بمشاريعي قبل ما أقدّمها.</p><a class="lnk wa-svc" data-msg="استشارة" href="#" target="_blank" data-en="Book a free consultation ›">احجز استشارة مجانية ‹</a></div>
+  </div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <div class="head reveal"><span class="eyebrow" data-en="Experience">الخبرة</span><h2 data-en="The journey so far.">الرحلة لحد هسه.</h2></div>
+  <div class="tl reveal">
+    <div class="row"><div class="yr" data-en="2025 — now">2025 — الآن</div><div><h3 data-en="Founder">المؤسس</h3><div class="org">MAS Business Solutions</div><p data-en="Founded a company for automation and AI solutions, built its visual identity, and designed MAS Academy for workshops and courses.">أسّست شركة لحلول الأتمتة والذكاء الاصطناعي، وبنيت هويتها البصرية، وصمّمت أكاديمية MAS للورش والدورات.</p></div></div>
+    <div class="row"><div class="yr" data-en="2024 — now">2024 — الآن</div><div><h3 data-en="AI & entrepreneurship trainer and speaker">مدرّب ومتحدث في الذكاء الاصطناعي وريادة الأعمال</h3><div class="org" data-en="University of Kufa · Riyada Initiative · Al-Abbas Holy Shrine">جامعة الكوفة · مبادرة ريادة · العتبة العباسية</div><p data-en="Official workshops, keynote talks and the first AI tools station at the Arbaeen cultural procession.">ورش رسمية، ومحاضرات، وأول محطة لأدوات الذكاء الاصطناعي بالموكب الثقافي في الأربعين.</p></div></div>
+    <div class="row"><div class="yr">2024</div><div><h3 data-en="Co-founder · Management & Marketing">شريك مؤسس · الإدارة والتسويق</h3><div class="org">3D Chamber</div><p data-en="Structured, managed and marketed a 3D-printing startup across exhibitions; presented to the Prime Minister of Iraq at the first Riyada exhibition.">هيكلة وإدارة وتسويق مشروع طباعة ثلاثية الأبعاد بالمعارض، وعُرض أمام رئيس الوزراء بمعرض مبادرة ريادة الأول.</p></div></div>
+    <div class="row"><div class="yr">2023</div><div><h3 data-en="Administrative Assistant & Marketer">مساعد إداري ومسوّق</h3><div class="org" data-en="Software company · Green Coding Club">شركة برمجيات · نادي البرمجة الأخضر</div><p data-en="Promoted from marketing to administrative assistant: reports from support-call data, content plans, new markets, and solving support-team issues.">ترقّيت من التسويق إلى مساعد إداري: تقارير من بيانات مكالمات الدعم، وخطط محتوى، واستهداف أسواق جديدة، وحل مشكلات فريق الدعم.</p></div></div>
+    <div class="row"><div class="yr">2023</div><div><h3 data-en="Paid advertising campaigns">حملات إعلانية ممولة</h3><div class="org">The Marzouk — Modern Car</div><p data-en="Ran Facebook ad campaigns that built audience trust and grew visitors, followers and qualified leads.">أطلقت حملات إعلانية على فيسبوك عزّزت ثقة الجمهور بالصفحة، ورفعت الزيارات والمتابعين، وولّدت عملاء محتملين.</p></div></div>
+    <div class="row"><div class="yr">2021 — 2022</div><div><h3 data-en="Design & sales">تصميم ومبيعات</h3><div class="org" data-en="Al-Karar Group for Telecommunications · Basra">مجموعة الكرار للاتصالات · البصرة</div><p data-en="Ran and unified the store's Instagram identity and worked in direct sales, applying “How to Sell Anything” in practice.">أدرت حساب المتجر ووحّدت هويته، واشتغلت بالمبيعات المباشرة بتطبيق كتاب «كيف تبيع أي شيء» عملياً.</p></div></div>
+    <div class="row"><div class="yr">2020</div><div><h3>MAS Market</h3><div class="org" data-en="E-commerce · personal project">تجارة إلكترونية · مشروع شخصي</div><p data-en="My first online store on Instagram — and the most valuable lesson: friends' support isn't a real market.">أول متجر إلكتروني إلي على إنستغرام، وأثمن درس: دعم الأصدقاء مو سوق حقيقي.</p></div></div>
+  </div>
+</div></section>
+
+<section id="projects" style="padding-top:20px"><div class="wrap">
+  <div class="head reveal"><span class="eyebrow" data-en="Projects & research">المشاريع والأبحاث</span><h2 data-en="Work you can verify.">شغل تگدر تتحقق منه.</h2></div>
+  <div class="grid g2 proj">
+    <div class="tile reveal"><span class="tag a" data-en="Published · MOSR 2026">منشور · مجلة بحوث الطلبة 2026</span><h3 data-en="CAS — AI platform for on-demand 3D printing">منصة CAS — تنسيق الطباعة ثلاثية الأبعاد بالذكاء الاصطناعي</h3>
+      <p data-en="My graduation project (Chamber Manufacturing Group). An AI agent turns a customer's idea into verifiable specs, then coordinates design, printing, packaging and delivery in one workflow.">مشروع تخرجي ضمن Chamber Manufacturing Group. وكيل ذكاء اصطناعي يحوّل فكرة الزبون إلى مواصفات قابلة للتحقق، وينسّق التصميم والطباعة والتغليف والتوصيل بمسار واحد.</p>
+      <div class="chips"><span>Next.js</span><span>Prisma</span><span>AI Agents</span><span>MES</span></div>
+      <div class="acts"><button class="lnk" data-doc="paper-cas" data-en="Read the paper ›">اقرأ الورقة ‹</button></div></div>
+    <div class="tile reveal"><span class="tag" data-en="Submitted · Al-Makeen 2026">مُقدَّم · مؤتمر المكين 2026</span><h3 data-en="MES for small Iraqi manufacturers">أنظمة تنفيذ التصنيع للمنشآت الصغيرة في العراق</h3>
+      <p data-en="Research with a design and case study on digital transformation for small factories, submitted to the Al-Makeen Foundation conference with the University of Kufa.">بحث بتصميم ودراسة حالة عن التحول الرقمي للمعامل الصغيرة، مقدَّم لمؤتمر مؤسسة المكين بالتعاون مع جامعة الكوفة.</p>
+      <div class="chips"><span>MES</span><span>IoT</span><span>Raspberry Pi</span></div></div>
+    <div class="tile reveal"><span class="tag g" data-en="Active">قائم</span><h3>MAS Business Solutions</h3>
+      <p data-en="“Consider it done” — an automated business operating system for Iraqi companies: identity, automated content, AI teams and integrated workflows.">«اعتبرها صارت»: نظام تشغيل آلي للأعمال للشركات العراقية. هوية، ومحتوى مؤتمت، وفرق ذكاء اصطناعي، وسير عمل متكامل.</p>
+      <div class="chips"><span>n8n</span><span>AI Agents</span><span>Branding</span></div></div>
+    <div class="tile reveal"><span class="tag" data-en="Completed · 2024">مكتمل · 2024</span><h3>3D Chamber</h3>
+      <p data-en="A 3D-printing startup I co-founded and marketed — presented to the Prime Minister of Iraq at the Riyada Initiative exhibition.">مشروع طباعة ثلاثية الأبعاد شاركت بتأسيسه وتسويقه، وعُرض أمام رئيس الوزراء بمعرض مبادرة ريادة.</p>
+      <div class="chips"><span>3D Printing</span><span>Marketing</span><span>Management</span></div></div>
+    <div class="tile reveal"><span class="tag" data-en="Delivered · Arbaeen 2025">منجز · الأربعين 2025</span><h3 data-en="AI Tools Station">محطة استثمار أدوات الذكاء الاصطناعي</h3>
+      <p data-en="Opened and ran the first AI tools station at the Al-Abbas Holy Shrine cultural procession — 475 of 630 visitors trained in 8 days.">افتتحت وأدرت أول محطة لأدوات الذكاء الاصطناعي بالموكب الثقافي للعتبة العباسية: 475 زائراً من أصل 630 خلال 8 أيام.</p>
+      <div class="acts"><button class="lnk" data-doc="ai-station" data-en="View the report ›">اعرض التقرير ‹</button></div></div>
+    <div class="tile reveal"><span class="tag" data-en="Delivered">منجز</span><h3 data-en="Scientific Committee Archive System">نظام أرشيف اللجنة العلمية</h3>
+      <p data-en="Analysed a scientific committee's archive in Najaf and designed an integrated system for incoming and outgoing correspondence.">حللت أرشيف لجنة علمية بالنجف وصمّمت نظاماً متكاملاً للمراسلات الواردة والصادرة.</p>
+      <div class="chips"><span>Systems Analysis</span><span>Archiving</span></div></div>
+  </div>
+</div></section>
+
+<section id="workshops"><div class="wrap">
+  <div class="head reveal"><span class="eyebrow" data-en="Workshops & talks">الورش والمحاضرات</span><h2 data-en="Teaching what I practise.">أعلّم اللي أطبّقه.</h2></div>
+  <div class="list reveal">
+    <div class="li"><div class="d">Oct 2026</div><div><h3 data-en="The Engineering Student × AI">الطالب المهندس × الذكاء الاصطناعي</h3><div class="o" data-en="Official workshop · ECE Department, University of Kufa">ورشة رسمية · قسم هندسة الإلكترونيك والاتصالات، جامعة الكوفة</div></div>
+      <div class="acts"><button class="lnk" data-doc="ws-engineer" data-en="Slides ›">العرض ‹</button></div></div>
+    <div class="li"><div class="d">Oct 2026</div><div><h3 data-en="Build a full software system in hours with AI">ابنِ نظاماً برمجياً متكاملاً في ساعات بالذكاء الاصطناعي</h3><div class="o" data-en="Online · vocational students & beginners">أونلاين · لطلبة الإعداديات المهنية والمبتدئين</div></div>
+      <div class="acts"><a class="lnk" href="https://youtu.be/FD184oBObRc" target="_blank" data-en="Watch ›">شاهد ‹</a></div></div>
+    <div class="li"><div class="d">2025</div><div><h3 data-en="Civil Engineering & AI — the Super Engineer">الهندسة المدنية والذكاء الاصطناعي — المهندس الخارق</h3><div class="o" data-en="Civil engineering students & graduates · certificate of appreciation">طلبة وخريجو الهندسة المدنية · شهادة تقدير</div></div>
+      <div class="acts"><button class="lnk" data-doc="ws-civil" data-en="Slides ›">العرض ‹</button><a class="lnk" href="https://youtu.be/S83jzLU3Rf8" target="_blank" data-en="Watch ›">شاهد ‹</a></div></div>
+    <div class="li"><div class="d">2025</div><div><h3 data-en="AI Tools Station — Arbaeen">محطة استثمار أدوات الذكاء الاصطناعي — الأربعين</h3><div class="o" data-en="Al-Abbas Holy Shrine cultural procession · 475 visitors trained">الموكب الثقافي للعتبة العباسية · 475 زائراً متدرّباً</div></div>
+      <div class="acts"><button class="lnk" data-doc="ai-station" data-en="Report ›">التقرير ‹</button></div></div>
+    <div class="li"><div class="d">2025</div><div><h3 data-en="Entrepreneurship keynote">محاضرة ريادة الأعمال</h3><div class="o" data-en="University of Kufa · honoured with a golden shield by the university president">جامعة الكوفة · تكريم بدرع ذهبي من رئيس الجامعة</div></div><div class="acts"></div></div>
+    <div class="li"><div class="d">2025</div><div><h3 data-en="Startup essentials — short workshops">أساسيات المشاريع الناشئة — ورش قصيرة</h3><div class="o" data-en="Riyada Initiative trainees · entrepreneurship, market testing, project management">متدربو مبادرة ريادة · الريادة، تجربة السوق، إدارة المشاريع</div></div><div class="acts"></div></div>
+    <div class="li"><div class="d">2024</div><div><h3 data-en="How engineers market themselves">كيف يسوّق المهندس نفسه</h3><div class="o" data-en="Kufa Engineering · based on Austin Kleon's Show Your Work!">هندسة الكوفة · اعتماداً على كتاب Show Your Work</div></div><div class="acts"></div></div>
+  </div>
+</div></section>
+
+<section id="credentials" style="padding-top:20px"><div class="wrap">
+  <div class="head reveal"><span class="eyebrow" data-en="Credentials">الشهادات والتكريم</span><h2 data-en="Proof, not promises.">إثباتات، مو وعود.</h2></div>
+  <div class="tile cvcard reveal"><div><h3 data-en="Curriculum Vitae">السيرة الذاتية</h3><p data-en="Two pages: experience, projects, skills and every certificate.">صفحتين: الخبرة، والمشاريع، والمهارات، وكل الشهادات.</p></div><button class="btn dark" data-doc="cv" data-en="View CV">اعرض السيرة</button></div>
+  <div class="certbar reveal"><span id="certcount"></span><button class="lnk" data-doc="certs" data-en="Browse all certificates ›">تصفّح كل الشهادات ‹</button></div>
+  <div id="certlist"></div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <div class="head reveal"><span class="eyebrow" data-en="Skills">المهارات</span><h2 data-en="Engineering meets business.">الهندسة تلتقي بالأعمال.</h2></div>
+  <div class="grid g4 skills">
+    <div class="tile reveal"><h3 data-en="Build">البناء والتنفيذ</h3><div class="chips"><span>Python · AI/ML</span><span>n8n</span><span>IoT · MQTT</span><span>PCB · KiCad</span><span>MATLAB</span><span>FPGA · VHDL</span></div></div>
+    <div class="tile reveal"><h3 data-en="Grow">النمو والإدارة</h3><div class="chips"><span data-en="Strategic planning">التخطيط الاستراتيجي</span><span data-en="Project management">إدارة المشاريع</span><span data-en="Digital marketing">التسويق الرقمي</span><span data-en="Sales & copywriting">المبيعات والكتابة</span><span data-en="Team leadership">قيادة الفرق</span></div></div>
+    <div class="tile reveal"><h3 data-en="Teach">التدريب والإلقاء</h3><div class="chips"><span>TOT · ADDIE</span><span>Public Speaking</span><span>Storytelling</span><span data-en="Training needs analysis">تحليل الاحتياج التدريبي</span></div></div>
+    <div class="tile reveal"><h3 data-en="Daily tools">أدوات يومية</h3><div class="chips"><span>AI Tools & LLMs</span><span>Local LLMs</span><span>Canva</span><span>CapCut</span><span data-en="Content creation">صناعة المحتوى</span></div></div>
+  </div>
+</div></section>
+
+<section id="library" style="padding-top:20px"><div class="wrap">
+  <div class="head reveal"><span class="eyebrow" data-en="Library">المكتبة</span><h2 data-en="Books I didn't just read — I applied.">كتب ما قريتها بس، طبّقتها.</h2></div>
+  <div class="books reveal">
+    <span>Zero to One <em>· Thiel</em></span><span>The E-Myth Revisited <em>· Gerber</em></span><span>Traction <em>· Wickman</em></span><span>The 1-Page Marketing Plan <em>· Dib</em></span>
+    <span>The Ultimate Sales Machine <em>· Holmes</em></span><span>How to Sell Anything <em>· Girard</em></span><span>Show Your Work! <em>· Kleon</em></span><span>The Power of Habit <em>· Duhigg</em></span>
+    <span>Six Thinking Hats <em>· de Bono</em></span><span>How to Win Friends <em>· Carnegie</em></span><span>Influence <em>· Cialdini</em></span><span>The 48 Laws of Power <em>· Greene</em></span>
+  </div>
+</div></section>
+
+<section id="writing"><div class="wrap">
+  <div class="head reveal"><span class="eyebrow" data-en="Writing">المحتوى</span><h2 data-en="Ideas I share.">أفكار أشاركها.</h2><p data-en="Sourced, practical posts from my Telegram channel.">منشورات عملية ومدعومة بالمصادر من قناتي على تلگرام.</p></div>
+  <div class="grid g3">
+    <a class="tile post reveal tg" data-id="762" href="#" target="_blank"><span class="n">01</span><h3 data-en="Deepfakes & media credibility">التزييف العميق ومصداقية الإعلام</h3><p data-en="A citizen's checklist before sharing.">قائمة تحقق للمواطن قبل المشاركة.</p></a>
+    <a class="tile post reveal tg" data-id="764" href="#" target="_blank"><span class="n">02</span><h3 data-en="An AI roadmap for Iraq">خارطة طريق الذكاء الاصطناعي للعراق</h3><p data-en="People, data and policy — with 26 references.">بشر وبيانات وسياسة، مع 26 مرجعاً.</p></a>
+    <a class="tile post reveal tg" data-id="763" href="#" target="_blank"><span class="n">03</span><h3 data-en="Military AI & accountability">الذكاء الاصطناعي العسكري والمسؤولية</h3><p data-en="Who is responsible when algorithms decide?">منو المسؤول لما الخوارزمية تقرر؟</p></a>
+    <a class="tile post reveal tg" data-id="667" href="#" target="_blank"><span class="n">04</span><h3 data-en="The journey to AI mastery">رحلة إتقان الذكاء الاصطناعي</h3><p data-en="Five stages, from curiosity to professional use.">خمس مراحل من الفضول للاستخدام المهني.</p></a>
+    <a class="tile post reveal tg" data-id="885" href="#" target="_blank"><span class="n">05</span><h3 data-en="Graduation-project prompts">برومبتات مشروع التخرج</h3><p data-en="The prompts I used in my own engineering project.">النصوص التوجيهية اللي استخدمتها بمشروعي.</p></a>
+    <a class="tile post reveal tg" data-id="949" href="#" target="_blank"><span class="n">06</span><h3 data-en="AI career paths">مسارات العمل في الذكاء الاصطناعي</h3><p data-en="A map to choose your track.">خريطة حتى تختار مسارك.</p></a>
+  </div>
+</div></section>
+
+<section class="cta" id="contact"><div class="wrap">
+  <span class="eyebrow reveal" data-en="Let's work together">لنشتغل سوا</span>
+  <h2 class="reveal" data-en="Let's build something that runs itself.">لنبنِ شيئاً يشتغل وحده.</h2>
+  <p class="reveal" data-en="Have a process that eats your team's time, or a workshop in mind? Send a short description and I'll reply with an initial plan within 48 hours. The first consultation is free.">عندك عملية تستهلك وقت فريقك، أو ورشة ببالك؟ ابعثلي وصف مختصر وأرد عليك بتصوّر أولي خلال 48 ساعة. الاستشارة الأولى مجانية.</p>
+  <div class="ctas reveal"><a class="btn dark" id="wa2" href="https://wa.me/9647818716667" target="_blank" data-en="Message me on WhatsApp">راسلني على واتساب</a><button class="btn ghost" id="vcard" data-en="Save my contact">احفظ جهة الاتصال</button></div>
+  <div class="contact reveal">
+    <div class="list">
+      <a class="ch" href="mailto:mohammed.ameen.sajjad@gmail.com"><b data-en="Email">البريد</b><small>mohammed.ameen.sajjad@gmail.com</small></a>
+      <a class="ch" href="https://wa.me/9647818716667" target="_blank"><b data-en="Phone · WhatsApp">هاتف · واتساب</b><small>+964 781 871 6667</small></a>
+      <a class="ch tg" data-id="" href="#" target="_blank"><b data-en="Telegram">تلگرام</b><small>t.me/mas_note</small></a>
+      <a class="ch" href="https://www.linkedin.com/in/mohammed-ameen-%D9%85%D8%AD%D9%85%D8%AF-%D8%A3%D9%85%D9%8A%D9%86-b5b935246" target="_blank"><b>LinkedIn</b><small>Mohammed Ameen</small></a>
+      <a class="ch" href="https://www.instagram.com/247_mas" target="_blank"><b>Instagram</b><small>@247_mas</small></a>
+      <a class="ch" href="https://www.youtube.com/@27_mas" target="_blank"><b>YouTube</b><small>@27_mas</small></a>
+    </div>
+    <div class="tile qr"><div id="qr"></div><small data-en="Scan to open this page">امسح الكود لفتح الصفحة</small></div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>© <span id="yr"></span> <span data-en="Mohammed Ameen Sajjad">محمد أمين سجاد</span> · MAS Business Solutions</span><span data-en="Najaf, Iraq">النجف، العراق</span></div></footer>
+
+<div class="viewer" id="viewer" role="dialog" aria-modal="true">
+  <div class="vbar"><b id="vtitle"></b><small id="vcount"></small><button class="vclose" id="vclose" aria-label="close">✕</button></div>
+  <div class="vpages" id="vpages"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script>
+const TG = "https://t.me/mas_note", WA = "https://wa.me/9647818716667";
+const DOCS = {
+  cv: {ar: "السيرة الذاتية", en: "Curriculum Vitae"},
+  "paper-cas": {ar: "ورقة منصة CAS — مجلة بحوث الطلبة 2026", en: "CAS paper — MOSR 2026"},
+  "ws-engineer": {ar: "ورشة الطالب المهندس × الذكاء الاصطناعي", en: "The Engineering Student × AI — slides"},
+  "ws-civil": {ar: "ورشة الهندسة المدنية والذكاء الاصطناعي", en: "Civil Engineering & AI — slides"},
+  "ai-station": {ar: "تقرير محطة أدوات الذكاء الاصطناعي", en: "AI Tools Station — report"},
+  certs: {ar: "الشهادات", en: "Certificates"}
+};
+let MAN = null;
+fetch("assets/docs/manifest.json").then(r => r.json()).then(m => MAN = m).catch(() => {});
+const en = () => document.documentElement.lang === "en";
+document.querySelectorAll(".tg").forEach(a => a.href = a.dataset.id ? `${TG}/${a.dataset.id}` : TG);
+document.getElementById("yr").textContent = new Date().getFullYear();
+document.getElementById("menu").onclick = () => document.getElementById("links").classList.toggle("on");
+document.querySelectorAll("#links a").forEach(a => a.onclick = () => document.getElementById("links").classList.remove("on"));
+
+function waLinks() {
+  const base = en() ? "Hi Mohammed, I'd like to talk about " : "مرحباً محمد، أريد أتواصل بخصوص ";
+  document.getElementById("wa").href = document.getElementById("wa2").href = WA + "?text=" + encodeURIComponent(base + (en() ? "a project." : "مشروع."));
+  document.querySelectorAll(".wa-svc").forEach(a => a.href = WA + "?text=" + encodeURIComponent(base + (en() ? "your services." : a.dataset.msg + ".")));
+}
+function setLang(l) {
+  document.documentElement.lang = l; document.documentElement.dir = l === "en" ? "ltr" : "rtl";
+  document.querySelectorAll("[data-en]").forEach(el => {
+    if (el.dataset.ar === undefined) el.dataset.ar = el.innerHTML;
+    el.innerHTML = l === "en" ? el.dataset.en : el.dataset.ar;
+  });
+  document.getElementById("lang").textContent = l === "en" ? "عربي" : "EN";
+  waLinks(); if (CERTS && CERTS.length) renderCerts(); try { localStorage.setItem("lang", l) } catch (e) {}
+}
+document.getElementById("lang").onclick = () => setLang(en() ? "ar" : "en");
+let saved = null; try { saved = localStorage.getItem("lang") } catch (e) {}
+setLang(saved || (new URLSearchParams(location.search).get("lang") === "en" ? "en" : "ar"));
+
+// reveal on scroll
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) } }), {threshold: .1});
+const staticMode = new URLSearchParams(location.search).has("static");
+document.querySelectorAll(".reveal").forEach(el => staticMode ? el.classList.add("in") : io.observe(el));
+
+
+// certificates, grouped, each one viewable
+const GROUPS = [["tech", "تقنية ومعتمدة", "Technical & accredited"], ["pro", "تطوير مهني وريادة", "Professional development"], ["honor", "تكريم وتطوع", "Recognition & service"]];
+var CERTS = [];
+function renderCerts() {
+  const L = en();
+  document.getElementById("certcount").textContent = CERTS.length ? (L ? `${CERTS.length} certificates — every one viewable` : `${CERTS.length} شهادة — كل وحدة تگدر تشوفها`) : "";
+  document.getElementById("certlist").innerHTML = GROUPS.map(([g, ar, enl]) => {
+    const items = CERTS.map((c, i) => ({...c, i})).filter(c => c.g === g);
+    if (!items.length) return "";
+    return `<div class="cgroup"><h3>${L ? enl : ar} · ${items.length}</h3><div class="list">` + items.map(c =>
+      `<div class="ci"><div><b>${L ? c.te : c.ta}</b><small>${L ? c.ie : c.ia}${c.d ? " · " + c.d : ""}</small></div><button class="lnk" data-cert="${c.i}">${L ? "View ›" : "اعرض ‹"}</button></div>`).join("") + "</div></div>";
+  }).join("");
+  document.querySelectorAll("[data-cert]").forEach(b => b.onclick = () => openDoc("certs", +b.dataset.cert));
+}
+fetch("assets/docs/certs.json").then(r => r.json()).then(c => { CERTS = c; renderCerts() }).catch(() => {});
+
+// view-only document viewer: shows page images, no PDF is ever served
+const V = document.getElementById("viewer"), VP = document.getElementById("vpages");
+function openDoc(slug, page) {
+  const d = MAN && MAN[slug]; if (!d) return;
+  document.getElementById("vtitle").textContent = DOCS[slug][en() ? "en" : "ar"];
+  const shown = d.pages.length, total = d.total;
+  document.getElementById("vcount").textContent = shown < total ? (en() ? `${shown} of ${total} pages` : `${shown} من ${total} صفحة`) : (en() ? `${total} pages` : `${total} صفحة`);
+  VP.innerHTML = d.pages.map(p => `<img src="${p}" alt="" loading="lazy" draggable="false">`).join("") +
+    `<div class="vnote">${en() ? "Preview only." : "للعرض فقط."}${shown < total ? (en() ? " Full document available on request." : " النسخة الكاملة عند الطلب.") : ""}</div>`;
+  V.classList.add("on"); document.body.style.overflow = "hidden";
+  VP.scrollTop = 0; if (page) setTimeout(() => VP.children[page] && VP.children[page].scrollIntoView({block: "start"}), 80);
+}
+function closeDoc() { V.classList.remove("on"); document.body.style.overflow = "" }
+document.querySelectorAll("[data-doc]").forEach(b => b.addEventListener("click", () => openDoc(b.dataset.doc, +(b.dataset.page || 0))));
+document.getElementById("vclose").onclick = closeDoc;
+V.addEventListener("click", e => { if (e.target === V || e.target === VP) closeDoc() });
+V.addEventListener("contextmenu", e => e.preventDefault());
+addEventListener("keydown", e => { if (e.key === "Escape") closeDoc() });
+
+// QR code of this page's own address
+try {
+  const q = qrcode(0, "M"); q.addData(location.protocol.startsWith("http") ? location.origin + location.pathname : "https://mohammedameensajjad-web.github.io/"); q.make();
+  document.getElementById("qr").innerHTML = q.createSvgTag({cellSize: 6, margin: 0, scalable: true});
+} catch (e) {}
+// save contact (vCard)
+document.getElementById("vcard").onclick = () => {
+  const v = ["BEGIN:VCARD", "VERSION:3.0", "N:Sajjad;Mohammed Ameen;;;", "FN:Mohammed Ameen Sajjad", "ORG:MAS Business Solutions",
+    "TITLE:Electronics & Communications Engineer · Founder", "TEL;TYPE=CELL:+9647818716667", "EMAIL:mohammed.ameen.sajjad@gmail.com",
+    "URL:https://mohammedameensajjad-web.github.io/", "ADR;TYPE=WORK:;;;Najaf;;;Iraq", "END:VCARD"].join("\r\n");
+  const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([v], {type: "text/vcard"})); a.download = "Mohammed-Ameen.vcf"; a.click();
+};
+</script>
+</body>
+</html>

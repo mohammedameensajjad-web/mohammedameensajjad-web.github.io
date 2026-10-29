@@ -1,0 +1,96 @@
+{
+ "cv": {
+  "pages": [
+   "assets/docs/cv/p01.webp",
+   "assets/docs/cv/p02.webp"
+  ],
+  "total": 2
+ },
+ "paper-cas": {
+  "pages": [
+   "assets/docs/paper-cas/p01.webp",
+   "assets/docs/paper-cas/p02.webp",
+   "assets/docs/paper-cas/p03.webp",
+   "assets/docs/paper-cas/p04.webp",
+   "assets/docs/paper-cas/p05.webp",
+   "assets/docs/paper-cas/p06.webp",
+   "assets/docs/paper-cas/p07.webp",
+   "assets/docs/paper-cas/p08.webp",
+   "assets/docs/paper-cas/p09.webp",
+   "assets/docs/paper-cas/p10.webp",
+   "assets/docs/paper-cas/p11.webp",
+   "assets/docs/paper-cas/p12.webp"
+  ],
+  "total": 23
+ },
+ "ws-engineer": {
+  "pages": [
+   "assets/docs/ws-engineer/p01.webp",
+   "assets/docs/ws-engineer/p02.webp",
+   "assets/docs/ws-engineer/p03.webp",
+   "assets/docs/ws-engineer/p04.webp",
+   "assets/docs/ws-engineer/p05.webp",
+   "assets/docs/ws-engineer/p06.webp",
+   "assets/docs/ws-engineer/p07.webp",
+   "assets/docs/ws-engineer/p08.webp",
+   "assets/docs/ws-engineer/p09.webp",
+   "assets/docs/ws-engineer/p10.webp"
+  ],
+  "total": 18
+ },
+ "ws-civil": {
+  "pages": [
+   "assets/docs/ws-civil/p01.webp",
+   "assets/docs/ws-civil/p02.webp",
+   "assets/docs/ws-civil/p03.webp",
+   "assets/docs/ws-civil/p04.webp",
+   "assets/docs/ws-civil/p05.webp",
+   "assets/docs/ws-civil/p06.webp",
+   "assets/docs/ws-civil/p07.webp",
+   "assets/docs/ws-civil/p08.webp",
+   "assets/docs/ws-civil/p09.webp",
+   "assets/docs/ws-civil/p10.webp"
+  ],
+  "total": 58
+ },
+ "ai-station": {
+  "pages": [
+   "assets/docs/ai-station/p01.webp",
+   "assets/docs/ai-station/p02.webp",
+   "assets/docs/ai-station/p03.webp",
+   "assets/docs/ai-station/p04.webp",
+   "assets/docs/ai-station/p05.webp"
+  ],
+  "total": 15
+ },
+ "certs": {
+  "pages": [
+   "assets/docs/certs/c01.webp",
+   "assets/docs/certs/c02.webp",
+   "assets/docs/certs/c03.webp",
+   "assets/docs/certs/c04.webp",
+   "assets/docs/certs/c05.webp",
+   "assets/docs/certs/c06.webp",
+   "assets/docs/certs/c07.webp",
+   "assets/docs/certs/c08.webp",
+   "assets/docs/certs/c09.webp",
+   "assets/docs/certs/c10.webp",
+   "assets/docs/certs/c11.webp",
+   "assets/docs/certs/c12.webp",
+   "assets/docs/certs/c13.webp",
+   "assets/docs/certs/c14.webp",
+   "assets/docs/certs/c15.webp",
+   "assets/docs/certs/c16.webp",
+   "assets/docs/certs/c17.webp",
+   "assets/docs/certs/c18.webp",
+   "assets/docs/certs/c19.webp",
+   "assets/docs/certs/c20.webp",
+   "assets/docs/certs/c21.webp",
+   "assets/docs/certs/c22.webp",
+   "assets/docs/certs/c23.webp",
+   "assets/docs/certs/c24.webp",
+   "assets/docs/certs/c25.webp"
+  ],
+  "total": 25
+ }
+}

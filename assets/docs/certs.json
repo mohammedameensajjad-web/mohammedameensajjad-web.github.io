@@ -1,0 +1,227 @@
+[
+ {
+  "img": "assets/docs/certs/c01.webp",
+  "g": "tech",
+  "ta": "Cloud Advanced: Architecture & Technologies",
+  "te": "Cloud Advanced: Architecture & Technologies",
+  "ia": "Huawei ICT Academy",
+  "ie": "Huawei ICT Academy",
+  "d": "2026"
+ },
+ {
+  "img": "assets/docs/certs/c02.webp",
+  "g": "tech",
+  "ta": "ICT Project Management Essentials",
+  "te": "ICT Project Management Essentials",
+  "ia": "Huawei ICT Academy",
+  "ie": "Huawei ICT Academy",
+  "d": "2026"
+ },
+ {
+  "img": "assets/docs/certs/c03.webp",
+  "g": "tech",
+  "ta": "Introduction to Cybersecurity",
+  "te": "Introduction to Cybersecurity",
+  "ia": "Cisco Networking Academy",
+  "ie": "Cisco Networking Academy",
+  "d": "2026"
+ },
+ {
+  "img": "assets/docs/certs/c04.webp",
+  "g": "tech",
+  "ta": "MATLAB Onramp",
+  "te": "MATLAB Onramp",
+  "ia": "MathWorks",
+  "ie": "MathWorks",
+  "d": "2026"
+ },
+ {
+  "img": "assets/docs/certs/c05.webp",
+  "g": "tech",
+  "ta": "Exponential AI and the Impact on Financial Services",
+  "te": "Exponential AI and the Impact on Financial Services",
+  "ia": "CFTE",
+  "ie": "CFTE",
+  "d": "2026"
+ },
+ {
+  "img": "assets/docs/certs/c06.webp",
+  "g": "tech",
+  "ta": "AI in Digital Marketing",
+  "te": "AI in Digital Marketing",
+  "ia": "Great Learning Academy",
+  "ie": "Great Learning Academy",
+  "d": "2023"
+ },
+ {
+  "img": "assets/docs/certs/c07.webp",
+  "g": "tech",
+  "ta": "Introduction to Human Resource Management",
+  "te": "Introduction to Human Resource Management",
+  "ia": "إدراك · بيت.كوم",
+  "ie": "Edraak · Bayt.com",
+  "d": "2025"
+ },
+ {
+  "img": "assets/docs/certs/c08.webp",
+  "g": "tech",
+  "ta": "Skills on Sales",
+  "te": "Skills on Sales",
+  "ia": "Skills on Sales",
+  "ie": "Skills on Sales",
+  "d": "2023"
+ },
+ {
+  "img": "assets/docs/certs/c09.webp",
+  "g": "tech",
+  "ta": "دورة التسويق",
+  "te": "Marketing course",
+  "ia": "USkill",
+  "ie": "USkill",
+  "d": "2023"
+ },
+ {
+  "img": "assets/docs/certs/c10.webp",
+  "g": "tech",
+  "ta": "English — Grade A",
+  "te": "English — Grade A",
+  "ia": "TELUS",
+  "ie": "TELUS",
+  "d": "2019"
+ },
+ {
+  "img": "assets/docs/certs/c11.webp",
+  "g": "tech",
+  "ta": "English Language — Beginners",
+  "te": "English Language — Beginners",
+  "ia": "مؤسسة «ذات» للتنمية البشرية",
+  "ie": "“That” Institution for Human Development",
+  "d": "2019"
+ },
+ {
+  "img": "assets/docs/certs/c12.webp",
+  "g": "pro",
+  "ta": "الذكاء الاصطناعي",
+  "te": "Artificial Intelligence course",
+  "ia": "نادي البرمجة الأخضر",
+  "ie": "Green Coding Club",
+  "d": "2022"
+ },
+ {
+  "img": "assets/docs/certs/c13.webp",
+  "g": "pro",
+  "ta": "المشاريع الإلكترونية الذكية",
+  "te": "Smart Electronic Projects",
+  "ia": "نادي البرمجة الأخضر",
+  "ie": "Green Coding Club",
+  "d": "2023"
+ },
+ {
+  "img": "assets/docs/certs/c14.webp",
+  "g": "pro",
+  "ta": "تطوير خطة مشروع — ريادة الأعمال",
+  "te": "Project-plan development — Entrepreneurship",
+  "ia": "مبادرة ريادة — رئاسة الوزراء",
+  "ie": "Riyada Initiative — PM's Office",
+  "d": "2025"
+ },
+ {
+  "img": "assets/docs/certs/c15.webp",
+  "g": "pro",
+  "ta": "إدارة المبيعات والتسويق",
+  "te": "Sales & Marketing Management",
+  "ia": "برنامج وهج للتنمية والتطوير",
+  "ie": "Wahj Development Program",
+  "d": ""
+ },
+ {
+  "img": "assets/docs/certs/c16.webp",
+  "g": "pro",
+  "ta": "عمل فصّي الدماغ وعلاقته بالإبداع",
+  "te": "The brain's hemispheres & creativity",
+  "ia": "تجمع مدربي ومتدربي كربلاء",
+  "ie": "Karbala Trainers' Gathering",
+  "d": ""
+ },
+ {
+  "img": "assets/docs/certs/c17.webp",
+  "g": "pro",
+  "ta": "الدورة التخصصية المكثفة في منهجة الأفكار",
+  "te": "Intensive course: structuring ideas",
+  "ia": "سماحة الشيخ ليث آل زايردهام",
+  "ie": "Sheikh Laith Al Zayerdaham",
+  "d": "2026"
+ },
+ {
+  "img": "assets/docs/certs/c18.webp",
+  "g": "pro",
+  "ta": "ورشة القيادة الإعلامية للفعاليات الثقافية",
+  "te": "Media leadership for cultural events",
+  "ia": "الأستاذ مرتضى الحمامي",
+  "ie": "Murtadha Al-Hamami",
+  "d": "2026"
+ },
+ {
+  "img": "assets/docs/certs/c19.webp",
+  "g": "honor",
+  "ta": "شهادة تقدير — مبادرة ريادة",
+  "te": "Certificate of appreciation — Riyada Initiative",
+  "ia": "مبادرة ريادة — رئاسة الوزراء",
+  "ie": "Riyada Initiative — PM's Office",
+  "d": ""
+ },
+ {
+  "img": "assets/docs/certs/c20.webp",
+  "g": "honor",
+  "ta": "شهادة تقدير — ورشة الهندسة المدنية والذكاء الاصطناعي",
+  "te": "Appreciation — Civil Engineering & AI workshop",
+  "ia": "مقدّم الورشة",
+  "ie": "Workshop presenter",
+  "d": "2025"
+ },
+ {
+  "img": "assets/docs/certs/c21.webp",
+  "g": "honor",
+  "ta": "كتاب شكر وتقدير — العمل التطوعي في اليوم المفتوح",
+  "te": "Letter of thanks — Open Day volunteering",
+  "ia": "جامعة الكوفة · كلية الهندسة",
+  "ie": "University of Kufa · Engineering",
+  "d": "2024"
+ },
+ {
+  "img": "assets/docs/certs/c22.webp",
+  "g": "honor",
+  "ta": "Award for participating — Open Day",
+  "te": "Award for participating — Open Day",
+  "ia": "جامعة الكوفة",
+  "ie": "University of Kufa",
+  "d": "2024"
+ },
+ {
+  "img": "assets/docs/certs/c23.webp",
+  "g": "honor",
+  "ta": "مخيم فتية الكفيل الوطني العاشر",
+  "te": "10th Fityat Al-Kafeel national camp",
+  "ia": "العتبة العباسية المقدسة",
+  "ie": "Al-Abbas Holy Shrine",
+  "d": "2025"
+ },
+ {
+  "img": "assets/docs/certs/c24.webp",
+  "g": "honor",
+  "ta": "مخيم «شباب اليوم قادة الغد»",
+  "te": "“Today's Youth, Tomorrow's Leaders” camp",
+  "ia": "العتبتان العباسية والحسينية",
+  "ie": "Al-Abbas & Al-Husseini Shrines",
+  "d": "2022"
+ },
+ {
+  "img": "assets/docs/certs/c25.webp",
+  "g": "honor",
+  "ta": "شكر وتقدير — خدمة زوار الأربعين (مشروع فتية الكفيل الوطني)",
+  "te": "Thanks — serving Arbaeen visitors (Fityat Al-Kafeel)",
+  "ia": "العتبة العباسية المقدسة",
+  "ie": "Al-Abbas Holy Shrine",
+  "d": "2024"
+ }
+]
