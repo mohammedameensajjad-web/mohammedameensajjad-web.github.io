@@ -6,23 +6,6 @@
   ],
   "total": 2
  },
- "paper-cas": {
-  "pages": [
-   "assets/docs/paper-cas/p01.webp",
-   "assets/docs/paper-cas/p02.webp",
-   "assets/docs/paper-cas/p03.webp",
-   "assets/docs/paper-cas/p04.webp",
-   "assets/docs/paper-cas/p05.webp",
-   "assets/docs/paper-cas/p06.webp",
-   "assets/docs/paper-cas/p07.webp",
-   "assets/docs/paper-cas/p08.webp",
-   "assets/docs/paper-cas/p09.webp",
-   "assets/docs/paper-cas/p10.webp",
-   "assets/docs/paper-cas/p11.webp",
-   "assets/docs/paper-cas/p12.webp"
-  ],
-  "total": 23
- },
  "ws-engineer": {
   "pages": [
    "assets/docs/ws-engineer/p01.webp",
@@ -92,5 +75,18 @@
    "assets/docs/certs/c25.webp"
   ],
   "total": 25
+ },
+ "ai-station-guide": {
+  "pages": [
+   "assets/docs/ai-station-guide/p01.webp",
+   "assets/docs/ai-station-guide/p02.webp",
+   "assets/docs/ai-station-guide/p03.webp",
+   "assets/docs/ai-station-guide/p04.webp",
+   "assets/docs/ai-station-guide/p05.webp",
+   "assets/docs/ai-station-guide/p06.webp",
+   "assets/docs/ai-station-guide/p07.webp",
+   "assets/docs/ai-station-guide/p08.webp"
+  ],
+  "total": 28
  }
 }
