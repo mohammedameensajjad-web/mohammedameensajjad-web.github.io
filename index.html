@@ -88,7 +88,7 @@ svg.i{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;stro
 .role span{color:var(--gold)}
 .lead{color:var(--muted);font-size:18px;max-width:560px;margin:14px 0 0}
 .ctas{display:flex;gap:12px;flex-wrap:wrap}
-.b-stat{grid-column:span 3;padding:24px 26px;display:flex;flex-direction:column;justify-content:space-between;gap:10px;min-height:150px}
+.b-stat{grid-column:span 6;padding:24px 26px;display:flex;flex-direction:column;justify-content:space-between;gap:10px;min-height:150px}
 .b-stat b{font:700 clamp(38px,4.4vw,56px)/1 var(--display);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
 .b-stat span{color:var(--muted);font-size:15px}
 .b-stat.hot{background:linear-gradient(140deg,#ffd43b,var(--gold) 45%,var(--amber));border-color:transparent;color:var(--gold-ink)}
@@ -227,7 +227,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
   .links.on{display:flex}.links a{padding:12px 14px;font-size:16px}
   .menu{display:inline-flex;margin-inline-start:auto}
   .b-intro{grid-column:span 12;padding:34px}.b-photo{grid-column:span 12;min-height:0;aspect-ratio:4/3;max-width:100%}
-  .b-stat{grid-column:span 6}
   .head,.about{grid-template-columns:1fr}
   .g3,.g4{grid-template-columns:repeat(2,1fr)}
   .proj .feat{grid-template-columns:1fr;padding:34px}.proj .s3{grid-column:span 6}.proj .s2{grid-column:span 3}
@@ -280,8 +279,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
     </div>
     <div class="tile b-stat hot"><b>800+</b><span data-en="people trained">متدرّب ومستفيد</span></div>
     <div class="tile b-stat"><b>25</b><span data-en="certificates & courses">شهادة ودورة</span></div>
-    <div class="tile b-stat"><b>7</b><span data-en="workshops & talks">ورش ومحاضرات</span></div>
-    <div class="tile b-stat"><b>2</b><span data-en="research papers">بحث علمي</span></div>
   </div>
   <div class="strip"><div class="row">
     <small data-en="Certified by and worked with">شهادات وتعاون مع</small>
@@ -332,22 +329,22 @@ footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
 </div></section>
 
 <section id="projects" style="padding-top:20px"><div class="wrap">
-  <div class="head"><div><span class="kicker" data-en="Projects & research">المشاريع والأبحاث</span><h2 data-en="Work you can verify">شغل تگدر تتحقق منه</h2></div>
+  <div class="head"><div><span class="kicker" data-en="Projects">المشاريع</span><h2 data-en="Work you can verify">شغل تگدر تتحقق منه</h2></div>
     <p data-en="Each project shows its real status. Documents open for viewing.">كل مشروع بحالته الحقيقية، والوثائق تنفتح للعرض.</p></div>
   <div class="proj">
     <div class="tile gl feat">
-      <div style="display:grid;gap:14px;min-width:0"><span class="tag pub" data-en="Published · MOSR 2026">منشور · مجلة بحوث الطلبة 2026</span>
+      <div style="display:grid;gap:14px;min-width:0"><span class="tag pub" data-en="Graduation project · student paper">مشروع التخرج · ورقة طلابية</span>
         <h3 data-en="CAS: an AI platform for on-demand 3D printing">منصة CAS لتنسيق الطباعة ثلاثية الأبعاد بالذكاء الاصطناعي</h3>
         <p data-en="My graduation project within Chamber Manufacturing Group. An AI agent turns a customer's idea into verifiable specs, then coordinates design, printing, packaging and delivery in one workflow.">مشروع تخرجي ضمن Chamber Manufacturing Group. وكيل ذكاء اصطناعي يحوّل فكرة الزبون إلى مواصفات قابلة للتحقق، وينسّق التصميم والطباعة والتغليف والتوصيل بمسار واحد.</p>
         <div class="tech"><span>Next.js</span><span>Prisma</span><span>AI Agents</span><span>MES</span></div>
-        <div><button class="btn primary" data-doc="paper-cas" data-en="Read the paper">اقرأ الورقة البحثية</button></div></div>
+        <div><button class="btn primary" data-doc="paper-cas" data-en="Read the student paper">اقرأ الورقة الطلابية</button></div></div>
       <div class="flow">
         <div><b data-en="Customer → specs">من الزبون إلى المواصفات</b><small data-en="AI clarifies vague requests">الذكاء الاصطناعي يوضّح الطلب الغامض</small></div>
         <div><b data-en="Designer → print farm">من المصمم إلى الطابعات</b><small data-en="One coordinated workflow">مسار عمل واحد منسّق</small></div>
         <div><b data-en="Packaging → delivery">من التغليف إلى التوصيل</b><small data-en="Tracked to completion">متابعة لحد الإنجاز</small></div>
       </div>
     </div>
-    <div class="tile hover s3"><span class="tag" data-en="Submitted · Al-Makeen 2026">مُقدَّم · مؤتمر المكين 2026</span><h3 data-en="MES for small Iraqi manufacturers">أنظمة تنفيذ التصنيع للمنشآت الصغيرة في العراق</h3><p data-en="A design and case study on digital transformation for small factories, submitted with the University of Kufa.">تصميم ودراسة حالة عن التحول الرقمي للمعامل الصغيرة، مقدَّم بالتعاون مع جامعة الكوفة.</p><div class="tech"><span>MES</span><span>IoT</span><span>Raspberry Pi</span></div></div>
+    <div class="tile hover s3"><span class="tag" data-en="In progress · not yet published">قيد الإعداد · غير منشور بعد</span><h3 data-en="MES for small Iraqi manufacturers">أنظمة تنفيذ التصنيع للمنشآت الصغيرة في العراق</h3><p data-en="A design and case study on digital transformation for small factories, being prepared for peer review.">تصميم ودراسة حالة عن التحول الرقمي للمعامل الصغيرة، قيد الإعداد للتحكيم العلمي.</p><div class="tech"><span>MES</span><span>IoT</span><span>Raspberry Pi</span></div></div>
     <div class="tile hover s3"><span class="tag live" data-en="Active">قائم</span><h3>MAS Business Solutions</h3><p data-en="“Consider it done”: an automated business operating system for Iraqi companies, with identity, automated content, AI teams and integrated workflows.">«اعتبرها صارت»: نظام تشغيل آلي للأعمال للشركات العراقية. هوية، ومحتوى مؤتمت، وفرق ذكاء اصطناعي، وسير عمل متكامل.</p><div class="tech"><span>n8n</span><span>AI Agents</span><span>Branding</span></div></div>
     <div class="tile hover s2"><span class="tag" data-en="Completed · 2024">مكتمل · 2024</span><h3>3D Chamber</h3><p data-en="Co-founded and marketed, then presented to the Prime Minister at the Riyada exhibition.">شاركت بتأسيسه وتسويقه، وعُرض أمام رئيس الوزراء بمعرض ريادة.</p></div>
     <div class="tile hover s2"><span class="tag" data-en="Delivered · Arbaeen 2025">منجز · الأربعين 2025</span><h3 data-en="AI Tools Station">محطة أدوات الذكاء الاصطناعي</h3><p data-en="475 of 630 visitors trained in 8 days at the Al-Abbas Shrine procession.">475 زائراً من أصل 630 تدرّبوا خلال 8 أيام بموكب العتبة العباسية.</p><div class="acts"><button class="lnk" data-doc="ai-station" data-en="View the report →">اعرض التقرير ←</button></div></div>
@@ -362,7 +359,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
     <div class="wi"><div class="d">2026</div><div><h3 data-en="The Engineering Student × AI">الطالب المهندس × الذكاء الاصطناعي</h3><div class="o" data-en="Official workshop · ECE Department, University of Kufa">ورشة رسمية · قسم هندسة الإلكترونيك والاتصالات، جامعة الكوفة</div></div><div class="acts"><button class="lnk" data-doc="ws-engineer" data-en="Slides →">العرض ←</button></div></div>
     <div class="wi"><div class="d">2026</div><div><h3 data-en="Build a full software system in hours with AI">ابنِ نظاماً برمجياً متكاملاً في ساعات</h3><div class="o" data-en="Online · vocational students & beginners">أونلاين · طلبة الإعداديات المهنية والمبتدئين</div></div><div class="acts"><a class="lnk" href="https://youtu.be/FD184oBObRc" target="_blank" data-en="Watch →">شاهد ←</a></div></div>
     <div class="wi"><div class="d">2025</div><div><h3 data-en="Civil Engineering & AI: the Super Engineer">الهندسة المدنية والذكاء الاصطناعي</h3><div class="o" data-en="Civil engineering students & graduates · appreciation certificate">طلبة وخريجو الهندسة المدنية · شهادة تقدير</div></div><div class="acts"><button class="lnk" data-doc="ws-civil" data-en="Slides →">العرض ←</button><a class="lnk" href="https://youtu.be/S83jzLU3Rf8" target="_blank" data-en="Watch →">شاهد ←</a></div></div>
-    <div class="wi"><div class="d">2025</div><div><h3 data-en="AI Tools Station at Arbaeen">محطة أدوات الذكاء الاصطناعي بالأربعين</h3><div class="o" data-en="Al-Abbas Holy Shrine cultural procession">الموكب الثقافي للعتبة العباسية</div></div><div class="acts"><button class="lnk" data-doc="ai-station" data-en="Report →">التقرير ←</button></div></div>
     <div class="wi"><div class="d">2025</div><div><h3 data-en="Entrepreneurship keynote">محاضرة ريادة الأعمال</h3><div class="o" data-en="University of Kufa · golden shield from the university president">جامعة الكوفة · درع ذهبي من رئيس الجامعة</div></div><div class="acts"></div></div>
     <div class="wi"><div class="d">2025</div><div><h3 data-en="Startup essentials">أساسيات المشاريع الناشئة</h3><div class="o" data-en="Riyada Initiative trainees">متدربو مبادرة ريادة</div></div><div class="acts"></div></div>
     <div class="wi"><div class="d">2024</div><div><h3 data-en="How engineers market themselves">كيف يسوّق المهندس نفسه</h3><div class="o" data-en="Kufa Engineering · based on Show Your Work!">هندسة الكوفة · اعتماداً على كتاب Show Your Work</div></div><div class="acts"></div></div>
@@ -434,7 +430,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
 const TG = "https://t.me/mas_note", WA = "https://wa.me/9647818716667", SITE = "https://mohammedameensajjad-web.github.io/";
 const DOCS = {
   cv: {ar: "السيرة الذاتية", en: "Curriculum Vitae"},
-  "paper-cas": {ar: "ورقة منصة CAS — مجلة بحوث الطلبة 2026", en: "CAS paper — MOSR 2026"},
+  "paper-cas": {ar: "ورقة منصة CAS الطلابية", en: "CAS student paper"},
   "ws-engineer": {ar: "ورشة الطالب المهندس × الذكاء الاصطناعي", en: "The Engineering Student × AI — slides"},
   "ws-civil": {ar: "ورشة الهندسة المدنية والذكاء الاصطناعي", en: "Civil Engineering & AI — slides"},
   "ai-station": {ar: "تقرير محطة أدوات الذكاء الاصطناعي", en: "AI Tools Station — report"},
