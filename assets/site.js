@@ -209,55 +209,40 @@ if (vc) vc.onclick = () => {
   const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([v], {type: "text/vcard"})); a.download = "Mohammed-Ameen.vcf"; a.click();
 };
 
-// Home: gold circuit traces with travelling pulses (the engineer's ground)
+// Home: a calm neural network. Nodes drift very slowly, faint links appear between close nodes, glow breathes.
 const cv = $("#circuit");
 if (cv && cv.getContext) {
   const ctx = cv.getContext("2d"), still = matchMedia("(prefers-reduced-motion: reduce)").matches || STATIC;
-  let W, H, paths = [], pulses = [], run = true, raf;
-  const G = 28;
+  let W, H, nodes = [], run = true, raf, t0 = performance.now();
   function build() {
     const r = cv.getBoundingClientRect(), dpr = Math.min(2, devicePixelRatio || 1);
     W = r.width; H = r.height; cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    paths = [];
-    const n = Math.round(W * H / 26000);
-    for (let k = 0; k < n; k++) {
-      let x = Math.round(Math.random() * W / G) * G, y = Math.round(Math.random() * H / G) * G;
-      const pts = [[x, y]];
-      let dir = Math.floor(Math.random() * 4);
-      for (let s = 0; s < 3 + Math.random() * 4; s++) {
-        const len = G * (2 + Math.floor(Math.random() * 5));
-        if (dir === 0) x += len; else if (dir === 1) x -= len; else if (dir === 2) y += len; else y -= len;
-        pts.push([x, y]);
-        dir = dir < 2 ? 2 + Math.floor(Math.random() * 2) : Math.floor(Math.random() * 2);
-      }
-      paths.push(pts);
-    }
-    pulses = paths.map(p => ({p, t: Math.random(), v: .0025 + Math.random() * .004}));
+    const n = Math.max(14, Math.min(34, Math.round(W * H / 22000)));
+    nodes = Array.from({length: n}, () => ({x: Math.random() * W, y: Math.random() * H,
+      vx: (Math.random() - .5) * .12, vy: (Math.random() - .5) * .12, r: 1.4 + Math.random() * 1.8, ph: Math.random() * 6.28}));
   }
-  function len(p) { let L = 0; for (let i = 1; i < p.length; i++) L += Math.hypot(p[i][0] - p[i - 1][0], p[i][1] - p[i - 1][1]); return L }
-  function at(p, t) {
-    let d = t * len(p);
-    for (let i = 1; i < p.length; i++) {
-      const s = Math.hypot(p[i][0] - p[i - 1][0], p[i][1] - p[i - 1][1]);
-      if (d <= s) { const k = d / s; return [p[i - 1][0] + (p[i][0] - p[i - 1][0]) * k, p[i - 1][1] + (p[i][1] - p[i - 1][1]) * k] }
-      d -= s;
-    }
-    return p[p.length - 1];
-  }
-  function draw() {
+  function draw(now) {
+    const t = ((now || performance.now()) - t0) / 1000, D = Math.min(190, W / 5);
     ctx.clearRect(0, 0, W, H);
-    ctx.lineWidth = 1.2; ctx.strokeStyle = "rgba(255,195,0,.16)";
-    paths.forEach(p => { ctx.beginPath(); p.forEach(([x, y], i) => i ? ctx.lineTo(x, y) : ctx.moveTo(x, y)); ctx.stroke();
-      ctx.fillStyle = "rgba(255,195,0,.35)"; [p[0], p[p.length - 1]].forEach(([x, y]) => { ctx.beginPath(); ctx.arc(x, y, 2.6, 0, 7); ctx.fill() }) });
-    pulses.forEach(q => {
-      const [x, y] = at(q.p, q.t);
-      const g = ctx.createRadialGradient(x, y, 0, x, y, 12); g.addColorStop(0, "rgba(255,210,60,.95)"); g.addColorStop(1, "rgba(255,170,0,0)");
-      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(x, y, 12, 0, 7); ctx.fill();
-      if (!still) { q.t += q.v; if (q.t > 1) q.t = 0 }
+    for (let a = 0; a < nodes.length; a++) for (let b = a + 1; b < nodes.length; b++) {
+      const p = nodes[a], q = nodes[b], d = Math.hypot(p.x - q.x, p.y - q.y);
+      if (d < D) { ctx.strokeStyle = `rgba(255,195,0,${(1 - d / D) * .14})`; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.stroke() }
+    }
+    nodes.forEach(p => {
+      const glow = .35 + .25 * Math.sin(t * .8 + p.ph);
+      const g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 5);
+      g.addColorStop(0, `rgba(255,205,60,${glow})`); g.addColorStop(1, "rgba(255,170,0,0)");
+      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(p.x, p.y, p.r * 5, 0, 7); ctx.fill();
+      ctx.fillStyle = `rgba(255,214,90,${.5 + glow * .5})`; ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 7); ctx.fill();
+      if (!still) {
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < 0 || p.x > W) p.vx *= -1;
+        if (p.y < 0 || p.y > H) p.vy *= -1;
+      }
     });
     if (!still && run) raf = requestAnimationFrame(draw);
   }
   build(); draw();
   addEventListener("resize", () => { build(); if (still) draw() });
-  if ("IntersectionObserver" in window && !still) new IntersectionObserver(es => { run = es[0].isIntersecting; cancelAnimationFrame(raf); if (run) draw() }).observe(cv);
+  if ("IntersectionObserver" in window && !still) new IntersectionObserver(es => { run = es[0].isIntersecting; cancelAnimationFrame(raf); if (run) raf = requestAnimationFrame(draw) }).observe(cv);
 }
