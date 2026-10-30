@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>محمد أمين سجاد</title>
-<meta name="description" content="مهندس إلكترونيات واتصالات: يبني أنظمة، ويدرّب على الذكاء الاصطناعي، ويسوّق ويبيع.">
-<meta property="og:title" content="محمد أمين سجاد — Mohammed Ameen Sajjad">
-<meta property="og:description" content="أنظمة تقنية · تدريب بالذكاء الاصطناعي · تسويق ومبيعات">
+<meta name="description" content="مهندس إلكترونيات واتصالات: أنظمة تقنية، وتدريب بالذكاء الاصطناعي، وتسويق ومبيعات.">
+<meta property="og:title" content="محمد أمين سجاد">
+<meta property="og:description" content="مهندس إلكترونيات واتصالات: أنظمة تقنية، وتدريب بالذكاء الاصطناعي، وتسويق ومبيعات.">
 <meta property="og:image" content="https://mohammedameensajjad-web.github.io/assets/og.jpg">
 <meta property="og:url" content="https://mohammedameensajjad-web.github.io/">
 <meta property="og:type" content="profile">
@@ -15,608 +15,69 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-/* Layout: one column of framed black panels, stacked tight (14px), each with a small gold numbered label.
-   Saturated gold is the only accent; panels carry a gold hairline so every section reads as its own object. */
-:root{
-  color-scheme:dark;
-  --bg:#050505; --panel:#0c0c0d; --panel-2:#141416; --panel-3:#1b1b1e;
-  --line:rgba(255,195,0,.2); --line-2:rgba(255,255,255,.08);
-  --gold:#ffc300; --amber:#ff9500; --gold-ink:#140f00; --green:#2ee87a;
-  --ink:#ffffff; --ink-2:#d9d9de; --muted:#9b9ba3;
-  --display:"Readex Pro","IBM Plex Sans Arabic",system-ui,sans-serif;
-  --body:"IBM Plex Sans Arabic","Readex Pro",system-ui,sans-serif;
-  --r:22px; --r-sm:14px;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:96px}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.75 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
-img{max-width:100%;display:block}
-a{color:inherit;text-decoration:none}
-button{font:inherit;color:inherit}
-h1,h2,h3{font-family:var(--display);margin:0;line-height:1.25;text-wrap:balance}
-p{margin:0}
-:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:8px}
-.wrap{max-width:1200px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-main{display:grid;gap:14px;padding-block:14px 0}
-.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
-
-/* Nav */
-.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;padding-top:12px}
-.bar{display:flex;align-items:center;gap:10px;padding:10px 10px 10px 18px;border:1px solid var(--line);border-radius:18px;background:rgba(12,12,13,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
-[dir="rtl"] .bar{padding:10px 18px 10px 10px}
-.brand{display:flex;align-items:center;gap:10px;font:600 15px var(--display);white-space:nowrap}
-.mono{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(135deg,var(--gold),var(--amber));color:var(--gold-ink);font:700 15px var(--display)}
-.links{display:flex;gap:2px;margin-inline-start:auto}
-.links a{padding:8px 12px;border-radius:10px;color:var(--ink-2);font:500 14px var(--display);transition:background .2s,color .2s}
-.links a:hover,.links a.on{color:var(--gold);background:rgba(255,195,0,.08)}
-.pill{border:1px solid var(--line-2);background:var(--panel-2);border-radius:12px;padding:8px 13px;cursor:pointer;font:600 13px var(--display)}
-.go{background:var(--gold);color:var(--gold-ink);border-color:var(--gold)}
-.menu{display:none}
-
-/* Panels */
-.panel{position:relative;background:linear-gradient(180deg,#0f0f11,#09090a);border:1px solid var(--line);border-radius:var(--r);padding:clamp(20px,3.2vw,38px);overflow:hidden}
-.ph{display:flex;align-items:center;gap:10px;margin-bottom:14px}
-.no{font:700 12px var(--display);color:var(--gold-ink);background:var(--gold);border-radius:7px;padding:2px 7px;font-variant-numeric:tabular-nums}
-.lbl{font:600 13px var(--display);letter-spacing:.06em;color:var(--gold);text-transform:uppercase}
-.h2{font-size:clamp(26px,3.4vw,38px);font-weight:700}
-.h2 em{font-style:normal;color:var(--gold)}
-.lead{color:var(--ink-2);font-size:17px;max-width:62ch}
-.muted{color:var(--muted)}
-.row{display:flex;align-items:flex-end;justify-content:space-between;gap:12px 30px;flex-wrap:wrap;margin-bottom:24px}
-.row > div{min-width:0}
-.sub{font:600 15px var(--display);color:var(--ink);margin:28px 0 12px;display:flex;align-items:center;gap:10px}
-.sub::after{content:"";flex:1;height:1px;background:var(--line-2)}
-.grid{display:grid;gap:12px}
-.g2{grid-template-columns:repeat(2,minmax(0,1fr))}.g3{grid-template-columns:repeat(3,minmax(0,1fr))}.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
-.card{background:var(--panel-2);border:1px solid var(--line-2);border-radius:var(--r-sm);padding:18px;display:flex;flex-direction:column;gap:8px;min-width:0;transition:border-color .2s,transform .2s}
-a.card:hover,.card.hov:hover{border-color:var(--line);transform:translateY(-2px)}
-.card h3{font-size:17px}
-.card p{color:var(--muted);font-size:14.5px;line-height:1.7}
-.ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:rgba(255,195,0,.1);border:1px solid var(--line);color:var(--gold);flex:none}
-.tag{align-self:flex-start;font:600 12px var(--display);padding:3px 10px;border-radius:999px;border:1px solid var(--line-2);color:var(--ink-2);background:rgba(255,255,255,.04);white-space:nowrap}
-.tag.live{color:var(--green);border-color:rgba(46,232,122,.35);background:rgba(46,232,122,.08)}
-.tag.soon{color:var(--gold);border-color:var(--line);background:rgba(255,195,0,.08)}
-.btns{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:12px;font:600 14.5px var(--display);cursor:pointer;border:1px solid var(--line);background:transparent;transition:transform .2s,background .2s}
-.btn:hover{transform:translateY(-1px)}
-.btn.pri{background:linear-gradient(135deg,var(--gold),var(--amber));color:var(--gold-ink);border-color:transparent;box-shadow:0 8px 28px rgba(255,170,0,.25)}
-.btn.out:hover{background:rgba(255,195,0,.08)}
-.lnk{background:none;border:0;padding:0;cursor:pointer;color:var(--gold);font:600 14px var(--display);white-space:nowrap}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chips span{font:500 13.5px var(--display);padding:6px 12px;border-radius:10px;background:var(--panel-3);border:1px solid var(--line-2);color:var(--ink-2)}
-
-/* Hero */
-.hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:30px;align-items:center;padding-bottom:clamp(20px,3vw,30px)}
-.hero::before{content:"";position:absolute;inset:-30% -10% auto auto;width:70%;aspect-ratio:1;background:radial-gradient(closest-side,rgba(255,180,0,.22),transparent);pointer-events:none}
-[dir="rtl"] .hero::before{inset:-30% auto auto -10%}
-.status{display:inline-flex;align-items:center;gap:8px;font:500 13px var(--display);padding:6px 12px;border-radius:999px;border:1px solid var(--line-2);background:var(--panel-2);color:var(--ink-2)}
-.status i{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green)}
-.hero .kick{font:600 15px var(--display);color:var(--ink-2);margin:20px 0 6px}
-.hero h1{font-size:clamp(40px,6.4vw,76px);font-weight:700;letter-spacing:-.01em}
-.hero h1 b{color:var(--gold);font-weight:700}
-.hero .lead{margin:16px 0 24px;font-size:18px}
-.soc{display:flex;align-items:center;gap:8px;margin-top:22px;flex-wrap:wrap}
-.soc small{color:var(--muted);font-size:13px;margin-inline-end:4px}
-.soc a{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;border:1px solid var(--line-2);background:var(--panel-2);color:var(--ink-2);transition:color .2s,border-color .2s}
-.soc a:hover{color:var(--gold);border-color:var(--line)}
-.photo{position:relative;justify-self:center;width:min(100%,420px)}
-.photo .frame{aspect-ratio:1;border-radius:50%;padding:6px;background:conic-gradient(from 200deg,var(--gold),var(--amber),transparent 45%,transparent 70%,var(--gold));box-shadow:0 0 70px rgba(255,170,0,.28)}
-.photo img{width:100%;height:100%;object-fit:cover;object-position:center 30%;border-radius:50%;border:5px solid var(--bg)}
-.stats{position:relative;margin:-56px auto 0;width:min(100%,400px);display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:16px;background:rgba(14,14,16,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
-.stats div{padding:12px 8px;text-align:center}
-.stats div+div{border-inline-start:1px solid var(--line-2)}
-.stats b{display:block;font:700 22px var(--display);color:var(--gold);font-variant-numeric:tabular-nums}
-.stats span{font-size:12.5px;color:var(--muted)}
-.trust{grid-column:1/-1;display:flex;align-items:center;gap:10px 24px;flex-wrap:wrap;padding-top:20px;border-top:1px solid var(--line-2)}
-.trust small{color:var(--muted)}
-.trust b{font:600 14px var(--display);color:var(--ink-2)}
-
-/* Parts */
-.part{display:flex;align-items:center;gap:14px;padding:18px 4px 4px}
-.part b{font:700 13px var(--display);color:var(--gold-ink);background:var(--gold);padding:4px 10px;border-radius:8px;white-space:nowrap}
-.part h2{font-size:clamp(22px,2.6vw,28px)}
-.part::after{content:"";flex:1;height:2px;background:linear-gradient(90deg,var(--gold),transparent)}
-[dir="rtl"] .part::after{background:linear-gradient(270deg,var(--gold),transparent)}
-
-/* About */
-.about{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:24px}
-.about .h2{margin-bottom:16px}
-.about .lead+.lead{margin-top:12px}
-.checks{display:grid;gap:10px;margin-top:20px}
-.checks div{display:flex;gap:10px;align-items:flex-start;color:var(--ink-2);font-size:15px}
-.checks .i{color:var(--gold);margin-top:4px;width:18px;height:18px}
-.edu{display:grid;gap:12px;align-content:start}
-
-/* Certificates */
-.cbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:6px}
-.cbar span{color:var(--ink-2);font:500 15px var(--display)}
-.cgroup h3{font:600 15px var(--display);color:var(--ink);margin:22px 0 10px;display:flex;align-items:center;gap:10px}
-.cgroup h3::after{content:"";flex:1;height:1px;background:var(--line-2)}
-.clist{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
-.ci{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border-radius:12px;background:var(--panel-2);border:1px solid var(--line-2);min-width:0}
-.ci div{min-width:0}
-.ci b{display:block;font:600 14.5px/1.5 var(--display)}
-.ci small{color:var(--muted);font-size:13px}
-
-/* Skills */
-.cv{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:20px 22px;border-radius:16px;border:1px solid var(--line);background:linear-gradient(135deg,rgba(255,195,0,.12),rgba(255,149,0,.04))}
-.cv h3{font-size:20px}
-.cv p{color:var(--ink-2);font-size:14.5px}
-.books{display:flex;flex-wrap:wrap;gap:8px}
-.books span{font:500 13.5px var(--display);padding:7px 12px;border-radius:10px;background:var(--panel-2);border:1px solid var(--line-2);direction:ltr}
-.books em{font-style:normal;color:var(--muted)}
-
-/* Companies */
-.co{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-.co img{width:48px;height:48px;border-radius:12px}
-.co .mark{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;background:var(--panel-3);border:1px solid var(--line);color:var(--gold)}
-.co small{display:block;color:var(--muted);font-size:13px;margin-top:2px}
-.prices{display:grid;border:1px solid var(--line-2);border-radius:16px;overflow:hidden}
-.pr{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center;padding:16px 20px;background:var(--panel-2)}
-.pr+.pr{border-top:1px solid var(--line-2)}
-.pr h3{font-size:16.5px}
-.pr p{color:var(--muted);font-size:14px}
-.pr .d{font:700 16px var(--display);color:var(--gold-ink);background:var(--gold);padding:6px 12px;border-radius:10px;white-space:nowrap;font-variant-numeric:tabular-nums}
-.note{color:var(--muted);font-size:13.5px;margin:12px 0 18px}
-.ov{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
-
-/* Workshops list */
-.ws{display:grid;border:1px solid var(--line-2);border-radius:16px;overflow:hidden}
-.wi{display:grid;grid-template-columns:120px minmax(0,1fr) auto;gap:18px;align-items:center;padding:16px 20px;background:var(--panel-2)}
-.wi+.wi{border-top:1px solid var(--line-2)}
-.wi .d{font:600 13px var(--display);color:var(--gold);font-variant-numeric:tabular-nums}
-.wi h3{font-size:16.5px}
-.wi .o{color:var(--muted);font-size:14px}
-.wi .acts{display:flex;gap:16px;flex-wrap:wrap;justify-content:flex-end}
-.wi.hl{background:linear-gradient(90deg,rgba(255,195,0,.1),var(--panel-2))}
-[dir="rtl"] .wi.hl{background:linear-gradient(270deg,rgba(255,195,0,.1),var(--panel-2))}
-
-/* Timeline */
-.tl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;position:relative;padding-top:26px}
-.tl::before{content:"";position:absolute;top:7px;inset-inline:8px;height:2px;background:linear-gradient(90deg,var(--gold),rgba(255,195,0,.15))}
-[dir="rtl"] .tl::before{background:linear-gradient(270deg,var(--gold),rgba(255,195,0,.15))}
-.tl .card{position:relative;overflow:visible}
-.tl .card::before{content:"";position:absolute;top:-26px;inset-inline-start:16px;width:14px;height:14px;border-radius:50%;background:var(--gold);box-shadow:0 0 12px var(--gold)}
-.yr{font:600 13px var(--display);color:var(--gold)}
-.org{font-size:13.5px;color:var(--ink-2)}
-
-/* Contact */
-.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
-.contact .h2{margin-bottom:10px}
-form{display:grid;gap:10px;margin-top:20px}
-label{font:500 13px var(--display);color:var(--muted)}
-input,select,textarea{width:100%;font:15px var(--body);color:var(--ink);background:var(--panel-2);border:1px solid var(--line-2);border-radius:12px;padding:12px 14px}
-textarea{min-height:110px;resize:vertical}
-input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold)}
-.info{display:grid;gap:10px;align-content:start}
-.info a{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;background:var(--panel-2);border:1px solid var(--line-2);min-width:0}
-.info a:hover{border-color:var(--line)}
-.info a div{min-width:0}
-.info small{display:block;color:var(--muted);font-size:12.5px}
-.info b{font:600 14.5px var(--display);direction:ltr;overflow-wrap:anywhere;display:block;text-align:start}
-.qrrow{display:flex;gap:16px;align-items:center;padding:16px;border-radius:14px;background:linear-gradient(135deg,var(--gold),var(--amber));color:var(--gold-ink)}
-.qrrow #qr{width:108px;height:108px;background:#ffffff;border-radius:10px;padding:8px;flex:none}
-.qrrow b{font:700 17px var(--display)}
-.qrrow p{font-size:13.5px}
-.qrrow button{margin-top:10px;background:var(--gold-ink);color:var(--gold);border:0;border-radius:10px;padding:8px 13px;font:600 13px var(--display);cursor:pointer}
-footer{padding-block:26px 34px;color:var(--muted);font-size:13.5px}
-footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-footer a:hover{color:var(--gold)}
-.top{position:fixed;bottom:calc(18px + env(safe-area-inset-bottom,0px));inset-inline-end:max(18px,env(safe-area-inset-right,0px));width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:rgba(12,12,13,.9);color:var(--gold);display:grid;place-items:center;z-index:40}
-
-/* Document viewer */
-.viewer{position:fixed;inset:0;z-index:90;background:rgba(0,0,0,.88);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);display:none;flex-direction:column}
-.viewer.on{display:flex}
-.vbar{display:flex;align-items:center;gap:12px;padding-top:calc(12px + env(safe-area-inset-top,0px));padding-bottom:12px;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px));border-bottom:1px solid var(--line-2);background:rgba(15,15,16,.92)}
-.vbar b{flex:1;font:600 15px var(--display);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.vbar small{color:var(--muted);font-size:13px}
-.vclose{width:38px;height:38px;border-radius:50%;border:1px solid var(--line-2);background:var(--panel-2);cursor:pointer;font-size:17px}
-.vpages{flex:1;overflow:auto;padding:22px 14px 60px;display:flex;flex-direction:column;align-items:center;gap:16px;user-select:none;-webkit-user-select:none}
-.vpages img{width:min(920px,100%);border-radius:12px;background:#ffffff;pointer-events:none;-webkit-user-drag:none;box-shadow:0 20px 60px rgba(0,0,0,.5)}
-.vnote{color:var(--muted);font-size:13.5px}
-
-.quick{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:18px}
-.quick small{color:var(--muted);font-size:13px;margin-inline-end:4px}
-.quick a{font:600 13px var(--display);padding:6px 12px;border-radius:10px;border:1px solid var(--line);color:var(--gold);background:rgba(255,195,0,.06)}
-.quick a:hover{background:rgba(255,195,0,.14)}
-.panel.feat{border-color:rgba(255,195,0,.5);background:radial-gradient(120% 60% at 50% 0%,rgba(255,180,0,.12),transparent 60%),linear-gradient(180deg,#111012,#09090a);box-shadow:0 30px 90px rgba(255,170,0,.08)}
-.why{margin-top:22px}
-.pr{grid-template-columns:minmax(0,1fr) auto auto}
-.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
-.steps div{padding:16px;border-radius:14px;background:var(--panel-2);border:1px solid var(--line-2);min-width:0}
-.steps b{display:grid;place-items:center;width:30px;height:30px;border-radius:9px;background:var(--gold);color:var(--gold-ink);font:700 14px var(--display);margin-bottom:10px}
-.steps h3{font-size:16px}.steps p{color:var(--muted);font-size:14px}
-.more{margin-top:16px}
-.fold{margin-top:22px;border:1px solid var(--line-2);border-radius:14px;background:var(--panel-2)}
-.fold summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 16px;font:600 15px var(--display)}
-.fold summary::-webkit-details-marker{display:none}
-.fold[open] summary .i{transform:rotate(180deg)}
-.fold .books{padding:0 16px 16px}
-.mbar{display:none}
-@media (max-width:1040px){
-  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .links{display:none;position:absolute;top:calc(100% + 8px);inset-inline:0;flex-direction:column;padding:10px;border:1px solid var(--line);border-radius:16px;background:rgba(12,12,13,.97)}
-  .links.on{display:flex}
-  .menu{display:grid;place-items:center;margin-inline-start:auto}
-  .bar{position:relative}
-  .g4,.ov,.tl{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .clist{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .tl::before,.tl .card::before{display:none}.tl{padding-top:0}
-}
-@media (max-width:760px){
-  .hero,.about,.contact{grid-template-columns:1fr}
-  .photo{order:-1;width:100%}.photo .frame{width:200px;margin:0 auto}
-  .stats{width:min(100%,330px);margin-top:-30px}.stats b{font-size:19px}
-  .hero{gap:18px}.hero .kick{margin-top:6px}.hero h1{font-size:40px}.hero .lead{font-size:16.5px;margin:12px 0 18px}
-  .g2,.g3,.g4,.ov,.tl,.clist{grid-template-columns:1fr}
-  .wi{grid-template-columns:1fr;gap:4px}.wi .acts{justify-content:flex-start}
-  .pr{grid-template-columns:1fr;gap:8px}.pr .d{justify-self:start}
-  .brand span:last-child{display:none}
-  .steps{grid-template-columns:1fr}
-  .ov{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.ov .card{padding:12px}.ov .card h3{font-size:14.5px}.ov .card p{font-size:12.5px}.ov .tag{font-size:11px;padding:2px 8px}
-  .pr{grid-template-columns:1fr auto;row-gap:10px}.pr > div:first-child{grid-column:1/-1}.pr .lnk{justify-self:end}
-  .mbar{display:grid;grid-template-columns:1fr 1.4fr;gap:8px;position:fixed;inset:auto 0 0 0;z-index:45;padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));background:rgba(8,8,9,.94);border-top:1px solid var(--line);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
-  .mbar a{display:grid;place-items:center;padding:12px;border-radius:12px;border:1px solid var(--line);font:600 15px var(--display)}
-  .mbar .go{background:linear-gradient(135deg,var(--gold),var(--amber));color:var(--gold-ink);border-color:transparent}
-  .top{display:none}
-  footer{padding-bottom:96px}
-}
-@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
-</style>
+<link rel="stylesheet" href="assets/site.css">
+<script>document.documentElement.classList.add("js")</script>
 </head>
-<body>
-
+<body data-page="home">
 <header class="nav"><div class="wrap"><div class="bar">
-  <a class="brand" href="#hero"><span class="mono">م</span><span data-en="Mohammed Ameen">محمد أمين</span></a>
-  <nav class="links" id="links">
-    <a href="#about" data-en="About">من أنا</a><a href="#credentials" data-en="Certificates">الشهادات</a><a href="#skills" data-en="Skills & CV">المهارات والسيرة</a>
-    <a href="#companies" data-en="Companies">الشركات</a><a href="#writing" data-en="Articles">المقالات</a><a href="#contact" data-en="Contact">تواصل</a>
-  </nav>
-  <button class="pill" id="lang">EN</button>
-  <a class="pill go" href="#contact" data-en="Let's talk">تواصل معي</a>
-  <button class="pill menu" id="menu" aria-label="القائمة"><svg class="i" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  <a class="brand" href="index.html"><span class="mono">م</span><span data-en="Mohammed Ameen">محمد أمين</span></a>
+  <nav class="links"><a href="index.html" data-nav="home" data-en="Home">الرئيسية</a><a href="about.html" data-nav="about" data-en="About">من أنا</a><a href="companies.html" data-nav="companies" data-en="Companies">شركاتي</a><a href="community.html" data-nav="community" data-en="Community">المجتمع</a><a href="contact.html" data-nav="contact" data-en="Contact">تواصل</a></nav>
+  <button class="pill" id="lang" type="button">EN</button>
+  <a class="pill go wa" href="#" target="_blank" data-en="WhatsApp">واتساب</a>
 </div></div></header>
-
+<nav class="tabs" aria-label="Pages"><a href="index.html" data-nav="home"><svg class="i" viewBox="0 0 24 24"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg><span data-en="Home">الرئيسية</span></a><a href="about.html" data-nav="about"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span data-en="About">من أنا</span></a><a href="companies.html" data-nav="companies"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="3"/><path d="M9 7V5h6v2M3 13h18"/></svg><span data-en="Companies">شركاتي</span></a><a href="community.html" data-nav="community"><svg class="i" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 20a6 6 0 0 0-3-5.2"/></svg><span data-en="Community">المجتمع</span></a><a href="contact.html" data-nav="contact"><svg class="i" viewBox="0 0 24 24"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7z"/></svg><span data-en="Contact">تواصل</span></a></nav>
 <main class="wrap">
 
-<section class="panel hero" id="hero">
+<section class="panel hero">
+  <canvas id="circuit" aria-hidden="true"></canvas>
   <div>
     <span class="status"><i></i><span data-en="Open to collaboration">متاح للتعاون</span></span>
     <p class="kick" data-en="Electronics & Communications Engineer">مهندس إلكترونيات واتصالات</p>
     <h1 data-en="Mohammed Ameen <b>Sajjad</b>">محمد أمين <b>سجاد</b></h1>
-    <p class="lead" data-en="I turn manual work and daily chaos into clear systems that run on their own, and I train people to use AI in their work. Behind it: marketing and sales experience since 2021.">أحوّل الشغل اليدوي والفوضى اليومية إلى أنظمة واضحة تشتغل وحدها، وأدرّب الناس يستخدمون الذكاء الاصطناعي بشغلهم. ووراها خبرة بالتسويق والمبيعات من 2021.</p>
+    <p class="h2" style="margin-top:6px"><span class="rot" data-words="أحوّل الفوضى إلى أنظمة|أدرّب على الذكاء الاصطناعي|أسوّق وأبيع من 2021|أبني حلول تصنيع محلية" data-words-en="I turn chaos into systems|I train people on AI|I market and sell since 2021|I build local manufacturing"></span></p>
+    <p class="lead" data-en="I turn manual work and daily chaos into clear systems that run on their own, and I train people to use AI in their work.">أحوّل الشغل اليدوي والفوضى اليومية إلى أنظمة واضحة تشتغل وحدها، وأدرّب الناس يستخدمون الذكاء الاصطناعي بشغلهم.</p>
     <div class="btns">
-      <a class="btn pri" href="#pricing"><span data-en="Services & prices">الخدمات والأسعار</span><svg class="i" viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg></a>
-      <a class="btn out wa-svc" data-msg="مشروع" data-msg-en="a project" href="#" target="_blank" data-en="Message me on WhatsApp">راسلني على واتساب</a>
-    </div>
-    <div class="quick"><small data-en="My companies">شركاتي</small><a href="#mas">MAS</a><a href="#cmg">CMG</a><a href="#academy" data-en="Compass Academy">أكاديمية بوصلة</a><a href="#agency" data-en="Marketing agency">وكالة التسويق</a></div>
-    <div class="soc"><small data-en="Follow me">تابعني</small>
-      <a class="tg" data-id="" href="#" target="_blank" aria-label="Telegram"><svg class="i" viewBox="0 0 24 24"><path d="M21 4 3 11l6 2 2 6 3-4 5 4z"/><path d="m9 13 9-6"/></svg></a>
-      <a href="https://www.linkedin.com/in/mohammed-ameen-%D9%85%D8%AD%D9%85%D8%AF-%D8%A3%D9%85%D9%8A%D9%86-b5b935246" target="_blank" aria-label="LinkedIn"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg></a>
-      <a href="https://www.instagram.com/247_mas" target="_blank" aria-label="Instagram"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17 7v.01"/></svg></a>
-      <a href="https://www.youtube.com/@27_mas" target="_blank" aria-label="YouTube"><svg class="i" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="m10 9 5 3-5 3z"/></svg></a>
+      <a class="btn pri" href="mas.html#pricing"><span data-en="Services & prices">الخدمات والأسعار</span><svg class="i" viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg></a>
+      <a class="btn out wa" data-msg="مشروع" data-msg-en="a project" href="#" target="_blank" data-en="Message me on WhatsApp">راسلني على واتساب</a>
     </div>
   </div>
   <div class="photo">
     <div class="frame"><img src="assets/hero.webp" alt="محمد أمين سجاد" fetchpriority="high"></div>
     <div class="stats">
-      <div><b>800+</b><span data-en="people trained">متدرّب</span></div>
-      <div><b>25</b><span data-en="certificates">شهادة</span></div>
-      <div><b>+8</b><span data-en="years of work">سنوات شغل</span></div>
-    </div>
-  </div>
-  <div class="trust"><small data-en="Certified by and worked with">شهادات وتعاون مع</small>
-    <b>Huawei ICT Academy</b><b>Cisco</b><b>MathWorks</b><b data-en="University of Kufa">جامعة الكوفة</b><b data-en="Riyada Initiative">مبادرة ريادة</b><b data-en="Al-Abbas Holy Shrine">العتبة العباسية</b>
-  </div>
-</section>
-
-<div class="part"><b data-en="Part one">الجزء الأول</b><h2 data-en="Who I am">منو آني</h2></div>
-
-<section class="panel" id="about">
-  <div class="ph"><span class="no">01</span><span class="lbl" data-en="About">من أنا</span></div>
-  <div class="about">
-    <div>
-      <h2 class="h2" data-en="I believe <em>technology must serve people</em>">أؤمن إن <em>التكنولوجيا لازم تخدم الإنسان</em></h2>
-      <p class="lead" data-en="I started working from home in 2018, at 16, with handicrafts and e-commerce. Then I worked in design, sales and marketing, ran paid ad campaigns, co-founded a 3D-printing project, and began giving AI workshops and talks.">بديت أشتغل من البيت سنة 2018 بعمر 16، بالأعمال اليدوية والتجارة الإلكترونية. بعدها اشتغلت بالتصميم والمبيعات والتسويق، وأدرت حملات إعلانية ممولة، وشاركت بتأسيس مشروع طباعة ثلاثية الأبعاد، وبديت أقدّم ورش ومحاضرات بالذكاء الاصطناعي.</p>
-      <p class="lead" data-en="Today I build tech systems for businesses. Every service I offer goes through one of my companies.">اليوم أبني أنظمة تقنية للمؤسسات، وكل خدمة أقدّمها تكون عن طريق وحدة من شركاتي.</p>
-      <div class="checks">
-        <div><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5L20 7"/></svg><span data-en="Systems that organise and automate work">أنظمة تنظّم الشغل وتؤتمته</span></div>
-        <div><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5L20 7"/></svg><span data-en="Over 800 people trained to use AI">أكثر من 800 متدرّب على استخدام الذكاء الاصطناعي</span></div>
-        <div><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5L20 7"/></svg><span data-en="Marketing and sales since 2021">تسويق ومبيعات من 2021</span></div>
-      </div>
-    </div>
-    <div class="edu">
-      <div class="card"><div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></div><h3 data-en="B.Sc. Electronics & Communications Engineering">بكالوريوس هندسة الإلكترونيات والاتصالات</h3><p data-en="University of Kufa · final year">جامعة الكوفة · المرحلة الأخيرة</p></div>
-      <div class="card"><div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="m12 3 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"/></svg></div><h3 data-en="School for the Gifted">مدرسة الموهوبين</h3><p>2015 – 2017</p></div>
-      <div class="chips"><span data-en="Experiment · Measure · Improve">جرّب · قِس · طوّر</span></div>
+      <div><b data-count="800" data-pre="+">+800</b><span data-en="trained">متدرّب</span></div>
+      <div><b data-count="25">25</b><span data-en="certificates">شهادة</span></div>
+      <div><b data-count="8" data-pre="+">+8</b><span data-en="years of work">سنوات شغل</span></div>
     </div>
   </div>
 </section>
 
-<section class="panel" id="credentials">
-  <div class="ph"><span class="no">02</span><span class="lbl" data-en="Certificates & recognition">الشهادات والتكريم</span></div>
-  <div class="row"><div><h2 class="h2" data-en="Proof, <em>not promises</em>">إثباتات، <em>مو وعود</em></h2></div><p class="muted" data-en="Every certificate opens for viewing. Personal details are hidden.">كل شهادة تنفتح للعرض، والبيانات الشخصية مخفية.</p></div>
-  <div class="cbar"><span id="certcount"></span><button class="lnk" data-doc="certs" data-en="Browse all certificates →">تصفّح كل الشهادات ←</button></div>
-  <div id="certlist"></div>
-  <button class="btn out more" id="certmore" type="button" hidden></button>
+<section class="panel rv">
+  <div class="row"><div><div class="ph"><span class="lbl" data-en="Explore">تصفّح</span></div><h2 class="h2" data-en="Where would you like to <em>go</em>?">وين تحب <em>تروح</em>؟</h2></div></div>
+  <div class="doors">
+    <a class="door" href="about.html"><span class="big"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><svg class="i arr" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg><h2 data-en="About me">من أنا</h2><p data-en="My story since 2018, my studies, certificates and skills.">قصتي من 2018، ودراستي، وشهاداتي، ومهاراتي.</p></a>
+    <a class="door" href="companies.html"><span class="big"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="3"/><path d="M9 7V5h6v2M3 13h18"/></svg></span><svg class="i arr" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg><h2 data-en="My companies">شركاتي</h2><p data-en="Four brands, each with its services and work.">أربع علامات، كل وحدة بخدماتها وشغلها.</p></a>
+    <a class="door" href="community.html"><span class="big"><svg class="i" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 20a6 6 0 0 0-3-5.2"/></svg></span><svg class="i arr" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg><h2 data-en="Community">المجتمع</h2><p data-en="Articles and videos where I share what I learn.">مقالات وفيديوهات أشارك بيها اللي أتعلمه.</p></a>
+    <a class="door" href="contact.html"><span class="big"><svg class="i" viewBox="0 0 24 24"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7z"/></svg></span><svg class="i arr" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg><h2 data-en="Contact">تواصل</h2><p data-en="Message me on the work WhatsApp in one step.">راسلني على واتساب العمل بخطوة وحدة.</p></a>
+  </div>
 </section>
 
-<section class="panel" id="skills">
-  <div class="ph"><span class="no">03</span><span class="lbl" data-en="Skills, CV & books">المهارات والسيرة الذاتية والكتب</span></div>
-  <div class="row"><div><h2 class="h2" data-en="What I <em>practise</em> every day">اللي <em>أمارسه</em> يومياً</h2></div><p class="muted" data-en="Skills I use in real work. Subjects I am still studying are not listed.">مهارات أستخدمها بشغل حقيقي. المواد اللي بعدني أدرسها ما مذكورة هنا.</p></div>
+<section class="panel rv" style="padding-block:20px">
+  <div class="marq"><div><b>Huawei ICT Academy</b><b>Cisco Networking Academy</b><b>MathWorks</b><b>جامعة الكوفة</b><b>مبادرة ريادة</b><b>العتبة العباسية</b><b>Green Coding Club</b><b>Edraak</b><b>Huawei ICT Academy</b><b>Cisco Networking Academy</b><b>MathWorks</b><b>جامعة الكوفة</b><b>مبادرة ريادة</b><b>العتبة العباسية</b><b>Green Coding Club</b><b>Edraak</b></div></div>
+</section>
+
+<section class="panel rv">
+  <div class="row"><div><div class="ph"><span class="lbl" data-en="Latest">آخر الأخبار</span></div><h2 class="h2" data-en="What <em>happened</em> lately">شنو <em>صار</em> مؤخراً</h2></div></div>
   <div class="grid g3">
-    <div class="card"><div class="ic"><svg class="i" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9zM9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/></svg></div><h3 data-en="AI & automation">الذكاء الاصطناعي والأتمتة</h3><div class="chips"><span>AI Agents</span><span>Prompt Engineering</span><span>Local LLMs</span></div></div>
-    <div class="card"><div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M3 11v2a1 1 0 0 0 1 1h3l5 4V6L7 10H4a1 1 0 0 0-1 1z"/><path d="M16 9a4 4 0 0 1 0 6M19 6a8 8 0 0 1 0 12"/></svg></div><h3 data-en="Marketing & sales">التسويق والمبيعات</h3><div class="chips"><span data-en="Paid ads">الإعلانات الممولة</span><span data-en="Content plans">خطط المحتوى</span><span data-en="Direct sales">المبيعات المباشرة</span><span data-en="Project management">إدارة المشاريع</span></div></div>
-    <div class="card"><div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M3 5h18v11H3zM8 21h8M12 16v5"/></svg></div><h3 data-en="Training & speaking">التدريب والإلقاء</h3><div class="chips"><span>TOT · ADDIE</span><span>Public Speaking</span><span>Storytelling</span><span>Canva · CapCut</span></div></div>
-  </div>
-  <h3 class="sub" data-en="My CV">سيرتي الذاتية</h3>
-  <div class="cv"><div><h3 data-en="Curriculum Vitae · two pages">السيرة الذاتية · صفحتين</h3><p data-en="Experience, education, skills and certificates. View only.">الخبرة، والتعليم، والمهارات، والشهادات. للعرض فقط.</p></div><button class="btn pri" data-doc="cv" data-en="View CV">اعرض السيرة الذاتية</button></div>
-  <details class="fold"><summary><span data-en="12 books I applied, not just read">12 كتاب طبّقتها، مو بس قريتها</span><svg class="i" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></summary>
-  <div class="books"><span>Zero to One <em>· Thiel</em></span><span>The E-Myth Revisited <em>· Gerber</em></span><span>Traction <em>· Wickman</em></span><span>The 1-Page Marketing Plan <em>· Dib</em></span><span>The Ultimate Sales Machine <em>· Holmes</em></span><span>How to Sell Anything <em>· Girard</em></span><span>Show Your Work! <em>· Kleon</em></span><span>The Power of Habit <em>· Duhigg</em></span><span>Six Thinking Hats <em>· de Bono</em></span><span>How to Win Friends <em>· Carnegie</em></span><span>Influence <em>· Cialdini</em></span><span>The 48 Laws of Power <em>· Greene</em></span></div></details>
-</section>
-
-<section id="companies">
-  <div class="part"><b data-en="Part two">الجزء الثاني</b><h2 data-en="My companies">شركاتي</h2></div>
-  <div class="panel" style="margin-top:14px">
-    <p class="lead" style="margin-bottom:18px" data-en="Every service I offer goes through one of these companies. For each one: what it does, what it has done, and why you would choose it.">كل خدمة أقدّمها تكون عن طريق وحدة من هالشركات. لكل شركة: شنو تسوي، وشنو سوّت، وليش تختارها.</p>
-    <div class="ov">
-      <a class="card" href="#mas"><span class="tag live" data-en="Taking orders">تستقبل طلبات</span><h3>MAS Business Solutions</h3><p data-en="Tech business solutions">حلول أعمال تقنية</p></a>
-      <a class="card" href="#cmg"><span class="tag" data-en="Paused while we prepare">متوقف مؤقتاً للتجهيز</span><h3>Chamber Manufacturing Group</h3><p data-en="Local manufacturing">تصنيع محلي</p></a>
-      <a class="card" href="#academy"><span class="tag soon" data-en="Coming soon">قريباً</span><h3 data-en="Compass Academy">أكاديمية بوصلة</h3><p data-en="Workshops, talks and courses">ورش ومحاضرات ودورات</p></a>
-      <a class="card" href="#agency"><span class="tag soon" data-en="Coming soon">قريباً</span><h3 data-en="Smart marketing agency">وكالة تسويق ذكية</h3><p data-en="Marketing run by systems">تسويق تشغّله الأنظمة</p></a>
-    </div>
+    <a class="card" href="academy.html"><span class="tag soon">1448هـ</span><h3 data-en="AI station at Arbaeen">محطة الذكاء الاصطناعي بالأربعين</h3><p data-en="A full week at the Al-Abbas Shrine cultural procession, about 300 visitors trained.">أسبوع كامل بالموكب الثقافي للعتبة العباسية، ودرّبت بيه حوالي 300 زائر.</p></a>
+    <a class="card" href="academy.html"><span class="tag soon">2026</span><h3 data-en="Official department workshop">ورشة رسمية بقسم الهندسة</h3><p data-en="“The Engineering Student × AI” at the ECE Department, University of Kufa.">«الطالب المهندس × الذكاء الاصطناعي» بقسم هندسة الإلكترونيك والاتصالات، جامعة الكوفة.</p></a>
+    <a class="card" href="mas.html"><span class="tag live" data-en="Taking orders">تستقبل طلبات</span><h3 data-en="MAS Business Solutions">MAS Business Solutions</h3><p data-en="Systems that organise and automate business work, with published prices.">أنظمة تنظّم شغل المؤسسات وتؤتمته، بأسعار معلنة.</p></a>
   </div>
 </section>
-
-<section class="panel feat" id="mas">
-  <div class="ph"><span class="no">04</span><span class="lbl">MAS Business Solutions</span></div>
-  <div class="row"><div class="co"><img src="assets/mas-logo.webp" alt=""><div><h2 class="h2" data-en="Tech business <em>solutions</em>">حلول أعمال <em>تقنية</em></h2><small data-en="Founded in 2025">تأسست سنة 2025</small></div></div><span class="tag live" data-en="Taking orders">تستقبل طلبات</span></div>
-  <p class="lead" data-en="Builds systems that organise and automate how businesses work, from portfolio websites to integrated enterprise systems.">تبني أنظمة تنظّم شغل المؤسسات وتؤتمته، من مواقع البورتفوليو لحد الأنظمة المؤسسية المتكاملة.</p>
-  <div class="grid g3 why">
-    <div class="card"><div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5L20 7"/></svg></div><h3 data-en="Systems I run myself">أنظمة أشغّلها بنفسي</h3><p data-en="The portfolio and the archiving system run for me every day before I offer them to you.">البورتفوليو ونظام الأرشفة شغّالين عندي يومياً قبل ما أقدّمهم إلك.</p></div>
-    <div class="card"><div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h3 data-en="Published prices">أسعار معلنة</h3><p data-en="You know the minimum price of every system before you message.">تعرف أقل سعر لكل نظام قبل ما تراسل.</p></div>
-    <div class="card"><div class="ic"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div><h3 data-en="You deal with the founder">تتعامل ويا المؤسس</h3><p data-en="You talk directly to the person who builds your system, not a middleman.">تحچي مباشرة ويا اللي يبني نظامك، مو ويا وسيط.</p></div>
-  </div>
-  <h3 class="sub" data-en="What it built">شنو بنت</h3>
-  <div class="grid g4">
-    <div class="card hov"><span class="tag live" data-en="Live">شغّال</span><h3 data-en="This portfolio">هذا البورتفوليو</h3><p data-en="Bilingual website with view-only documents, a certificate viewer and a QR code. You are looking at it.">موقع بلغتين، بعرض وثائق بدون تنزيل، وعارض شهادات، وباركود. اللي تشوفه هسه.</p></div>
-    <div class="card hov"><span class="tag live" data-en="Live">شغّال</span><h3 data-en="A personal archiving system">نظام أرشفة لملفاتي</h3><p data-en="Sorts thousands of files by task, renames them by content, and builds a searchable visual index.">يرتّب آلاف الملفات حسب المهمة، ويسمّيها حسب محتواها، ويبني فهرساً بصرياً قابلاً للبحث.</p></div>
-    <div class="card hov"><span class="tag" data-en="Being built">قيد البناء</span><h3 data-en="CMG's manufacturing platform">منصة التصنيع لـ CMG</h3><p data-en="Ordering, per-order pricing and AI that turns an idea into a 3D design.">الطلب، وتسعير كل طلب تلقائياً، وتحويل الفكرة لتصميم ثلاثي الأبعاد بالذكاء الاصطناعي.</p></div>
-    <div class="card hov"><span class="tag" data-en="Being built">قيد البناء</span><h3 data-en="Compass Academy's platform">منصة أكاديمية بوصلة</h3><p data-en="Organises the academy's courses, workshops and trainees.">تنظّم كورسات الأكاديمية وورشها ومتدربيها.</p></div>
-  </div>
-  <h3 class="sub" data-en="Services & prices">الخدمات والأسعار</h3>
-  <div class="prices" id="pricing">
-    <div class="pr"><div><h3 data-en="Personal portfolio website">موقع بورتفوليو شخصي</h3><p data-en="Like this site, for professionals with a strong CV.">مثل هذا الموقع، للمحترفين أصحاب السيرة الذاتية القوية.</p></div><div class="d" data-en="$250">250$</div><a class="lnk wa-svc" data-msg="موقع بورتفوليو شخصي من MAS" data-msg-en="a personal portfolio website from MAS" href="#" target="_blank" data-en="Request →">اطلب ←</a></div>
-    <div class="pr"><div><h3 data-en="Digital file archiving systems">أنظمة أرشفة الملفات الإلكترونية</h3><p data-en="Like my own archiving system. Priced by the total size of the files.">مثل نظام الأرشفة بحاسبتي. السعر حسب الحجم الكلي للملفات.</p></div><div class="d" data-en="$250+">250$ فما فوق</div><a class="lnk wa-svc" data-msg="نظام أرشفة ملفات من MAS" data-msg-en="a file archiving system from MAS" href="#" target="_blank" data-en="Request →">اطلب ←</a></div>
-    <div class="pr"><div><h3 data-en="Online academy platforms">منصات تنظيم عمل الأكاديميات الإلكترونية</h3><p data-en="Like the Compass Academy platform. Plus $50 for each course uploaded.">مثل منصة أكاديمية بوصلة. ويضاف 50$ لرفع كل كورس عليها.</p></div><div class="d" data-en="$2,000+">2,000$ فما فوق</div><a class="lnk wa-svc" data-msg="منصة أكاديمية إلكترونية من MAS" data-msg-en="an online academy platform from MAS" href="#" target="_blank" data-en="Request →">اطلب ←</a></div>
-    <div class="pr"><div><h3 data-en="Integrated enterprise systems">أنظمة مؤسسية متكاملة</h3><p data-en="Like the CMG platform and the smart marketing agency's system. Priced by the system's complexity.">مثل منصة CMG، ونظام وكالة التسويق الذكية. السعر حسب تعقيد النظام.</p></div><div class="d" data-en="$5,000+">5,000$ فما فوق</div><a class="lnk wa-svc" data-msg="نظام مؤسسي متكامل من MAS" data-msg-en="an integrated enterprise system from MAS" href="#" target="_blank" data-en="Request →">اطلب ←</a></div>
-  </div>
-  <p class="note" data-en="Prices exclude hosting and domain costs.">الأسعار ما تشمل تكاليف الاستضافة والدومين.</p>
-  <h3 class="sub" data-en="How we work">شلون نشتغل</h3>
-  <div class="steps">
-    <div><b>1</b><h3 data-en="You message us">تراسلنا</h3><p data-en="Tell us what you need on WhatsApp.">تگول شنو تحتاج على واتساب.</p></div>
-    <div><b>2</b><h3 data-en="Scope and quote">نطاق وعرض سعر</h3><p data-en="We define what the system does and send the price.">نحدد شنو يسوي النظام ونرسلك السعر.</p></div>
-    <div><b>3</b><h3 data-en="Build and test">بناء وتجربة</h3><p data-en="We build it and test it with you.">نبنيه ونجرّبه وياك.</p></div>
-    <div><b>4</b><h3 data-en="Handover">تسليم</h3><p data-en="You receive the system and we walk you through it.">تستلم النظام ونشرحلك شلون يشتغل.</p></div>
-  </div>
-  <div class="btns" style="margin-top:20px"><a class="btn pri wa-svc" data-msg="خدمات MAS Business Solutions" data-msg-en="MAS Business Solutions services" href="#" target="_blank" data-en="Request a quote from MAS">اطلب عرض سعر من MAS</a></div>
-</section>
-
-<section class="panel" id="cmg">
-  <div class="ph"><span class="no">05</span><span class="lbl">Chamber Manufacturing Group</span></div>
-  <div class="row"><div class="co"><span class="mark"><svg class="i" viewBox="0 0 24 24"><path d="M21 16V8l-9-5-9 5v8l9 5 9-5z"/><path d="M3.3 7 12 12l8.7-5M12 22V12"/></svg></span><div><h2 class="h2" data-en="Local <em>manufacturing</em>">حلول تصنيع <em>محلية</em></h2><small data-en="We make what you need inside Iraq, for everyone">نصنع اللي تحتاجه داخل العراق، ولكل الفئات</small></div></div><span class="tag" data-en="Paused while we prepare">متوقف مؤقتاً للتجهيز</span></div>
-  <p class="lead" data-en="Work is paused while we build the new platform.">الشغل متوقف حالياً لحد ما نكمل المنصة الجديدة.</p>
-  <h3 class="sub" data-en="What it has done">شنو سوّت</h3>
-  <div class="grid g3">
-    <div class="card hov"><span class="tag" data-en="2024 · as 3D Chamber">2024 · باسم 3D Chamber</span><h3 data-en="3D printing for university students">طباعة ثلاثية الأبعاد لطلبة الجامعات</h3><p data-en="Served students from many fields. I co-founded it and ran management and marketing.">خدم طلبة من مختلف التخصصات. شاركت بتأسيسه وكنت مسؤول الإدارة والتسويق.</p></div>
-    <div class="card hov"><span class="tag" data-en="Riyada Initiative">مبادرة ريادة</span><h3 data-en="Presented to the Prime Minister">عُرض أمام رئيس الوزراء</h3><p data-en="At the first Riyada Initiative exhibition.">بمعرض مبادرة ريادة الأول.</p></div>
-    <div class="card hov"><span class="tag soon" data-en="The new vision">الرؤية الجديدة</span><h3 data-en="Why the name changed">ليش تغيّر الاسم</h3><p data-en="A local manufacturing platform for everyone, with easy ordering and AI that turns an idea into a 3D design. Later: carpentry, CNC and PCB.">منصة تصنيع محلية لكل الفئات، بطلب سهل، وتحويل الفكرة لتصميم ثلاثي الأبعاد بالذكاء الاصطناعي. وبالمستقبل: نجارة وCNC وPCB.</p></div>
-  </div>
-  <h3 class="sub" data-en="Pricing">التسعير</h3>
-  <p class="lead" data-en="Every order is custom, so the platform prices each one with its own algorithms and formulas.">كل طلب مخصص، فالمنصة تطلع سعر كل طلب لحاله بخوارزميات ومعادلات.</p>
-  <div class="btns" style="margin-top:18px"><a class="btn pri wa-svc" data-msg="التسجيل المبكر بإطلاق Chamber Manufacturing Group" data-msg-en="early registration for the Chamber Manufacturing Group launch" href="#" target="_blank" data-en="Tell me when it launches">بلّغني من ينطلق</a><a class="btn out" href="https://www.instagram.com/chamber_manufacturing_group" target="_blank" data-en="See CMG's work on Instagram">شوف شغل CMG على إنستغرام</a></div>
-</section>
-
-<section class="panel" id="academy">
-  <div class="ph"><span class="no">06</span><span class="lbl" data-en="Compass Academy">أكاديمية بوصلة · Compass Academy</span></div>
-  <div class="row"><div class="co"><span class="mark"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg></span><div><h2 class="h2" data-en="Workshops, talks and <em>courses</em>">ورش ومحاضرات <em>ودورات</em></h2><small data-en="An academy through which I pass on my experience">أكاديمية أنقل بيها خبرتي للناس</small></div></div><span class="tag soon" data-en="Coming soon">قريباً</span></div>
-  <p class="lead" data-en="The academy has not launched yet, but you can book a workshop or talk now. Here is what I have delivered so far: over 800 people trained since 2024, at the University of Kufa, the Riyada Initiative and the Al-Abbas Holy Shrine.">الأكاديمية بعدها ما انطلقت، بس تگدر تطلب ورشة أو محاضرة هسه. وهذا اللي قدّمته لحد الآن: أكثر من 800 متدرّب من 2024، بجامعة الكوفة ومبادرة ريادة والعتبة العباسية.</p>
-  <h3 class="sub" data-en="What I have delivered">شنو قدّمت</h3>
-  <div class="ws">
-    <div class="wi hl"><div class="d" data-en="1447–1448 AH">1447–1448هـ</div><div><h3 data-en="AI Tools Station at Arbaeen">محطة أدوات الذكاء الاصطناعي بالأربعين</h3><div class="o" data-en="A week, 10 hours a day, individual and group coaching · Al-Abbas Shrine cultural procession · about 500 visitors in 1447 AH and 300 in 1448 AH">أسبوع، 10 ساعات باليوم، استشارات فردية وجماعية · الموكب الثقافي للعتبة العباسية · حوالي 500 زائر سنة 1447هـ و300 زائر سنة 1448هـ</div></div><div class="acts"><button class="lnk" data-doc="ai-station-guide" data-en="1448 guide →">دليل 1448هـ ←</button><button class="lnk" data-doc="ai-station" data-en="1447 report →">تقرير 1447هـ ←</button></div></div>
-    <div class="wi"><div class="d">2026</div><div><h3 data-en="The Engineering Student × AI">الطالب المهندس × الذكاء الاصطناعي</h3><div class="o" data-en="Official workshop · ECE Department, University of Kufa">ورشة رسمية · قسم هندسة الإلكترونيك والاتصالات، جامعة الكوفة</div></div><div class="acts"><button class="lnk" data-doc="ws-engineer" data-en="Slides →">العرض ←</button></div></div>
-    <div class="wi"><div class="d">2026</div><div><h3 data-en="Build a full software system in hours with AI">ابنِ نظاماً برمجياً متكاملاً في ساعات</h3><div class="o" data-en="Online · vocational students & beginners">أونلاين · طلبة الإعداديات المهنية والمبتدئين</div></div><div class="acts"><a class="lnk" href="https://youtu.be/FD184oBObRc" target="_blank" data-en="Watch →">شاهد ←</a></div></div>
-    <div class="wi"><div class="d">2025</div><div><h3 data-en="Civil Engineering & AI: the Super Engineer">الهندسة المدنية والذكاء الاصطناعي</h3><div class="o" data-en="Civil engineering students & graduates · appreciation certificate">طلبة وخريجو الهندسة المدنية · شهادة تقدير</div></div><div class="acts"><button class="lnk" data-doc="ws-civil" data-en="Slides →">العرض ←</button><a class="lnk" href="https://youtu.be/S83jzLU3Rf8" target="_blank" data-en="Watch →">شاهد ←</a></div></div>
-    <div class="wi"><div class="d">2025</div><div><h3 data-en="Entrepreneurship keynote">محاضرة ريادة الأعمال</h3><div class="o" data-en="University of Kufa · in front of the university president, his assistants and the Dean of Medicine · golden shield">جامعة الكوفة · بحضور رئيس الجامعة ومعاونيه وعميد كلية الطب · درع ذهبي</div></div><div class="acts"><a class="lnk" href="https://youtu.be/MohqZ0VsynA" target="_blank" data-en="Watch →">شاهد ←</a></div></div>
-    <div class="wi"><div class="d">2025</div><div><h3 data-en="Startup essentials">أساسيات المشاريع الناشئة</h3><div class="o" data-en="Riyada Initiative trainees">متدربو مبادرة ريادة</div></div><div class="acts"><a class="lnk" href="https://www.instagram.com/reel/DKZm-svougw/" target="_blank" data-en="Watch →">شاهد ←</a></div></div>
-    <div class="wi"><div class="d">2024</div><div><h3 data-en="How engineers market themselves">كيف يسوّق المهندس نفسه</h3><div class="o" data-en="Kufa Engineering · based on Show Your Work!">هندسة الكوفة · اعتماداً على كتاب Show Your Work</div></div><div class="acts"><a class="lnk tg" data-id="610" href="#" target="_blank" data-en="Lecture file →">ملف المحاضرة ←</a></div></div>
-  </div>
-  <div class="btns" style="margin-top:18px"><a class="btn pri wa-svc" data-msg="ورشة أو محاضرة" data-msg-en="a workshop or talk" href="#" target="_blank" data-en="Book a workshop now">اطلب ورشة هسه</a></div>
-</section>
-
-<section class="panel" id="agency">
-  <div class="ph"><span class="no">07</span><span class="lbl" data-en="Smart marketing agency">وكالة تسويق ذكية</span></div>
-  <div class="row"><div class="co"><span class="mark"><svg class="i" viewBox="0 0 24 24"><path d="M3 11v2a1 1 0 0 0 1 1h3l5 4V6L7 10H4a1 1 0 0 0-1 1z"/><path d="M16 9a4 4 0 0 1 0 6M19 6a8 8 0 0 1 0 12"/></svg></span><div><h2 class="h2" data-en="Marketing run by <em>systems</em>">تسويق تشغّله <em>الأنظمة</em></h2><small data-en="Unlike the ad agencies around today">تختلف عن الوكالات الإعلانية الموجودة</small></div></div><span class="tag soon" data-en="Coming soon">قريباً</span></div>
-  <p class="lead" data-en="Built on my marketing and sales work since 2021 and my systems experience, with a partner who specialises in management, media and marketing.">مبنية على خبرتي بالتسويق والمبيعات من 2021 وخبرتي ببناء الأنظمة، ويا شريك متخصص بالإدارة والإعلام والتسويق.</p>
-  <h3 class="sub" data-en="What it will do">شنو راح تسوي</h3>
-  <div class="grid g3">
-    <div class="card"><div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/><path d="M8 10h8"/></svg></div><h3 data-en="Reply bots">بوتات رد</h3><p data-en="Customers get an answer at any hour.">الزبون ياخذ جواب بأي ساعة.</p></div>
-    <div class="card"><div class="ic"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18M8 14h3"/></svg></div><h3 data-en="Page management">إدارة الصفحات</h3><p data-en="Content, replies and reports in one place.">المحتوى والردود والتقارير بمكان واحد.</p></div>
-    <div class="card"><div class="ic"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4M10 15l2 2 3-3"/></svg></div><h3 data-en="Automatic publishing">النشر التلقائي</h3><p data-en="Posts go out on schedule without manual work.">المنشورات تنزل بموعدها بدون شغل يدوي.</p></div>
-  </div>
-  <h3 class="sub" data-en="My marketing & sales experience">خبرتي بالتسويق والمبيعات</h3>
-  <div class="tl">
-    <div class="card"><div class="yr">2018</div><h3 data-en="E-commerce from home">تجارة إلكترونية من البيت</h3><div class="org" data-en="My first work">أول شغل إلي</div><p data-en="Handicrafts and online selling, at 16.">أعمال يدوية وبيع أونلاين، بعمر 16.</p></div>
-    <div class="card"><div class="yr">2021 — 2022</div><h3 data-en="Design & sales">تصميم ومبيعات</h3><div class="org" data-en="Al-Karar Group for Telecommunications">مجموعة الكرار للاتصالات</div><p data-en="Unified the store's Instagram identity and worked in direct sales.">وحّدت هوية حساب المتجر واشتغلت بالمبيعات المباشرة.</p></div>
-    <div class="card"><div class="yr">2023</div><h3 data-en="Administrative assistant & marketer">مساعد إداري ومسوّق</h3><div class="org" data-en="Software company · Green Coding Club">شركة برمجيات · نادي البرمجة الأخضر</div><p data-en="Reports from support-call data, content plans and new markets.">تقارير من بيانات مكالمات الدعم، وخطط محتوى، وأسواق جديدة.</p></div>
-    <div class="card"><div class="yr">2023</div><h3 data-en="Paid ad campaigns">حملات إعلانية ممولة</h3><div class="org" data-en="Three clients">لثلاث جهات</div><p data-en="Al-Marzouk car trading · Al-Shathrawan office for cosmetics and laser devices · Green Coding Club events.">المرزوق لتجارة السيارات · مكتب الشذروان لتجارة مواد التجميل وأجهزة الليزر · فعاليات نادي البرمجة الأخضر.</p></div>
-  </div>
-  <div class="btns" style="margin-top:20px"><a class="btn pri wa-svc" data-msg="قائمة انتظار وكالة التسويق الذكية" data-msg-en="the smart marketing agency waiting list" href="#" target="_blank" data-en="Join the waiting list">سجّلني بقائمة الانتظار</a></div>
-</section>
-
-<div class="part"><b data-en="Part three">الجزء الثالث</b><h2 data-en="Ideas I share">أفكار أشاركها</h2></div>
-
-<section class="panel" id="writing">
-  <div class="ph"><span class="no">08</span><span class="lbl" data-en="Articles">المقالات</span></div>
-  <div class="row"><div><h2 class="h2" data-en="From my <em>Telegram</em> channel">من قناتي على <em>تلگرام</em></h2></div><a class="lnk tg" data-id="" href="#" target="_blank" data-en="Open the channel →">افتح القناة ←</a></div>
-  <div class="grid g3">
-    <a class="card post tg" data-id="762" href="#" target="_blank"><h3 data-en="Deepfakes & media credibility">التزييف العميق ومصداقية الإعلام</h3><p data-en="A citizen's checklist before sharing.">قائمة تحقق للمواطن قبل المشاركة.</p><span class="lnk" data-en="Read →">اقرأ ←</span></a>
-    <a class="card post tg" data-id="764" href="#" target="_blank"><h3 data-en="An AI roadmap for Iraq">خارطة طريق الذكاء الاصطناعي للعراق</h3><p data-en="People, data and policy, with 26 references.">بشر وبيانات وسياسة، مع 26 مرجعاً.</p><span class="lnk" data-en="Read →">اقرأ ←</span></a>
-    <a class="card post tg" data-id="763" href="#" target="_blank"><h3 data-en="Military AI & accountability">الذكاء الاصطناعي العسكري والمسؤولية</h3><p data-en="Who is responsible when algorithms decide?">منو المسؤول لما الخوارزمية تقرر؟</p><span class="lnk" data-en="Read →">اقرأ ←</span></a>
-    <a class="card post tg" data-id="667" href="#" target="_blank"><h3 data-en="The journey to AI mastery">رحلة إتقان الذكاء الاصطناعي</h3><p data-en="Five stages, from curiosity to professional use.">خمس مراحل من الفضول للاستخدام المهني.</p><span class="lnk" data-en="Read →">اقرأ ←</span></a>
-    <a class="card post tg" data-id="885" href="#" target="_blank"><h3 data-en="Graduation-project prompts">برومبتات مشروع التخرج</h3><p data-en="The prompts I used in my own engineering project.">النصوص التوجيهية اللي استخدمتها بمشروعي.</p><span class="lnk" data-en="Read →">اقرأ ←</span></a>
-    <a class="card post tg" data-id="949" href="#" target="_blank"><h3 data-en="AI career paths">مسارات العمل في الذكاء الاصطناعي</h3><p data-en="A map to choose your track.">خريطة حتى تختار مسارك.</p><span class="lnk" data-en="Read →">اقرأ ←</span></a>
-  </div>
-</section>
-
-<section class="panel" id="contact">
-  <div class="ph"><span class="no">09</span><span class="lbl" data-en="Contact">تواصل</span></div>
-  <div class="contact">
-    <div>
-      <h2 class="h2" data-en="Let's build something that <em>runs itself</em>">لنبنِ شيئاً <em>يشتغل وحده</em></h2>
-      <p class="lead" data-en="Pick the company, write a short message, and it opens in WhatsApp on the work number.">اختار الشركة، واكتب رسالة مختصرة، وتنفتح على واتساب رقم العمل.</p>
-      <form id="cform">
-        <label for="cto" data-en="Company">الشركة</label>
-        <select id="cto">
-          <option value="MAS Business Solutions" data-en="MAS Business Solutions · tech solutions">MAS Business Solutions · حلول أعمال تقنية</option>
-          <option value="Chamber Manufacturing Group" data-en="Chamber Manufacturing Group · manufacturing">Chamber Manufacturing Group · تصنيع</option>
-          <option value="أكاديمية بوصلة" data-en="Compass Academy · a workshop or talk">أكاديمية بوصلة · ورشة أو محاضرة</option>
-          <option value="وكالة التسويق الذكية" data-en="Smart marketing agency · early interest">وكالة التسويق الذكية · تسجيل اهتمام</option>
-        </select>
-        <label for="cname" data-en="Your name">اسمك</label>
-        <input id="cname" autocomplete="name">
-        <label for="cmsg" data-en="Your message">رسالتك</label>
-        <textarea id="cmsg"></textarea>
-        <div class="btns"><button class="btn pri" type="submit" data-en="Send on WhatsApp">أرسل على واتساب</button></div>
-      </form>
-    </div>
-    <div class="info">
-      <a id="wa2" href="https://wa.me/9647876004990" target="_blank"><span class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7z"/></svg></span><div><small data-en="Work number · WhatsApp">رقم العمل · واتساب</small><b>+964 787 600 4990</b></div></a>
-      <a href="mailto:mohammed.ameen.sajjad@gmail.com"><span class="ic"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m3 7 9 6 9-6"/></svg></span><div><small data-en="Email">البريد</small><b>mohammed.ameen.sajjad@gmail.com</b></div></a>
-      <a class="tg" data-id="" href="#" target="_blank"><span class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M21 4 3 11l6 2 2 6 3-4 5 4z"/><path d="m9 13 9-6"/></svg></span><div><small data-en="Telegram channel">قناة تلگرام</small><b>t.me/mas_note</b></div></a>
-      <div class="qrrow"><div id="qr"></div><div><b data-en="This page in one scan">هالصفحة بمسحة وحدة</b><p data-en="Scan the code to open the site.">امسح الكود حتى ينفتح الموقع.</p><button id="vcard" type="button" data-en="Save my contact">احفظ جهة الاتصال</button></div></div>
-    </div>
-  </div>
-</section>
-
+<section class="cta rv"><div><h2 data-en="Have an idea? Let's turn it into a working system">عندك فكرة؟ خلّينا نحوّلها لنظام يشتغل</h2><p data-en="Pick the right company and message me on the work WhatsApp.">اختار الشركة المناسبة وراسلني على واتساب العمل.</p></div>
+  <div class="btns"><a class="btn" href="contact.html" data-en="Contact me">تواصل معي</a></div></section>
 </main>
-
-<footer><div class="wrap"><span>© <span id="yr"></span> <span data-en="Mohammed Ameen Sajjad">محمد أمين سجاد</span></span><span><a href="https://www.linkedin.com/in/mohammed-ameen-%D9%85%D8%AD%D9%85%D8%AF-%D8%A3%D9%85%D9%8A%D9%86-b5b935246" target="_blank">LinkedIn</a> · <a href="https://www.instagram.com/247_mas" target="_blank">Instagram</a> · <a href="https://www.youtube.com/@27_mas" target="_blank">YouTube</a></span></div></footer>
-<div class="mbar"><a href="#pricing" data-en="Prices">الأسعار</a><a class="go wa-svc" data-msg="مشروع" data-msg-en="a project" href="#" target="_blank" data-en="WhatsApp">واتساب</a></div>
-<a class="top" href="#hero" aria-label="للأعلى"><svg class="i" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
-
-<div class="viewer" id="viewer" role="dialog" aria-modal="true">
-  <div class="vbar"><b id="vtitle"></b><small id="vcount"></small><button class="vclose" id="vclose" aria-label="إغلاق">✕</button></div>
-  <div class="vpages" id="vpages"></div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
-<script>
-const TG = "https://t.me/mas_note", WA = "https://wa.me/9647876004990", SITE = "https://mohammedameensajjad-web.github.io/";
-const DOCS = {
-  cv: {ar: "السيرة الذاتية", en: "Curriculum Vitae"},
-  "ws-engineer": {ar: "ورشة الطالب المهندس × الذكاء الاصطناعي", en: "The Engineering Student × AI — slides"},
-  "ws-civil": {ar: "ورشة الهندسة المدنية والذكاء الاصطناعي", en: "Civil Engineering & AI — slides"},
-  "ai-station": {ar: "تقرير محطة أدوات الذكاء الاصطناعي — 1447هـ", en: "AI Tools Station — 1447 AH report"},
-  "ai-station-guide": {ar: "دليل زائر محطة الذكاء الاصطناعي — 1448هـ", en: "AI Tools Station — 1448 AH visitor guide"},
-  certs: {ar: "الشهادات", en: "Certificates"}
-};
-var MAN = null, CERTS = [], ALLC = false;
-const en = () => document.documentElement.lang === "en";
-document.querySelectorAll(".tg").forEach(a => a.href = a.dataset.id ? `${TG}/${a.dataset.id}` : TG);
-document.getElementById("yr").textContent = new Date().getFullYear();
-const links = document.getElementById("links");
-document.getElementById("menu").onclick = () => links.classList.toggle("on");
-links.querySelectorAll("a").forEach(a => a.onclick = () => links.classList.remove("on"));
-
-// Highlight the nav link of the section on screen
-const navMap = {about: "about", credentials: "credentials", skills: "skills", companies: "companies", mas: "companies", cmg: "companies", academy: "companies", agency: "companies", writing: "writing", contact: "contact"};
-if ("IntersectionObserver" in window) {
-  const io = new IntersectionObserver(es => es.forEach(e => {
-    if (!e.isIntersecting) return;
-    links.querySelectorAll("a").forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#" + navMap[e.target.id]));
-  }), {rootMargin: "-45% 0px -50% 0px"});
-  Object.keys(navMap).forEach(id => { const el = document.getElementById(id); if (el) io.observe(el) });
-}
-
-function waText(topic) {
-  return WA + "?text=" + encodeURIComponent((en() ? "Hi, I'd like to talk about " : "مرحباً، أريد أتواصل بخصوص ") + topic + ".");
-}
-function waLinks() {
-  const L = en();
-  document.getElementById("wa2").href = waText(L ? "a project" : "مشروع");
-  document.querySelectorAll(".wa-svc").forEach(a => a.href = waText(L ? a.dataset.msgEn : a.dataset.msg));
-}
-document.getElementById("cform").addEventListener("submit", e => {
-  e.preventDefault();
-  const L = en(), to = document.getElementById("cto").value, name = document.getElementById("cname").value.trim(), msg = document.getElementById("cmsg").value.trim();
-  const text = (L ? `Hi, I'm contacting ${to}.` : `مرحباً، أتواصل ويا ${to}.`) + (name ? (L ? ` My name is ${name}.` : ` اسمي ${name}.`) : "") + (msg ? "\n" + msg : "");
-  window.open(WA + "?text=" + encodeURIComponent(text), "_blank");
-});
-
-const GROUPS = [["tech", "تقنية ومعتمدة", "Technical & accredited"], ["pro", "تطوير مهني وريادة", "Professional development"], ["honor", "تكريم وتطوع", "Recognition & service"]];
-function renderCerts() {
-  const L = en();
-  document.getElementById("certcount").textContent = CERTS.length ? (L ? `${CERTS.length} certificates, each one viewable` : `${CERTS.length} شهادة، كل وحدة تگدر تشوفها`) : "";
-  document.getElementById("certlist").innerHTML = GROUPS.map(([g, ar, enl]) => {
-    const all = CERTS.filter(c => c.g === g).length;
-    const items = CERTS.map((c, i) => ({...c, i})).filter(c => c.g === g).slice(0, ALLC ? 99 : 3);
-    if (!items.length) return "";
-    return `<div class="cgroup"><h3>${L ? enl : ar} · ${all}</h3><div class="clist">` + items.map(c =>
-      `<div class="ci"><div><b>${L ? c.te : c.ta}</b><small>${L ? c.ie : c.ia}${c.d ? " · " + c.d : ""}</small></div><button class="lnk" data-cert="${c.i}">${L ? "View →" : "اعرض ←"}</button></div>`).join("") + "</div></div>";
-  }).join("");
-  document.querySelectorAll("[data-cert]").forEach(b => b.onclick = () => openDoc("certs", +b.dataset.cert));
-  const m = document.getElementById("certmore");
-  m.hidden = !CERTS.length;
-  m.textContent = ALLC ? (L ? "Show fewer" : "اعرض أقل") : (L ? `Show all ${CERTS.length} certificates` : `اعرض كل الشهادات (${CERTS.length})`);
-}
-document.getElementById("certmore").onclick = () => { ALLC = !ALLC; renderCerts(); if (!ALLC) document.getElementById("credentials").scrollIntoView() };
-function setLang(l) {
-  document.documentElement.lang = l; document.documentElement.dir = l === "en" ? "ltr" : "rtl";
-  document.querySelectorAll("[data-en]").forEach(el => {
-    if (el.dataset.ar === undefined) el.dataset.ar = el.innerHTML;
-    el.innerHTML = l === "en" ? el.dataset.en : el.dataset.ar;
-  });
-  document.getElementById("lang").textContent = l === "en" ? "عربي" : "EN";
-  waLinks(); if (CERTS.length) renderCerts();
-  try { localStorage.setItem("lang", l) } catch (e) {}
-}
-document.getElementById("lang").onclick = () => setLang(en() ? "ar" : "en");
-let saved = null; try { saved = localStorage.getItem("lang") } catch (e) {}
-setLang(saved || (new URLSearchParams(location.search).get("lang") === "en" ? "en" : "ar"));
-fetch("assets/docs/manifest.json").then(r => r.json()).then(m => MAN = m).catch(() => {});
-fetch("assets/docs/certs.json").then(r => r.json()).then(c => { CERTS = c; renderCerts() }).catch(() => {});
-
-const V = document.getElementById("viewer"), VP = document.getElementById("vpages");
-function openDoc(slug, page) {
-  const d = MAN && MAN[slug]; if (!d) return;
-  const L = en(), shown = d.pages.length, total = d.total;
-  document.getElementById("vtitle").textContent = DOCS[slug][L ? "en" : "ar"];
-  document.getElementById("vcount").textContent = shown < total ? (L ? `${shown} of ${total} pages` : `${shown} من ${total} صفحة`) : (L ? `${total} pages` : `${total} صفحة`);
-  VP.innerHTML = d.pages.map(p => `<img src="${p}" alt="" loading="lazy" draggable="false">`).join("") +
-    `<div class="vnote">${L ? "Preview only." : "للعرض فقط."}${shown < total ? (L ? " Full document on request." : " النسخة الكاملة عند الطلب.") : ""}</div>`;
-  V.classList.add("on"); document.body.style.overflow = "hidden"; VP.scrollTop = 0;
-  if (page) setTimeout(() => VP.children[page] && VP.children[page].scrollIntoView({block: "start"}), 80);
-}
-function closeDoc() { V.classList.remove("on"); document.body.style.overflow = "" }
-document.querySelectorAll("[data-doc]").forEach(b => b.addEventListener("click", () => openDoc(b.dataset.doc, 0)));
-document.getElementById("vclose").onclick = closeDoc;
-V.addEventListener("click", e => { if (e.target === V || e.target === VP) closeDoc() });
-V.addEventListener("contextmenu", e => e.preventDefault());
-addEventListener("keydown", e => { if (e.key === "Escape") closeDoc() });
-
-try {
-  const q = qrcode(0, "M"); q.addData(location.protocol.startsWith("http") ? location.origin + location.pathname : SITE); q.make();
-  document.getElementById("qr").innerHTML = q.createSvgTag({cellSize: 6, margin: 0, scalable: true});
-} catch (e) {}
-document.getElementById("vcard").onclick = () => {
-  const v = ["BEGIN:VCARD", "VERSION:3.0", "N:Sajjad;Mohammed Ameen;;;", "FN:Mohammed Ameen Sajjad", "ORG:MAS Business Solutions",
-    "TITLE:Electronics & Communications Engineer", "TEL;TYPE=WORK:+9647876004990", "EMAIL:mohammed.ameen.sajjad@gmail.com",
-    "URL:" + SITE, "END:VCARD"].join("\r\n");
-  const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([v], {type: "text/vcard"})); a.download = "Mohammed-Ameen.vcf"; a.click();
-};
-</script>
+<footer><div class="wrap"><span>© <span id="yr"></span> <span data-en="Mohammed Ameen Sajjad">محمد أمين سجاد</span></span>
+<span><a href="https://www.linkedin.com/in/mohammed-ameen-%D9%85%D8%AD%D9%85%D8%AF-%D8%A3%D9%85%D9%8A%D9%86-b5b935246" target="_blank">LinkedIn</a> · <a href="https://www.instagram.com/247_mas" target="_blank">Instagram</a> · <a href="https://www.youtube.com/@27_mas" target="_blank">YouTube</a> · <a class="tg" data-id="" href="#" target="_blank">Telegram</a></span></div></footer>
+<script src="assets/site.js"></script>
 </body>
 </html>
