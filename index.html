@@ -105,6 +105,8 @@ section{padding-block:96px}
 .head{display:grid;grid-template-columns:1fr 1fr;gap:20px 60px;align-items:end;margin-bottom:42px}
 .sec{padding-top:72px}.sec .head{border-top:1px solid var(--line);padding-top:40px}
 .num{display:block;font:700 15px var(--display);color:var(--gold);letter-spacing:.12em;margin-bottom:10px;font-variant-numeric:tabular-nums}
+.part{padding-top:130px}.part .wrap{border-top:2px solid var(--gold);padding-top:34px}.part h2{font:700 clamp(40px,6vw,72px)/1.1 var(--display);margin:10px 0 12px}.part p{color:var(--muted);font-size:18px;margin:0;max-width:640px}
+.sub{font:600 19px var(--display);color:var(--ink);margin:38px 0 16px}
 .acts2{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-top:22px}
 .soon{display:flex;align-items:center;gap:16px;flex-wrap:wrap}.soon p{margin:0;color:var(--ink-2);font-size:16px}
 .head h2{font-size:clamp(34px,4.8vw,58px);font-weight:700;letter-spacing:-.02em;margin-top:12px}
@@ -256,8 +258,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
 <header class="nav"><div class="bar">
   <a class="brand" href="#top"><img src="assets/mas-logo.webp" alt=""><span data-en="Mohammed Ameen">محمد أمين</span></a>
   <nav class="links" id="links">
-    <a href="#about" data-en="About">من أنا</a><a href="#services" data-en="Prices">الأسعار</a><a href="#work" data-en="Work">الأعمال</a><a href="#projects" data-en="Projects">المشاريع</a>
-    <a href="#experience" data-en="Experience">الخبرة</a><a href="#workshops" data-en="Workshops">الورش</a><a href="#credentials" data-en="Credentials">الشهادات</a><a href="#contact" data-en="Contact">تواصل</a>
+    <a href="#about" data-en="About">من أنا</a><a href="#credentials" data-en="Certificates">الشهادات</a><a href="#skills" data-en="Skills">المهارات</a>
+    <a href="#mas">MAS</a><a href="#cmg">CMG</a><a href="#academy" data-en="Academy">الأكاديمية</a><a href="#agency" data-en="Agency">الوكالة</a><a href="#writing" data-en="Writing">المحتوى</a><a href="#contact" data-en="Contact">تواصل</a>
   </nav>
   <button class="pill" id="lang">EN</button>
   <a class="pill go" id="waNav" href="https://wa.me/9647876004990" target="_blank" data-en="Let's talk">تواصل معي</a>
@@ -271,12 +273,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
       <div>
         <span class="status"><i></i><span data-en="Taking on systems and website projects">متاح لمشاريع الأنظمة والمواقع</span></span>
         <h1><span class="gold-text" data-en="Mohammed Ameen Sajjad">محمد أمين سجاد</span></h1>
-        <p class="role" data-en="Tech business solutions <span>·</span> Workshops & talks">حلول أعمال تقنية <span>·</span> ورش ومحاضرات</p>
-        <p class="lead" data-en="Electronics & Communications engineer and founder of MAS Business Solutions. I build systems that organise and automate how businesses work, and I give workshops and talks on AI.">مهندس إلكترونيات واتصالات ومؤسس MAS Business Solutions. أبني أنظمة تنظّم شغل المؤسسات وتؤتمته، وأقدّم ورش ومحاضرات بالذكاء الاصطناعي.</p>
+        <p class="role" data-en="Tech systems <span>·</span> AI training <span>·</span> Marketing & sales">أنظمة تقنية <span>·</span> تدريب بالذكاء الاصطناعي <span>·</span> تسويق ومبيعات</p>
+        <p class="lead" data-en="Electronics & Communications engineer. I build systems that organise and automate how businesses work, I train people to use AI, and I have worked in marketing and sales since 2021.">مهندس إلكترونيات واتصالات. أبني أنظمة تنظّم شغل المؤسسات وتؤتمته، وأدرّب الناس على استخدام الذكاء الاصطناعي، واشتغلت بالتسويق والمبيعات من 2021.</p>
       </div>
       <div class="ctas">
         <a class="btn primary" id="wa" href="https://wa.me/9647876004990" target="_blank" data-en="Start a project with me">ابدأ مشروعك معي</a>
-        <a class="btn line" href="#pricing" data-en="See prices">شوف الأسعار</a>
+        <a class="btn line" href="#companies" data-en="See my companies">شوف شركاتي</a>
       </div>
     </div>
     <div class="tile b-photo">
@@ -292,98 +294,31 @@ footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
   </div></div>
 </div></section>
 
+<section class="part" id="me"><div class="wrap"><span class="kicker" data-en="Part one">الجزء الأول</span><h2 data-en="Mohammed Ameen">محمد أمين</h2><p data-en="Who I am, what I do, and my certificates and skills.">منو آني، وشنو أسوي، وشنو الشهادات والمهارات اللي عندي.</p></div></section>
+
 <section id="about" class="sec"><div class="wrap">
-  <div class="head"><div><span class="num">01</span><span class="kicker" data-en="About">من أنا</span><h2 data-en="An engineer who builds systems">مهندس يبني أنظمة</h2></div>
+  <div class="head"><div><span class="num">01</span><span class="kicker" data-en="About">من أنا</span><h2 data-en="I build systems, train and market">أبني أنظمة، وأدرّب، وأسوّق</h2></div>
     <p data-en="My story in short, from my first work at home to today.">قصتي باختصار، من أول شغل بالبيت لحد اليوم.</p></div>
   <div class="about">
   <div class="tile gl">
     <p class="big" data-en="I believe <em>technology must serve people</em>, and that every system can be measured and improved.">أؤمن إن <em>التكنولوجيا لازم تخدم الإنسان</em>، وإن كل نظام ممكن نقيسه ونحسّنه.</p></div>
   <div class="tile">
-    <p data-en="I'm a final-year Electronics & Communications Engineering student at the University of Kufa and a former student of the School for the Gifted in Najaf. I started working from home in 2018, at 16, with handicrafts and e-commerce, then moved through marketing and sales roles and a 3D-printing project.">طالب بالمرحلة الأخيرة بهندسة الإلكترونيات والاتصالات في جامعة الكوفة، ودرست سابقاً في مدرسة الموهوبين بالنجف. بديت أشتغل من البيت سنة 2018 بعمر 16، بالأعمال اليدوية والتجارة الإلكترونية، وبعدها اشتغلت بالتسويق والمبيعات وبمشروع طباعة ثلاثية الأبعاد.</p>
-    <p data-en="Today I run MAS Business Solutions, which builds tech systems for businesses. Alongside it, I give workshops and talks on AI and entrepreneurship.">اليوم أدير MAS Business Solutions، شركتي اللي تبني أنظمة تقنية للمؤسسات. وبجانبها أقدّم ورش ومحاضرات بالذكاء الاصطناعي وريادة الأعمال.</p>
-    <div class="chips" style="margin-top:20px"><span data-en="Experiment · Measure · Improve">جرّب · قِس · طوّر</span><span data-en="AI & automation">ذكاء اصطناعي وأتمتة</span><span data-en="Entrepreneurship">ريادة أعمال</span><span data-en="Marketing & sales">تسويق ومبيعات</span></div>
+    <p data-en="I'm a final-year Electronics & Communications Engineering student at the University of Kufa and a former student of the School for the Gifted in Najaf.">طالب بالمرحلة الأخيرة بهندسة الإلكترونيات والاتصالات في جامعة الكوفة، ودرست سابقاً في مدرسة الموهوبين بالنجف.</p>
+    <p data-en="I started working from home in 2018, at 16, with handicrafts and e-commerce. Then I worked in design, sales and marketing, ran paid ad campaigns, co-founded a 3D-printing project, and began giving AI workshops and talks. Today I build tech systems for businesses.">بديت أشتغل من البيت سنة 2018 بعمر 16، بالأعمال اليدوية والتجارة الإلكترونية. بعدها اشتغلت بالتصميم والمبيعات والتسويق، وأدرت حملات إعلانية ممولة، وشاركت بتأسيس مشروع طباعة ثلاثية الأبعاد، وبديت أقدّم ورش ومحاضرات بالذكاء الاصطناعي. واليوم أبني أنظمة تقنية للمؤسسات.</p>
+    <div class="chips" style="margin-top:20px"><span data-en="Experiment · Measure · Improve">جرّب · قِس · طوّر</span><span data-en="Systems & automation">أنظمة وأتمتة</span><span data-en="AI training">تدريب بالذكاء الاصطناعي</span><span data-en="Marketing & sales">تسويق ومبيعات</span></div>
   </div>
-  </div>
-</div></section>
-
-<section id="services" class="sec"><div class="wrap">
-  <div class="head"><div><span class="num">02</span><span class="kicker" data-en="Services & prices">الخدمات والأسعار</span><h2 data-en="What I offer now">اللي أقدّمه هسه</h2></div>
-    <p data-en="Two services, each with its own scope and price.">خدمتين، كل وحدة بنطاقها وسعرها.</p></div>
-  <div class="tile price gl" id="pricing"><span class="kicker" data-en="MAS Business Solutions · tech business solutions">MAS Business Solutions · حلول أعمال تقنية</span>
-    <div class="ws">
-      <div class="wi"><div><h3 data-en="Personal portfolio website">موقع بورتفوليو شخصي</h3><div class="o" data-en="Like this site, for professionals with a strong CV.">مثل هذا الموقع، للمحترفين أصحاب السيرة الذاتية القوية.</div></div><div class="d" data-en="$250">250$</div></div>
-      <div class="wi"><div><h3 data-en="Digital file archiving systems">أنظمة أرشفة الملفات الإلكترونية</h3><div class="o" data-en="Like my own archiving system. Starts at $200 and rises with the total size of the files.">مثل نظام الأرشفة بحاسبتي. يبدأ من 200$ ويزيد حسب الحجم الكلي للملفات.</div></div><div class="d" data-en="$200 and up">200$ فما فوق</div></div>
-      <div class="wi"><div><h3 data-en="Online academy platforms">منصات تنظيم عمل الأكاديميات الإلكترونية</h3><div class="o" data-en="Organises courses and trainees. $2,000 to build the platform, plus $50 for each course uploaded.">تنظّم الكورسات والمتدربين. 2,000$ لبناء المنصة، و50$ لرفع كل كورس عليها.</div></div><div class="d" data-en="$2,000 + $50 per course">2,000$ + 50$ لكل كورس</div></div>
-      <div class="wi"><div><h3 data-en="Integrated enterprise systems">أنظمة مؤسسية متكاملة</h3><div class="o" data-en="Like the platform we are building for CMG and the system for the smart marketing agency (launching soon). Starts at $5,000 and rises with the system's complexity.">مثل المنصة اللي نبنيها لـ CMG، ونظام وكالة التسويق الذكية (تنطلق قريباً). يبدأ من 5,000$ ويزيد حسب تعقيد النظام.</div></div><div class="d" data-en="$5,000 and up">5,000$ فما فوق</div></div>
-    </div>
-    <p class="note" data-en="Prices exclude hosting and domain costs.">الأسعار ما تشمل تكاليف الاستضافة والدومين.</p>
-    <div class="acts2"><a class="btn primary wa-svc" data-msg="حلول الأعمال التقنية" data-msg-en="tech business solutions" href="#" target="_blank" data-en="Request a quote">اطلب عرض سعر</a><a class="lnk" href="#work" data-en="See the work →">شوف الأعمال المنجزة ←</a></div></div>
-  <div class="tile price" style="margin-top:14px"><span class="kicker" data-en="Workshops & talks · under my name">ورش ومحاضرات · باسمي</span>
-    <h3 style="font-size:21px;margin-top:12px" data-en="AI and entrepreneurship, for universities and institutions">الذكاء الاصطناعي وريادة الأعمال، للجامعات والمؤسسات</h3>
-    <p class="note" data-en="Priced by the type of workshop and the audience.">السعر حسب نوع الورشة وعدد الحضور.</p>
-    <div class="acts2"><a class="btn line wa-svc" data-msg="ورشة أو محاضرة" data-msg-en="a workshop or talk" href="#" target="_blank" data-en="Request a workshop">اطلب ورشة</a><a class="lnk" href="#workshops" data-en="See past workshops →">شوف الورش السابقة ←</a></div></div>
-</div></section>
-
-<section id="work" class="sec"><div class="wrap">
-  <div class="head"><div><span class="num">03</span><span class="kicker" data-en="Proof of work">الأعمال المنجزة</span><h2 data-en="Systems I built">أنظمة بنيتها</h2></div>
-    <p data-en="The proof behind MAS's services. Academic work stays private until it is peer-reviewed and published.">الإثبات ورا خدمات MAS. الأعمال الأكاديمية تبقى خاصة لحد ما تتحكّم وتنشر.</p></div>
-  <div class="proj">
-    <div class="tile hover gl s2"><span class="tag live" data-en="Live">شغّال</span><h3 data-en="This portfolio">هذا البورتفوليو</h3><p data-en="Bilingual website with view-only documents, a certificate viewer and a QR code. You are looking at it.">موقع بلغتين، بعرض وثائق بدون تنزيل، وعارض شهادات، وباركود. اللي تشوفه هسه.</p></div>
-    <div class="tile hover s2"><span class="tag live" data-en="Live">شغّال</span><h3 data-en="Personal archiving system">نظام أرشفة ملفاتي</h3><p data-en="Sorts thousands of files by task, renames them by content, and builds a searchable visual index.">يرتّب آلاف الملفات حسب المهمة، ويسمّيها حسب محتواها، ويبني فهرساً بصرياً قابلاً للبحث.</p></div>
-    <div class="tile hover s2"><span class="tag" data-en="In development">قيد التطوير</span><h3 data-en="CMG digital manufacturing platform">منصة التصنيع الرقمي لـ CMG</h3><p data-en="Ordering, per-order pricing and AI that turns an idea into a 3D design.">الطلب، وتسعير كل طلب تلقائياً، وتحويل الفكرة لتصميم ثلاثي الأبعاد بالذكاء الاصطناعي.</p></div>
-  </div>
-</div></section>
-
-<section id="projects" class="sec"><div class="wrap">
-  <div class="head"><div><span class="num">04</span><span class="kicker" data-en="Projects">المشاريع</span><h2 data-en="My projects">مشاريعي</h2></div>
-    <p data-en="The projects I founded and work on.">المشاريع اللي أسستها وأشتغل عليها.</p></div>
-  <div class="grid g2 svc">
-    <div class="tile hover gl"><span class="kicker" style="color:var(--ink-2)">MAS Business Solutions</span><span class="tag live" data-en="Taking orders">تستقبل طلبات</span>
-      <h3 data-en="Tech business solutions">حلول أعمال تقنية</h3><p data-en="My company. It builds enterprise systems, academy platforms, archiving systems and portfolio websites.">شركتي. تبني أنظمة مؤسسية، ومنصات أكاديميات، وأنظمة أرشفة، ومواقع بورتفوليو.</p>
-      <a class="lnk" href="#services" data-en="See services and prices →">شوف الخدمات والأسعار ←</a></div>
-    <div class="tile hover"><span class="kicker" style="color:var(--ink-2)">Chamber Manufacturing Group</span><span class="tag" data-en="Paused while we prepare">متوقف مؤقتاً للتجهيز</span>
-      <h3 data-en="Local manufacturing solutions">حلول تصنيع محلية</h3><p data-en="Formerly 3D Chamber, which 3D-printed for university students across many fields. The name changed because the vision grew: make what you need inside Iraq, for everyone, not only students. Work is paused while we build the platform. Later: carpentry, CNC and PCB.">سابقاً 3D Chamber، وقدّم الطباعة ثلاثية الأبعاد لطلبة جامعات بمختلف التخصصات. تغيّر الاسم لأن الرؤية صارت أوسع: نصنع اللي تحتاجه داخل العراق، ولكل الفئات مو بس الطلبة. الشغل متوقف حالياً لحد ما نكمل المنصة. وبالمستقبل: نجارة وCNC وPCB.</p>
-      <a class="lnk" href="https://www.instagram.com/chamber_manufacturing_group" target="_blank" data-en="See the work on Instagram →">شوف الشغل على إنستغرام ←</a></div>
-  </div>
-  <div class="tile soon" style="margin-top:14px"><span class="tag" data-en="Coming soon">قريباً</span><p data-en="<b>A smart marketing agency</b> run by systems: reply bots, page management and automatic publishing. And <b>Compass Academy</b> for workshops and courses."><b>وكالة تسويق ذكية</b> تشغّلها الأنظمة: بوتات رد، وإدارة صفحات، ونشر تلقائي. و<b>أكاديمية بوصلة</b> للورش والدورات.</p></div>
-</div></section>
-
-<section id="experience" class="sec"><div class="wrap">
-  <div class="head"><div><span class="num">05</span><span class="kicker" data-en="Experience">الخبرة</span><h2 data-en="Built step by step">انبنيت خطوة بخطوة</h2></div>
-    <p data-en="From working at home to a company, with sales, marketing and training along the way.">من شغل بالبيت إلى شركة، مروراً بالمبيعات والتسويق والتدريب.</p></div>
-  <div class="xp">
-    <div class="tile gl"><div class="yr" data-en="2025 — now">2025 — الآن</div><h3 data-en="Founder">المؤسس</h3><div class="org">MAS Business Solutions</div><p data-en="Tech business solutions: enterprise systems, academy platforms, archiving systems and portfolio websites.">حلول أعمال تقنية: أنظمة مؤسسية، ومنصات أكاديميات، وأنظمة أرشفة، ومواقع بورتفوليو.</p></div>
-    <div class="tile"><div class="yr" data-en="2024 — now">2024 — الآن</div><h3 data-en="AI & entrepreneurship trainer">مدرّب ومتحدث</h3><div class="org" data-en="University of Kufa · Riyada · Al-Abbas Holy Shrine">جامعة الكوفة · ريادة · العتبة العباسية</div><p data-en="Official workshops and talks, and the AI tools station at the Arbaeen procession for two years.">ورش ومحاضرات رسمية، ومحطة أدوات الذكاء الاصطناعي بموكب الأربعين لسنتين.</p></div>
-    <div class="tile"><div class="yr">2024</div><h3 data-en="Co-founder · management & marketing">شريك مؤسس · إدارة وتسويق</h3><div class="org">3D Chamber</div><p data-en="3D printing for university students across many fields. Presented to the Prime Minister of Iraq at the first Riyada exhibition, and later became Chamber Manufacturing Group.">طباعة ثلاثية الأبعاد لطلبة الجامعات بمختلف التخصصات. عُرض أمام رئيس الوزراء بمعرض مبادرة ريادة الأول، وتطوّر بعدين إلى Chamber Manufacturing Group.</p></div>
-    <div class="tile"><div class="yr">2023</div><h3 data-en="Administrative assistant & marketer">مساعد إداري ومسوّق</h3><div class="org" data-en="Software company · Green Coding Club">شركة برمجيات · نادي البرمجة الأخضر</div><p data-en="Reports from support-call data, content plans, new markets, and solving support-team issues.">تقارير من بيانات مكالمات الدعم، وخطط محتوى، وأسواق جديدة، وحل مشكلات فريق الدعم.</p></div>
-    <div class="tile"><div class="yr">2023</div><h3 data-en="Paid advertising campaigns">حملات إعلانية ممولة</h3><div class="org" data-en="Three clients">لثلاث جهات</div><p data-en="Al-Marzouk car trading · Al-Shathrawan office for cosmetics and laser devices · Green Coding Club events.">المرزوق لتجارة السيارات · مكتب الشذروان لتجارة مواد التجميل وأجهزة الليزر · فعاليات نادي البرمجة الأخضر.</p></div>
-    <div class="tile"><div class="yr">2021 — 2022</div><h3 data-en="Design & sales">تصميم ومبيعات</h3><div class="org" data-en="Al-Karar Group for Telecommunications · Basra">مجموعة الكرار للاتصالات · البصرة</div><p data-en="Unified the store's Instagram identity and worked in direct sales.">وحّدت هوية حساب المتجر واشتغلت بالمبيعات المباشرة.</p></div>
-  </div>
-</div></section>
-
-<section id="workshops" class="sec"><div class="wrap">
-  <div class="head"><div><span class="num">06</span><span class="kicker" data-en="Workshops & talks">الورش والمحاضرات</span><h2 data-en="Teaching what I practise">أعلّم اللي أطبّقه</h2></div>
-    <p data-en="Workshops and talks I have given, with slides and recordings.">ورش ومحاضرات قدّمتها، ويا العروض والتسجيلات.</p></div>
-  <div class="ws">
-    <div class="wi"><div class="d" data-en="1447–1448 AH">1447–1448هـ</div><div><h3 data-en="AI Tools Station at Arbaeen">محطة أدوات الذكاء الاصطناعي بالأربعين</h3><div class="o" data-en="A week, 10 hours a day, individual and group coaching · Al-Abbas Shrine cultural procession · about 500 visitors in 1447 AH and 300 in 1448 AH">أسبوع، 10 ساعات باليوم، استشارات فردية وجماعية · الموكب الثقافي للعتبة العباسية · حوالي 500 زائر سنة 1447هـ و300 زائر سنة 1448هـ</div></div><div class="acts"><button class="lnk" data-doc="ai-station-guide" data-en="1448 guide →">دليل 1448هـ ←</button><button class="lnk" data-doc="ai-station" data-en="1447 report →">تقرير 1447هـ ←</button></div></div>
-    <div class="wi"><div class="d">2026</div><div><h3 data-en="The Engineering Student × AI">الطالب المهندس × الذكاء الاصطناعي</h3><div class="o" data-en="Official workshop · ECE Department, University of Kufa">ورشة رسمية · قسم هندسة الإلكترونيك والاتصالات، جامعة الكوفة</div></div><div class="acts"><button class="lnk" data-doc="ws-engineer" data-en="Slides →">العرض ←</button></div></div>
-    <div class="wi"><div class="d">2026</div><div><h3 data-en="Build a full software system in hours with AI">ابنِ نظاماً برمجياً متكاملاً في ساعات</h3><div class="o" data-en="Online · vocational students & beginners">أونلاين · طلبة الإعداديات المهنية والمبتدئين</div></div><div class="acts"><a class="lnk" href="https://youtu.be/FD184oBObRc" target="_blank" data-en="Watch →">شاهد ←</a></div></div>
-    <div class="wi"><div class="d">2025</div><div><h3 data-en="Civil Engineering & AI: the Super Engineer">الهندسة المدنية والذكاء الاصطناعي</h3><div class="o" data-en="Civil engineering students & graduates · appreciation certificate">طلبة وخريجو الهندسة المدنية · شهادة تقدير</div></div><div class="acts"><button class="lnk" data-doc="ws-civil" data-en="Slides →">العرض ←</button><a class="lnk" href="https://youtu.be/S83jzLU3Rf8" target="_blank" data-en="Watch →">شاهد ←</a></div></div>
-    <div class="wi"><div class="d">2025</div><div><h3 data-en="Entrepreneurship keynote">محاضرة ريادة الأعمال</h3><div class="o" data-en="University of Kufa · in front of the university president, his assistants and the Dean of Medicine · golden shield">جامعة الكوفة · بحضور رئيس الجامعة ومعاونيه وعميد كلية الطب · درع ذهبي</div></div><div class="acts"><a class="lnk" href="https://youtu.be/MohqZ0VsynA" target="_blank" data-en="Watch →">شاهد ←</a></div></div>
-    <div class="wi"><div class="d">2025</div><div><h3 data-en="Startup essentials">أساسيات المشاريع الناشئة</h3><div class="o" data-en="Riyada Initiative trainees">متدربو مبادرة ريادة</div></div><div class="acts"><a class="lnk" href="https://www.instagram.com/reel/DKZm-svougw/" target="_blank" data-en="Watch →">شاهد ←</a></div></div>
-    <div class="wi"><div class="d">2024</div><div><h3 data-en="How engineers market themselves">كيف يسوّق المهندس نفسه</h3><div class="o" data-en="Kufa Engineering · based on Show Your Work!">هندسة الكوفة · اعتماداً على كتاب Show Your Work</div></div><div class="acts"><a class="lnk tg" data-id="610" href="#" target="_blank" data-en="Lecture file →">ملف المحاضرة ←</a></div></div>
   </div>
 </div></section>
 
 <section id="credentials" class="sec"><div class="wrap">
-  <div class="head"><div><span class="num">07</span><span class="kicker" data-en="Credentials">الشهادات والتكريم</span><h2 data-en="Proof, not promises">إثباتات، مو وعود</h2></div>
+  <div class="head"><div><span class="num">02</span><span class="kicker" data-en="Credentials">الشهادات والتكريم</span><h2 data-en="Proof, not promises">إثباتات، مو وعود</h2></div>
     <p data-en="Every certificate opens for viewing. Personal details are hidden.">كل شهادة تنفتح للعرض، والبيانات الشخصية مخفية.</p></div>
   <div class="cbar"><span id="certcount"></span><button class="lnk" data-doc="certs" data-en="Browse all certificates →">تصفّح كل الشهادات ←</button></div>
   <div id="certlist"></div>
 </div></section>
 
 <section id="skills" class="sec"><div class="wrap">
-  <div class="head"><div><span class="num">08</span><span class="kicker" data-en="Skills, CV & library">المهارات والسيرة الذاتية والمكتبة</span><h2 data-en="What I practise every day">اللي أمارسه يومياً</h2></div>
+  <div class="head"><div><span class="num">03</span><span class="kicker" data-en="Skills, CV & books">المهارات والسيرة الذاتية والكتب</span><h2 data-en="What I practise every day">اللي أمارسه يومياً</h2></div>
     <p data-en="Skills I use in paid work. Subjects I am still studying are not listed.">مهارات أستخدمها بشغل حقيقي. المواد اللي بعدني أدرسها ما مذكورة هنا.</p></div>
   <div class="tile cv" style="margin-bottom:14px"><div><h3 data-en="My CV">سيرتي الذاتية</h3><p data-en="Two pages: experience, education, skills and certificates. View only.">صفحتين: الخبرة، والتعليم، والمهارات، والشهادات. للعرض فقط.</p></div><button class="btn primary" data-doc="cv" data-en="View CV">اعرض السيرة الذاتية</button></div>
   <div class="grid g3 sk">
@@ -395,9 +330,78 @@ footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
     <div class="books"><span>Zero to One <em>· Thiel</em></span><span>The E-Myth Revisited <em>· Gerber</em></span><span>Traction <em>· Wickman</em></span><span>The 1-Page Marketing Plan <em>· Dib</em></span><span>The Ultimate Sales Machine <em>· Holmes</em></span><span>How to Sell Anything <em>· Girard</em></span><span>Show Your Work! <em>· Kleon</em></span><span>The Power of Habit <em>· Duhigg</em></span><span>Six Thinking Hats <em>· de Bono</em></span><span>How to Win Friends <em>· Carnegie</em></span><span>Influence <em>· Cialdini</em></span><span>The 48 Laws of Power <em>· Greene</em></span></div></div>
 </div></section>
 
-<section id="writing" class="sec"><div class="wrap">
-  <div class="head"><div><span class="num">09</span><span class="kicker" data-en="Writing">المحتوى</span><h2 data-en="Ideas I share">أفكار أشاركها</h2></div>
-    <p data-en="Sourced, practical posts from my Telegram channel.">منشورات عملية ومدعومة بالمصادر من قناتي على تلگرام.</p></div>
+<section class="part" id="companies"><div class="wrap"><span class="kicker" data-en="Part two">الجزء الثاني</span><h2 data-en="My companies">شركاتي</h2><p data-en="Every service I offer runs through one of these companies. For each: what it does, what it has done, and why choose it.">كل خدمة أقدّمها تكون عن طريق وحدة من هالشركات. لكل شركة: شنو تسوي، وشنو سوّت، وليش تختارها.</p></div></section>
+
+<section id="mas" class="sec"><div class="wrap">
+  <div class="head"><div><span class="num">04</span><span class="kicker" data-en="MAS Business Solutions">MAS Business Solutions</span><h2 data-en="Tech business solutions">حلول أعمال تقنية</h2></div>
+    <p data-en="Builds systems that organise and automate how businesses work, from portfolio websites to integrated enterprise systems.">تبني أنظمة تنظّم شغل المؤسسات وتؤتمته، من مواقع البورتفوليو لحد الأنظمة المؤسسية المتكاملة.</p></div>
+  <div class="tile soon"><span class="tag live" data-en="Taking orders">تستقبل طلبات</span><p data-en="Founded in 2025.">تأسست سنة 2025.</p></div>
+  <h3 class="sub" data-en="What it built">شنو بنت</h3>
+  <div class="proj">
+    <div class="tile hover gl s3"><span class="tag live" data-en="Live">شغّال</span><h3 data-en="This portfolio">هذا البورتفوليو</h3><p data-en="Bilingual website with view-only documents, a certificate viewer and a QR code. You are looking at it.">موقع بلغتين، بعرض وثائق بدون تنزيل، وعارض شهادات، وباركود. اللي تشوفه هسه.</p></div>
+    <div class="tile hover s3"><span class="tag live" data-en="Live">شغّال</span><h3 data-en="A personal archiving system">نظام أرشفة لملفاتي</h3><p data-en="Sorts thousands of files by task, renames them by content, and builds a searchable visual index.">يرتّب آلاف الملفات حسب المهمة، ويسمّيها حسب محتواها، ويبني فهرساً بصرياً قابلاً للبحث.</p></div>
+    <div class="tile hover s3"><span class="tag" data-en="Being built">قيد البناء</span><h3 data-en="CMG's digital manufacturing platform">منصة التصنيع الرقمي لـ CMG</h3><p data-en="Ordering, per-order pricing and AI that turns an idea into a 3D design.">الطلب، وتسعير كل طلب تلقائياً، وتحويل الفكرة لتصميم ثلاثي الأبعاد بالذكاء الاصطناعي.</p></div>
+    <div class="tile hover s3"><span class="tag" data-en="Being built">قيد البناء</span><h3 data-en="Compass Academy's platform">منصة أكاديمية بوصلة</h3><p data-en="Organises the academy's courses, workshops and trainees.">تنظّم كورسات الأكاديمية وورشها ومتدربيها.</p></div>
+  </div>
+  <h3 class="sub" data-en="Services & prices">الخدمات والأسعار</h3>
+  <div class="tile price gl" id="pricing">
+    <div class="ws">
+      <div class="wi"><div><h3 data-en="Personal portfolio website">موقع بورتفوليو شخصي</h3><div class="o" data-en="Like this site, for professionals with a strong CV.">مثل هذا الموقع، للمحترفين أصحاب السيرة الذاتية القوية.</div></div><div class="d" data-en="$250">250$</div></div>
+      <div class="wi"><div><h3 data-en="Digital file archiving systems">أنظمة أرشفة الملفات الإلكترونية</h3><div class="o" data-en="Like my own archiving system. Priced by the total size of the files.">مثل نظام الأرشفة بحاسبتي. السعر حسب الحجم الكلي للملفات.</div></div><div class="d" data-en="$250+">250$ فما فوق</div></div>
+      <div class="wi"><div><h3 data-en="Online academy platforms">منصات تنظيم عمل الأكاديميات الإلكترونية</h3><div class="o" data-en="Like the Compass Academy platform. Plus $50 for each course uploaded.">مثل منصة أكاديمية بوصلة. ويضاف 50$ لرفع كل كورس عليها.</div></div><div class="d" data-en="$2,000+">2,000$ فما فوق</div></div>
+      <div class="wi"><div><h3 data-en="Integrated enterprise systems">أنظمة مؤسسية متكاملة</h3><div class="o" data-en="Like the CMG platform and the smart marketing agency's system. Priced by the system's complexity.">مثل منصة CMG، ونظام وكالة التسويق الذكية. السعر حسب تعقيد النظام.</div></div><div class="d" data-en="$5,000+">5,000$ فما فوق</div></div>
+    </div>
+    <p class="note" data-en="Prices exclude hosting and domain costs.">الأسعار ما تشمل تكاليف الاستضافة والدومين.</p>
+    <div class="acts2"><a class="btn primary wa-svc" data-msg="خدمات MAS Business Solutions" data-msg-en="MAS Business Solutions services" href="#" target="_blank" data-en="Request a quote">اطلب عرض سعر</a></div></div>
+</div></section>
+
+<section id="cmg" class="sec"><div class="wrap">
+  <div class="head"><div><span class="num">05</span><span class="kicker" data-en="Chamber Manufacturing Group">Chamber Manufacturing Group</span><h2 data-en="Local manufacturing solutions">حلول تصنيع محلية</h2></div>
+    <p data-en="We make what you need inside Iraq, for everyone.">نصنع اللي تحتاجه داخل العراق، ولكل الفئات.</p></div>
+  <div class="tile soon"><span class="tag" data-en="Paused while we prepare">متوقف مؤقتاً للتجهيز</span><p data-en="Work is paused while we build the new platform.">الشغل متوقف حالياً لحد ما نكمل المنصة الجديدة.</p></div>
+  <h3 class="sub" data-en="What it has done">شنو سوّت</h3>
+  <div class="proj">
+    <div class="tile hover gl s3"><span class="tag" data-en="2024 · as 3D Chamber">2024 · باسم 3D Chamber</span><h3 data-en="3D printing for university students">طباعة ثلاثية الأبعاد لطلبة الجامعات</h3><p data-en="Served students from many fields. I co-founded it and ran management and marketing. It was presented to the Prime Minister of Iraq at the first Riyada exhibition.">خدم طلبة من مختلف التخصصات. شاركت بتأسيسه وكنت مسؤول الإدارة والتسويق، وعُرض أمام رئيس الوزراء بمعرض مبادرة ريادة الأول.</p></div>
+    <div class="tile hover s3"><span class="tag" data-en="The new vision">الرؤية الجديدة</span><h3 data-en="Why the name changed">ليش تغيّر الاسم</h3><p data-en="The vision grew beyond students: a local manufacturing platform for everyone, with easy ordering and AI that turns an idea into a 3D design. Later: carpentry, CNC and PCB.">الرؤية صارت أوسع من الطلبة: منصة تصنيع محلية لكل الفئات، بطلب سهل، وتحويل الفكرة لتصميم ثلاثي الأبعاد بالذكاء الاصطناعي. وبالمستقبل: نجارة وCNC وPCB.</p></div>
+  </div>
+  <h3 class="sub" data-en="Pricing">التسعير</h3>
+  <div class="tile price"><p class="note" style="margin:0;font-size:16px;color:var(--ink-2)" data-en="Every order is custom, so the platform prices each one with its own algorithms and formulas.">كل طلب مخصص، فالمنصة تطلع سعر كل طلب لحاله بخوارزميات ومعادلات.</p>
+    <div class="acts2"><a class="btn line" href="https://www.instagram.com/chamber_manufacturing_group" target="_blank" data-en="See CMG's work on Instagram">شوف شغل CMG على إنستغرام</a></div></div>
+</div></section>
+
+<section id="academy" class="sec"><div class="wrap">
+  <div class="head"><div><span class="num">06</span><span class="kicker" data-en="Compass Academy">أكاديمية بوصلة · Compass Academy</span><h2 data-en="Workshops, talks and courses">ورش ومحاضرات ودورات</h2></div>
+    <p data-en="An academy through which I pass on my experience.">أكاديمية أنقل بيها خبرتي للناس.</p></div>
+  <div class="tile soon"><span class="tag" data-en="Coming soon">قريباً</span><p data-en="Until it launches, here is what I have already delivered: <b>800+ people trained</b> since 2024 at the University of Kufa, the Riyada Initiative and the Al-Abbas Holy Shrine.">لحد ما تنطلق، هذا اللي قدّمته لحد الآن: <b>أكثر من 800 متدرّب</b> من 2024، بجامعة الكوفة ومبادرة ريادة والعتبة العباسية.</p></div>
+  <h3 class="sub" data-en="What I have delivered">شنو قدّمت</h3>
+  <div class="ws">
+    <div class="wi"><div class="d" data-en="1447–1448 AH">1447–1448هـ</div><div><h3 data-en="AI Tools Station at Arbaeen">محطة أدوات الذكاء الاصطناعي بالأربعين</h3><div class="o" data-en="A week, 10 hours a day, individual and group coaching · Al-Abbas Shrine cultural procession · about 500 visitors in 1447 AH and 300 in 1448 AH">أسبوع، 10 ساعات باليوم، استشارات فردية وجماعية · الموكب الثقافي للعتبة العباسية · حوالي 500 زائر سنة 1447هـ و300 زائر سنة 1448هـ</div></div><div class="acts"><button class="lnk" data-doc="ai-station-guide" data-en="1448 guide →">دليل 1448هـ ←</button><button class="lnk" data-doc="ai-station" data-en="1447 report →">تقرير 1447هـ ←</button></div></div>
+    <div class="wi"><div class="d">2026</div><div><h3 data-en="The Engineering Student × AI">الطالب المهندس × الذكاء الاصطناعي</h3><div class="o" data-en="Official workshop · ECE Department, University of Kufa">ورشة رسمية · قسم هندسة الإلكترونيك والاتصالات، جامعة الكوفة</div></div><div class="acts"><button class="lnk" data-doc="ws-engineer" data-en="Slides →">العرض ←</button></div></div>
+    <div class="wi"><div class="d">2026</div><div><h3 data-en="Build a full software system in hours with AI">ابنِ نظاماً برمجياً متكاملاً في ساعات</h3><div class="o" data-en="Online · vocational students & beginners">أونلاين · طلبة الإعداديات المهنية والمبتدئين</div></div><div class="acts"><a class="lnk" href="https://youtu.be/FD184oBObRc" target="_blank" data-en="Watch →">شاهد ←</a></div></div>
+    <div class="wi"><div class="d">2025</div><div><h3 data-en="Civil Engineering & AI: the Super Engineer">الهندسة المدنية والذكاء الاصطناعي</h3><div class="o" data-en="Civil engineering students & graduates · appreciation certificate">طلبة وخريجو الهندسة المدنية · شهادة تقدير</div></div><div class="acts"><button class="lnk" data-doc="ws-civil" data-en="Slides →">العرض ←</button><a class="lnk" href="https://youtu.be/S83jzLU3Rf8" target="_blank" data-en="Watch →">شاهد ←</a></div></div>
+    <div class="wi"><div class="d">2025</div><div><h3 data-en="Entrepreneurship keynote">محاضرة ريادة الأعمال</h3><div class="o" data-en="University of Kufa · in front of the university president, his assistants and the Dean of Medicine · golden shield">جامعة الكوفة · بحضور رئيس الجامعة ومعاونيه وعميد كلية الطب · درع ذهبي</div></div><div class="acts"><a class="lnk" href="https://youtu.be/MohqZ0VsynA" target="_blank" data-en="Watch →">شاهد ←</a></div></div>
+    <div class="wi"><div class="d">2025</div><div><h3 data-en="Startup essentials">أساسيات المشاريع الناشئة</h3><div class="o" data-en="Riyada Initiative trainees">متدربو مبادرة ريادة</div></div><div class="acts"><a class="lnk" href="https://www.instagram.com/reel/DKZm-svougw/" target="_blank" data-en="Watch →">شاهد ←</a></div></div>
+    <div class="wi"><div class="d">2024</div><div><h3 data-en="How engineers market themselves">كيف يسوّق المهندس نفسه</h3><div class="o" data-en="Kufa Engineering · based on Show Your Work!">هندسة الكوفة · اعتماداً على كتاب Show Your Work</div></div><div class="acts"><a class="lnk tg" data-id="610" href="#" target="_blank" data-en="Lecture file →">ملف المحاضرة ←</a></div></div>
+  </div>
+  <div class="acts2"><a class="btn line wa-svc" data-msg="ورشة أو محاضرة" data-msg-en="a workshop or talk" href="#" target="_blank" data-en="Request a workshop">اطلب ورشة</a></div>
+</div></section>
+
+<section id="agency" class="sec"><div class="wrap">
+  <div class="head"><div><span class="num">07</span><span class="kicker" data-en="Smart marketing agency">وكالة تسويق ذكية</span><h2 data-en="Marketing run by systems">تسويق تشغّله الأنظمة</h2></div>
+    <p data-en="Unlike today's ad agencies: reply bots, page management and automatic publishing.">وكالة تختلف عن الوكالات الإعلانية الموجودة: بوتات رد، وإدارة صفحات، ونشر تلقائي.</p></div>
+  <div class="tile soon"><span class="tag" data-en="Coming soon">قريباً</span><p data-en="Built on my marketing and sales work since 2021 and my systems experience, with a partner who specialises in management, media and marketing.">مبنية على خبرتي بالتسويق والمبيعات من 2021 وخبرتي ببناء الأنظمة، ويا شريك متخصص بالإدارة والإعلام والتسويق.</p></div>
+  <h3 class="sub" data-en="My marketing & sales experience">خبرتي بالتسويق والمبيعات</h3>
+  <div class="xp">
+    <div class="tile gl"><div class="yr">2023</div><h3 data-en="Paid advertising campaigns">حملات إعلانية ممولة</h3><div class="org" data-en="Three clients">لثلاث جهات</div><p data-en="Al-Marzouk car trading · Al-Shathrawan office for cosmetics and laser devices · Green Coding Club events.">المرزوق لتجارة السيارات · مكتب الشذروان لتجارة مواد التجميل وأجهزة الليزر · فعاليات نادي البرمجة الأخضر.</p></div>
+    <div class="tile"><div class="yr">2023</div><h3 data-en="Administrative assistant & marketer">مساعد إداري ومسوّق</h3><div class="org" data-en="Software company · Green Coding Club">شركة برمجيات · نادي البرمجة الأخضر</div><p data-en="Reports from support-call data, content plans, new markets, and solving support-team issues.">تقارير من بيانات مكالمات الدعم، وخطط محتوى، وأسواق جديدة، وحل مشكلات فريق الدعم.</p></div>
+    <div class="tile"><div class="yr">2021 — 2022</div><h3 data-en="Design & sales">تصميم ومبيعات</h3><div class="org" data-en="Al-Karar Group for Telecommunications · Basra">مجموعة الكرار للاتصالات · البصرة</div><p data-en="Unified the store's Instagram identity and worked in direct sales.">وحّدت هوية حساب المتجر واشتغلت بالمبيعات المباشرة.</p></div>
+    <div class="tile"><div class="yr">2018</div><h3 data-en="E-commerce from home">تجارة إلكترونية من البيت</h3><div class="org" data-en="My first work">أول شغل إلي</div><p data-en="Handicrafts and online selling, at 16.">أعمال يدوية وبيع أونلاين، بعمر 16.</p></div>
+  </div>
+</div></section>
+
+<section class="part" id="ideas"><div class="wrap"><span class="kicker" data-en="Part three">الجزء الثالث</span><h2 data-en="Ideas I share">أفكار أشاركها</h2><p data-en="Articles I published on my Telegram channel.">مقالات طرحتها على قناتي بتلگرام.</p></div></section>
+
+<section id="writing" class="sec" style="padding-top:40px"><div class="wrap">
   <div class="grid g3">
     <a class="tile hover post tg" data-id="762" href="#" target="_blank"><h3 data-en="Deepfakes & media credibility">التزييف العميق ومصداقية الإعلام</h3><p data-en="A citizen's checklist before sharing.">قائمة تحقق للمواطن قبل المشاركة.</p><span class="lnk" data-en="Read →">اقرأ ←</span></a>
     <a class="tile hover post tg" data-id="764" href="#" target="_blank"><h3 data-en="An AI roadmap for Iraq">خارطة طريق الذكاء الاصطناعي للعراق</h3><p data-en="People, data and policy, with 26 references.">بشر وبيانات وسياسة، مع 26 مرجعاً.</p><span class="lnk" data-en="Read →">اقرأ ←</span></a>
