@@ -7,9 +7,12 @@
 <meta name="description" content="مهندس إلكترونيات واتصالات: يبني أنظمة، ويدرّب على الذكاء الاصطناعي، ويسوّق ويبيع.">
 <meta property="og:title" content="محمد أمين سجاد — Mohammed Ameen Sajjad">
 <meta property="og:description" content="أنظمة تقنية · تدريب بالذكاء الاصطناعي · تسويق ومبيعات">
-<meta property="og:image" content="assets/hero.webp">
+<meta property="og:image" content="https://mohammedameensajjad-web.github.io/assets/og.jpg">
+<meta property="og:url" content="https://mohammedameensajjad-web.github.io/">
+<meta property="og:type" content="profile">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#050505">
-<link rel="icon" href="assets/mas-logo.webp">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -214,7 +217,26 @@ footer a:hover{color:var(--gold)}
 .vpages img{width:min(920px,100%);border-radius:12px;background:#ffffff;pointer-events:none;-webkit-user-drag:none;box-shadow:0 20px 60px rgba(0,0,0,.5)}
 .vnote{color:var(--muted);font-size:13.5px}
 
+.quick{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:18px}
+.quick small{color:var(--muted);font-size:13px;margin-inline-end:4px}
+.quick a{font:600 13px var(--display);padding:6px 12px;border-radius:10px;border:1px solid var(--line);color:var(--gold);background:rgba(255,195,0,.06)}
+.quick a:hover{background:rgba(255,195,0,.14)}
+.panel.feat{border-color:rgba(255,195,0,.5);background:radial-gradient(120% 60% at 50% 0%,rgba(255,180,0,.12),transparent 60%),linear-gradient(180deg,#111012,#09090a);box-shadow:0 30px 90px rgba(255,170,0,.08)}
+.why{margin-top:22px}
+.pr{grid-template-columns:minmax(0,1fr) auto auto}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.steps div{padding:16px;border-radius:14px;background:var(--panel-2);border:1px solid var(--line-2);min-width:0}
+.steps b{display:grid;place-items:center;width:30px;height:30px;border-radius:9px;background:var(--gold);color:var(--gold-ink);font:700 14px var(--display);margin-bottom:10px}
+.steps h3{font-size:16px}.steps p{color:var(--muted);font-size:14px}
+.more{margin-top:16px}
+.fold{margin-top:22px;border:1px solid var(--line-2);border-radius:14px;background:var(--panel-2)}
+.fold summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 16px;font:600 15px var(--display)}
+.fold summary::-webkit-details-marker{display:none}
+.fold[open] summary .i{transform:rotate(180deg)}
+.fold .books{padding:0 16px 16px}
+.mbar{display:none}
 @media (max-width:1040px){
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
   .links{display:none;position:absolute;top:calc(100% + 8px);inset-inline:0;flex-direction:column;padding:10px;border:1px solid var(--line);border-radius:16px;background:rgba(12,12,13,.97)}
   .links.on{display:flex}
   .menu{display:grid;place-items:center;margin-inline-start:auto}
@@ -225,11 +247,21 @@ footer a:hover{color:var(--gold)}
 }
 @media (max-width:760px){
   .hero,.about,.contact{grid-template-columns:1fr}
-  .photo{order:-1;width:min(100%,300px)}
+  .photo{order:-1;width:100%}.photo .frame{width:200px;margin:0 auto}
+  .stats{width:min(100%,330px);margin-top:-30px}.stats b{font-size:19px}
+  .hero{gap:18px}.hero .kick{margin-top:6px}.hero h1{font-size:40px}.hero .lead{font-size:16.5px;margin:12px 0 18px}
   .g2,.g3,.g4,.ov,.tl,.clist{grid-template-columns:1fr}
   .wi{grid-template-columns:1fr;gap:4px}.wi .acts{justify-content:flex-start}
   .pr{grid-template-columns:1fr;gap:8px}.pr .d{justify-self:start}
   .brand span:last-child{display:none}
+  .steps{grid-template-columns:1fr}
+  .ov{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.ov .card{padding:12px}.ov .card h3{font-size:14.5px}.ov .card p{font-size:12.5px}.ov .tag{font-size:11px;padding:2px 8px}
+  .pr{grid-template-columns:1fr auto;row-gap:10px}.pr > div:first-child{grid-column:1/-1}.pr .lnk{justify-self:end}
+  .mbar{display:grid;grid-template-columns:1fr 1.4fr;gap:8px;position:fixed;inset:auto 0 0 0;z-index:45;padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));background:rgba(8,8,9,.94);border-top:1px solid var(--line);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+  .mbar a{display:grid;place-items:center;padding:12px;border-radius:12px;border:1px solid var(--line);font:600 15px var(--display)}
+  .mbar .go{background:linear-gradient(135deg,var(--gold),var(--amber));color:var(--gold-ink);border-color:transparent}
+  .top{display:none}
+  footer{padding-bottom:96px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
@@ -254,11 +286,12 @@ footer a:hover{color:var(--gold)}
     <span class="status"><i></i><span data-en="Open to collaboration">متاح للتعاون</span></span>
     <p class="kick" data-en="Electronics & Communications Engineer">مهندس إلكترونيات واتصالات</p>
     <h1 data-en="Mohammed Ameen <b>Sajjad</b>">محمد أمين <b>سجاد</b></h1>
-    <p class="lead" data-en="I build systems that organise and automate how businesses work, I train people to use AI, and I have worked in marketing and sales since 2021.">أبني أنظمة تنظّم شغل المؤسسات وتؤتمته، وأدرّب الناس على استخدام الذكاء الاصطناعي، واشتغلت بالتسويق والمبيعات من 2021.</p>
+    <p class="lead" data-en="I turn manual work and daily chaos into clear systems that run on their own, and I train people to use AI in their work. Behind it: marketing and sales experience since 2021.">أحوّل الشغل اليدوي والفوضى اليومية إلى أنظمة واضحة تشتغل وحدها، وأدرّب الناس يستخدمون الذكاء الاصطناعي بشغلهم. ووراها خبرة بالتسويق والمبيعات من 2021.</p>
     <div class="btns">
-      <a class="btn pri" href="#companies"><span data-en="See my companies">شوف شركاتي</span><svg class="i" viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg></a>
-      <a class="btn out" href="#contact" data-en="Contact me">تواصل معي</a>
+      <a class="btn pri" href="#pricing"><span data-en="Services & prices">الخدمات والأسعار</span><svg class="i" viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg></a>
+      <a class="btn out wa-svc" data-msg="مشروع" data-msg-en="a project" href="#" target="_blank" data-en="Message me on WhatsApp">راسلني على واتساب</a>
     </div>
+    <div class="quick"><small data-en="My companies">شركاتي</small><a href="#mas">MAS</a><a href="#cmg">CMG</a><a href="#academy" data-en="Compass Academy">أكاديمية بوصلة</a><a href="#agency" data-en="Marketing agency">وكالة التسويق</a></div>
     <div class="soc"><small data-en="Follow me">تابعني</small>
       <a class="tg" data-id="" href="#" target="_blank" aria-label="Telegram"><svg class="i" viewBox="0 0 24 24"><path d="M21 4 3 11l6 2 2 6 3-4 5 4z"/><path d="m9 13 9-6"/></svg></a>
       <a href="https://www.linkedin.com/in/mohammed-ameen-%D9%85%D8%AD%D9%85%D8%AF-%D8%A3%D9%85%D9%8A%D9%86-b5b935246" target="_blank" aria-label="LinkedIn"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg></a>
@@ -271,7 +304,7 @@ footer a:hover{color:var(--gold)}
     <div class="stats">
       <div><b>800+</b><span data-en="people trained">متدرّب</span></div>
       <div><b>25</b><span data-en="certificates">شهادة</span></div>
-      <div><b>2018</b><span data-en="started working">بداية الشغل</span></div>
+      <div><b>+8</b><span data-en="years of work">سنوات شغل</span></div>
     </div>
   </div>
   <div class="trust"><small data-en="Certified by and worked with">شهادات وتعاون مع</small>
@@ -307,6 +340,7 @@ footer a:hover{color:var(--gold)}
   <div class="row"><div><h2 class="h2" data-en="Proof, <em>not promises</em>">إثباتات، <em>مو وعود</em></h2></div><p class="muted" data-en="Every certificate opens for viewing. Personal details are hidden.">كل شهادة تنفتح للعرض، والبيانات الشخصية مخفية.</p></div>
   <div class="cbar"><span id="certcount"></span><button class="lnk" data-doc="certs" data-en="Browse all certificates →">تصفّح كل الشهادات ←</button></div>
   <div id="certlist"></div>
+  <button class="btn out more" id="certmore" type="button" hidden></button>
 </section>
 
 <section class="panel" id="skills">
@@ -319,8 +353,8 @@ footer a:hover{color:var(--gold)}
   </div>
   <h3 class="sub" data-en="My CV">سيرتي الذاتية</h3>
   <div class="cv"><div><h3 data-en="Curriculum Vitae · two pages">السيرة الذاتية · صفحتين</h3><p data-en="Experience, education, skills and certificates. View only.">الخبرة، والتعليم، والمهارات، والشهادات. للعرض فقط.</p></div><button class="btn pri" data-doc="cv" data-en="View CV">اعرض السيرة الذاتية</button></div>
-  <h3 class="sub" data-en="Books I applied, not just read">كتب طبّقتها، مو بس قريتها</h3>
-  <div class="books"><span>Zero to One <em>· Thiel</em></span><span>The E-Myth Revisited <em>· Gerber</em></span><span>Traction <em>· Wickman</em></span><span>The 1-Page Marketing Plan <em>· Dib</em></span><span>The Ultimate Sales Machine <em>· Holmes</em></span><span>How to Sell Anything <em>· Girard</em></span><span>Show Your Work! <em>· Kleon</em></span><span>The Power of Habit <em>· Duhigg</em></span><span>Six Thinking Hats <em>· de Bono</em></span><span>How to Win Friends <em>· Carnegie</em></span><span>Influence <em>· Cialdini</em></span><span>The 48 Laws of Power <em>· Greene</em></span></div>
+  <details class="fold"><summary><span data-en="12 books I applied, not just read">12 كتاب طبّقتها، مو بس قريتها</span><svg class="i" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></summary>
+  <div class="books"><span>Zero to One <em>· Thiel</em></span><span>The E-Myth Revisited <em>· Gerber</em></span><span>Traction <em>· Wickman</em></span><span>The 1-Page Marketing Plan <em>· Dib</em></span><span>The Ultimate Sales Machine <em>· Holmes</em></span><span>How to Sell Anything <em>· Girard</em></span><span>Show Your Work! <em>· Kleon</em></span><span>The Power of Habit <em>· Duhigg</em></span><span>Six Thinking Hats <em>· de Bono</em></span><span>How to Win Friends <em>· Carnegie</em></span><span>Influence <em>· Cialdini</em></span><span>The 48 Laws of Power <em>· Greene</em></span></div></details>
 </section>
 
 <section id="companies">
@@ -336,10 +370,15 @@ footer a:hover{color:var(--gold)}
   </div>
 </section>
 
-<section class="panel" id="mas">
+<section class="panel feat" id="mas">
   <div class="ph"><span class="no">04</span><span class="lbl">MAS Business Solutions</span></div>
   <div class="row"><div class="co"><img src="assets/mas-logo.webp" alt=""><div><h2 class="h2" data-en="Tech business <em>solutions</em>">حلول أعمال <em>تقنية</em></h2><small data-en="Founded in 2025">تأسست سنة 2025</small></div></div><span class="tag live" data-en="Taking orders">تستقبل طلبات</span></div>
   <p class="lead" data-en="Builds systems that organise and automate how businesses work, from portfolio websites to integrated enterprise systems.">تبني أنظمة تنظّم شغل المؤسسات وتؤتمته، من مواقع البورتفوليو لحد الأنظمة المؤسسية المتكاملة.</p>
+  <div class="grid g3 why">
+    <div class="card"><div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5L20 7"/></svg></div><h3 data-en="Systems I run myself">أنظمة أشغّلها بنفسي</h3><p data-en="The portfolio and the archiving system run for me every day before I offer them to you.">البورتفوليو ونظام الأرشفة شغّالين عندي يومياً قبل ما أقدّمهم إلك.</p></div>
+    <div class="card"><div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h3 data-en="Published prices">أسعار معلنة</h3><p data-en="You know the minimum price of every system before you message.">تعرف أقل سعر لكل نظام قبل ما تراسل.</p></div>
+    <div class="card"><div class="ic"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div><h3 data-en="You deal with the founder">تتعامل ويا المؤسس</h3><p data-en="You talk directly to the person who builds your system, not a middleman.">تحچي مباشرة ويا اللي يبني نظامك، مو ويا وسيط.</p></div>
+  </div>
   <h3 class="sub" data-en="What it built">شنو بنت</h3>
   <div class="grid g4">
     <div class="card hov"><span class="tag live" data-en="Live">شغّال</span><h3 data-en="This portfolio">هذا البورتفوليو</h3><p data-en="Bilingual website with view-only documents, a certificate viewer and a QR code. You are looking at it.">موقع بلغتين، بعرض وثائق بدون تنزيل، وعارض شهادات، وباركود. اللي تشوفه هسه.</p></div>
@@ -349,13 +388,20 @@ footer a:hover{color:var(--gold)}
   </div>
   <h3 class="sub" data-en="Services & prices">الخدمات والأسعار</h3>
   <div class="prices" id="pricing">
-    <div class="pr"><div><h3 data-en="Personal portfolio website">موقع بورتفوليو شخصي</h3><p data-en="Like this site, for professionals with a strong CV.">مثل هذا الموقع، للمحترفين أصحاب السيرة الذاتية القوية.</p></div><div class="d" data-en="$250">250$</div></div>
-    <div class="pr"><div><h3 data-en="Digital file archiving systems">أنظمة أرشفة الملفات الإلكترونية</h3><p data-en="Like my own archiving system. Priced by the total size of the files.">مثل نظام الأرشفة بحاسبتي. السعر حسب الحجم الكلي للملفات.</p></div><div class="d" data-en="$250+">250$ فما فوق</div></div>
-    <div class="pr"><div><h3 data-en="Online academy platforms">منصات تنظيم عمل الأكاديميات الإلكترونية</h3><p data-en="Like the Compass Academy platform. Plus $50 for each course uploaded.">مثل منصة أكاديمية بوصلة. ويضاف 50$ لرفع كل كورس عليها.</p></div><div class="d" data-en="$2,000+">2,000$ فما فوق</div></div>
-    <div class="pr"><div><h3 data-en="Integrated enterprise systems">أنظمة مؤسسية متكاملة</h3><p data-en="Like the CMG platform and the smart marketing agency's system. Priced by the system's complexity.">مثل منصة CMG، ونظام وكالة التسويق الذكية. السعر حسب تعقيد النظام.</p></div><div class="d" data-en="$5,000+">5,000$ فما فوق</div></div>
+    <div class="pr"><div><h3 data-en="Personal portfolio website">موقع بورتفوليو شخصي</h3><p data-en="Like this site, for professionals with a strong CV.">مثل هذا الموقع، للمحترفين أصحاب السيرة الذاتية القوية.</p></div><div class="d" data-en="$250">250$</div><a class="lnk wa-svc" data-msg="موقع بورتفوليو شخصي من MAS" data-msg-en="a personal portfolio website from MAS" href="#" target="_blank" data-en="Request →">اطلب ←</a></div>
+    <div class="pr"><div><h3 data-en="Digital file archiving systems">أنظمة أرشفة الملفات الإلكترونية</h3><p data-en="Like my own archiving system. Priced by the total size of the files.">مثل نظام الأرشفة بحاسبتي. السعر حسب الحجم الكلي للملفات.</p></div><div class="d" data-en="$250+">250$ فما فوق</div><a class="lnk wa-svc" data-msg="نظام أرشفة ملفات من MAS" data-msg-en="a file archiving system from MAS" href="#" target="_blank" data-en="Request →">اطلب ←</a></div>
+    <div class="pr"><div><h3 data-en="Online academy platforms">منصات تنظيم عمل الأكاديميات الإلكترونية</h3><p data-en="Like the Compass Academy platform. Plus $50 for each course uploaded.">مثل منصة أكاديمية بوصلة. ويضاف 50$ لرفع كل كورس عليها.</p></div><div class="d" data-en="$2,000+">2,000$ فما فوق</div><a class="lnk wa-svc" data-msg="منصة أكاديمية إلكترونية من MAS" data-msg-en="an online academy platform from MAS" href="#" target="_blank" data-en="Request →">اطلب ←</a></div>
+    <div class="pr"><div><h3 data-en="Integrated enterprise systems">أنظمة مؤسسية متكاملة</h3><p data-en="Like the CMG platform and the smart marketing agency's system. Priced by the system's complexity.">مثل منصة CMG، ونظام وكالة التسويق الذكية. السعر حسب تعقيد النظام.</p></div><div class="d" data-en="$5,000+">5,000$ فما فوق</div><a class="lnk wa-svc" data-msg="نظام مؤسسي متكامل من MAS" data-msg-en="an integrated enterprise system from MAS" href="#" target="_blank" data-en="Request →">اطلب ←</a></div>
   </div>
   <p class="note" data-en="Prices exclude hosting and domain costs.">الأسعار ما تشمل تكاليف الاستضافة والدومين.</p>
-  <div class="btns"><a class="btn pri wa-svc" data-msg="خدمات MAS Business Solutions" data-msg-en="MAS Business Solutions services" href="#" target="_blank" data-en="Request a quote from MAS">اطلب عرض سعر من MAS</a></div>
+  <h3 class="sub" data-en="How we work">شلون نشتغل</h3>
+  <div class="steps">
+    <div><b>1</b><h3 data-en="You message us">تراسلنا</h3><p data-en="Tell us what you need on WhatsApp.">تگول شنو تحتاج على واتساب.</p></div>
+    <div><b>2</b><h3 data-en="Scope and quote">نطاق وعرض سعر</h3><p data-en="We define what the system does and send the price.">نحدد شنو يسوي النظام ونرسلك السعر.</p></div>
+    <div><b>3</b><h3 data-en="Build and test">بناء وتجربة</h3><p data-en="We build it and test it with you.">نبنيه ونجرّبه وياك.</p></div>
+    <div><b>4</b><h3 data-en="Handover">تسليم</h3><p data-en="You receive the system and we walk you through it.">تستلم النظام ونشرحلك شلون يشتغل.</p></div>
+  </div>
+  <div class="btns" style="margin-top:20px"><a class="btn pri wa-svc" data-msg="خدمات MAS Business Solutions" data-msg-en="MAS Business Solutions services" href="#" target="_blank" data-en="Request a quote from MAS">اطلب عرض سعر من MAS</a></div>
 </section>
 
 <section class="panel" id="cmg">
@@ -370,13 +416,13 @@ footer a:hover{color:var(--gold)}
   </div>
   <h3 class="sub" data-en="Pricing">التسعير</h3>
   <p class="lead" data-en="Every order is custom, so the platform prices each one with its own algorithms and formulas.">كل طلب مخصص، فالمنصة تطلع سعر كل طلب لحاله بخوارزميات ومعادلات.</p>
-  <div class="btns" style="margin-top:18px"><a class="btn out" href="https://www.instagram.com/chamber_manufacturing_group" target="_blank" data-en="See CMG's work on Instagram">شوف شغل CMG على إنستغرام</a></div>
+  <div class="btns" style="margin-top:18px"><a class="btn pri wa-svc" data-msg="التسجيل المبكر بإطلاق Chamber Manufacturing Group" data-msg-en="early registration for the Chamber Manufacturing Group launch" href="#" target="_blank" data-en="Tell me when it launches">بلّغني من ينطلق</a><a class="btn out" href="https://www.instagram.com/chamber_manufacturing_group" target="_blank" data-en="See CMG's work on Instagram">شوف شغل CMG على إنستغرام</a></div>
 </section>
 
 <section class="panel" id="academy">
   <div class="ph"><span class="no">06</span><span class="lbl" data-en="Compass Academy">أكاديمية بوصلة · Compass Academy</span></div>
   <div class="row"><div class="co"><span class="mark"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg></span><div><h2 class="h2" data-en="Workshops, talks and <em>courses</em>">ورش ومحاضرات <em>ودورات</em></h2><small data-en="An academy through which I pass on my experience">أكاديمية أنقل بيها خبرتي للناس</small></div></div><span class="tag soon" data-en="Coming soon">قريباً</span></div>
-  <p class="lead" data-en="Until it launches, here is what I have already delivered: over 800 people trained since 2024, at the University of Kufa, the Riyada Initiative and the Al-Abbas Holy Shrine.">لحد ما تنطلق، هذا اللي قدّمته لحد الآن: أكثر من 800 متدرّب من 2024، بجامعة الكوفة ومبادرة ريادة والعتبة العباسية.</p>
+  <p class="lead" data-en="The academy has not launched yet, but you can book a workshop or talk now. Here is what I have delivered so far: over 800 people trained since 2024, at the University of Kufa, the Riyada Initiative and the Al-Abbas Holy Shrine.">الأكاديمية بعدها ما انطلقت، بس تگدر تطلب ورشة أو محاضرة هسه. وهذا اللي قدّمته لحد الآن: أكثر من 800 متدرّب من 2024، بجامعة الكوفة ومبادرة ريادة والعتبة العباسية.</p>
   <h3 class="sub" data-en="What I have delivered">شنو قدّمت</h3>
   <div class="ws">
     <div class="wi hl"><div class="d" data-en="1447–1448 AH">1447–1448هـ</div><div><h3 data-en="AI Tools Station at Arbaeen">محطة أدوات الذكاء الاصطناعي بالأربعين</h3><div class="o" data-en="A week, 10 hours a day, individual and group coaching · Al-Abbas Shrine cultural procession · about 500 visitors in 1447 AH and 300 in 1448 AH">أسبوع، 10 ساعات باليوم، استشارات فردية وجماعية · الموكب الثقافي للعتبة العباسية · حوالي 500 زائر سنة 1447هـ و300 زائر سنة 1448هـ</div></div><div class="acts"><button class="lnk" data-doc="ai-station-guide" data-en="1448 guide →">دليل 1448هـ ←</button><button class="lnk" data-doc="ai-station" data-en="1447 report →">تقرير 1447هـ ←</button></div></div>
@@ -387,7 +433,7 @@ footer a:hover{color:var(--gold)}
     <div class="wi"><div class="d">2025</div><div><h3 data-en="Startup essentials">أساسيات المشاريع الناشئة</h3><div class="o" data-en="Riyada Initiative trainees">متدربو مبادرة ريادة</div></div><div class="acts"><a class="lnk" href="https://www.instagram.com/reel/DKZm-svougw/" target="_blank" data-en="Watch →">شاهد ←</a></div></div>
     <div class="wi"><div class="d">2024</div><div><h3 data-en="How engineers market themselves">كيف يسوّق المهندس نفسه</h3><div class="o" data-en="Kufa Engineering · based on Show Your Work!">هندسة الكوفة · اعتماداً على كتاب Show Your Work</div></div><div class="acts"><a class="lnk tg" data-id="610" href="#" target="_blank" data-en="Lecture file →">ملف المحاضرة ←</a></div></div>
   </div>
-  <div class="btns" style="margin-top:18px"><a class="btn out wa-svc" data-msg="ورشة أو محاضرة" data-msg-en="a workshop or talk" href="#" target="_blank" data-en="Request a workshop">اطلب ورشة</a></div>
+  <div class="btns" style="margin-top:18px"><a class="btn pri wa-svc" data-msg="ورشة أو محاضرة" data-msg-en="a workshop or talk" href="#" target="_blank" data-en="Book a workshop now">اطلب ورشة هسه</a></div>
 </section>
 
 <section class="panel" id="agency">
@@ -407,6 +453,7 @@ footer a:hover{color:var(--gold)}
     <div class="card"><div class="yr">2023</div><h3 data-en="Administrative assistant & marketer">مساعد إداري ومسوّق</h3><div class="org" data-en="Software company · Green Coding Club">شركة برمجيات · نادي البرمجة الأخضر</div><p data-en="Reports from support-call data, content plans and new markets.">تقارير من بيانات مكالمات الدعم، وخطط محتوى، وأسواق جديدة.</p></div>
     <div class="card"><div class="yr">2023</div><h3 data-en="Paid ad campaigns">حملات إعلانية ممولة</h3><div class="org" data-en="Three clients">لثلاث جهات</div><p data-en="Al-Marzouk car trading · Al-Shathrawan office for cosmetics and laser devices · Green Coding Club events.">المرزوق لتجارة السيارات · مكتب الشذروان لتجارة مواد التجميل وأجهزة الليزر · فعاليات نادي البرمجة الأخضر.</p></div>
   </div>
+  <div class="btns" style="margin-top:20px"><a class="btn pri wa-svc" data-msg="قائمة انتظار وكالة التسويق الذكية" data-msg-en="the smart marketing agency waiting list" href="#" target="_blank" data-en="Join the waiting list">سجّلني بقائمة الانتظار</a></div>
 </section>
 
 <div class="part"><b data-en="Part three">الجزء الثالث</b><h2 data-en="Ideas I share">أفكار أشاركها</h2></div>
@@ -457,6 +504,7 @@ footer a:hover{color:var(--gold)}
 </main>
 
 <footer><div class="wrap"><span>© <span id="yr"></span> <span data-en="Mohammed Ameen Sajjad">محمد أمين سجاد</span></span><span><a href="https://www.linkedin.com/in/mohammed-ameen-%D9%85%D8%AD%D9%85%D8%AF-%D8%A3%D9%85%D9%8A%D9%86-b5b935246" target="_blank">LinkedIn</a> · <a href="https://www.instagram.com/247_mas" target="_blank">Instagram</a> · <a href="https://www.youtube.com/@27_mas" target="_blank">YouTube</a></span></div></footer>
+<div class="mbar"><a href="#pricing" data-en="Prices">الأسعار</a><a class="go wa-svc" data-msg="مشروع" data-msg-en="a project" href="#" target="_blank" data-en="WhatsApp">واتساب</a></div>
 <a class="top" href="#hero" aria-label="للأعلى"><svg class="i" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
 
 <div class="viewer" id="viewer" role="dialog" aria-modal="true">
@@ -475,7 +523,7 @@ const DOCS = {
   "ai-station-guide": {ar: "دليل زائر محطة الذكاء الاصطناعي — 1448هـ", en: "AI Tools Station — 1448 AH visitor guide"},
   certs: {ar: "الشهادات", en: "Certificates"}
 };
-var MAN = null, CERTS = [];
+var MAN = null, CERTS = [], ALLC = false;
 const en = () => document.documentElement.lang === "en";
 document.querySelectorAll(".tg").forEach(a => a.href = a.dataset.id ? `${TG}/${a.dataset.id}` : TG);
 document.getElementById("yr").textContent = new Date().getFullYear();
@@ -513,13 +561,18 @@ function renderCerts() {
   const L = en();
   document.getElementById("certcount").textContent = CERTS.length ? (L ? `${CERTS.length} certificates, each one viewable` : `${CERTS.length} شهادة، كل وحدة تگدر تشوفها`) : "";
   document.getElementById("certlist").innerHTML = GROUPS.map(([g, ar, enl]) => {
-    const items = CERTS.map((c, i) => ({...c, i})).filter(c => c.g === g);
+    const all = CERTS.filter(c => c.g === g).length;
+    const items = CERTS.map((c, i) => ({...c, i})).filter(c => c.g === g).slice(0, ALLC ? 99 : 3);
     if (!items.length) return "";
-    return `<div class="cgroup"><h3>${L ? enl : ar} · ${items.length}</h3><div class="clist">` + items.map(c =>
+    return `<div class="cgroup"><h3>${L ? enl : ar} · ${all}</h3><div class="clist">` + items.map(c =>
       `<div class="ci"><div><b>${L ? c.te : c.ta}</b><small>${L ? c.ie : c.ia}${c.d ? " · " + c.d : ""}</small></div><button class="lnk" data-cert="${c.i}">${L ? "View →" : "اعرض ←"}</button></div>`).join("") + "</div></div>";
   }).join("");
   document.querySelectorAll("[data-cert]").forEach(b => b.onclick = () => openDoc("certs", +b.dataset.cert));
+  const m = document.getElementById("certmore");
+  m.hidden = !CERTS.length;
+  m.textContent = ALLC ? (L ? "Show fewer" : "اعرض أقل") : (L ? `Show all ${CERTS.length} certificates` : `اعرض كل الشهادات (${CERTS.length})`);
 }
+document.getElementById("certmore").onclick = () => { ALLC = !ALLC; renderCerts(); if (!ALLC) document.getElementById("credentials").scrollIntoView() };
 function setLang(l) {
   document.documentElement.lang = l; document.documentElement.dir = l === "en" ? "ltr" : "rtl";
   document.querySelectorAll("[data-en]").forEach(el => {
