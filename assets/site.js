@@ -94,19 +94,55 @@ if (panes.length) {
   show(location.hash.slice(1));
 }
 
-// Certificates with filters
+// Certificates: thumbnails with filters; "key" ones first; click to enlarge
 const GROUPS = {tech: ["تقنية ومعتمدة", "Technical"], pro: ["تطوير مهني وريادة", "Professional"], honor: ["تكريم وتطوع", "Recognition"]};
+const KEY = [0, 1, 2, 3, 13, 18, 19, 20];
+if ($("#certlist")) CF = "key";
+let SHOWN = [];
 function renderCerts() {
   const box = $("#certlist"); if (!box) return;
   const L = en(), f = $("#cfilters");
-  f.innerHTML = [["all", L ? `All · ${CERTS.length}` : `الكل · ${CERTS.length}`]].concat(Object.entries(GROUPS).map(([k, v]) => [k, `${L ? v[1] : v[0]} · ${CERTS.filter(c => c.g === k).length}`]))
+  f.innerHTML = [["key", L ? `Key · ${KEY.length}` : `الأساسية · ${KEY.length}`], ["all", L ? `All · ${CERTS.length}` : `الكل · ${CERTS.length}`]]
+    .concat(Object.entries(GROUPS).map(([k, v]) => [k, `${L ? v[1] : v[0]} · ${CERTS.filter(c => c.g === k).length}`]))
     .map(([k, t]) => `<button type="button" data-f="${k}" class="${k === CF ? "on" : ""}">${t}</button>`).join("");
   f.querySelectorAll("button").forEach(b => b.onclick = () => { CF = b.dataset.f; renderCerts() });
-  box.innerHTML = CERTS.map((c, i) => ({...c, i})).filter(c => CF === "all" || c.g === CF).map(c =>
-    `<div class="ci" data-cert="${c.i}" role="button" tabindex="0"><div><b>${L ? c.te : c.ta}</b><small>${L ? c.ie : c.ia}${c.d ? " · " + c.d : ""}</small></div><span class="lnk">${L ? "View →" : "اعرض ←"}</span></div>`).join("");
-  box.querySelectorAll("[data-cert]").forEach(b => { b.onclick = () => openDoc("certs", +b.dataset.cert); b.onkeydown = e => { if (e.key === "Enter") b.click() } });
+  SHOWN = CF === "key" ? KEY.filter(i => CERTS[i]) : CERTS.map((c, i) => i).filter(i => CF === "all" || CERTS[i].g === CF);
+  box.innerHTML = SHOWN.map((i, k) => { const c = CERTS[i];
+    return `<button type="button" class="cert" data-k="${k}"><span class="th"><img src="${c.img.replace("/certs/", "/certs/t/")}" alt="" loading="lazy" draggable="false"></span><b>${L ? c.te : c.ta}</b><small>${L ? c.ie : c.ia}${c.d ? " · " + c.d : ""}</small></button>` }).join("");
+  box.querySelectorAll(".cert").forEach(b => b.onclick = () => openCert(+b.dataset.k));
 }
+let LBK = 0;
+function openCert(k) {
+  if (!$("#lb")) {
+    document.body.insertAdjacentHTML("beforeend", `<div class="lb" id="lb" role="dialog" aria-modal="true"><img id="lbimg" alt=""><div class="cap"><b id="lbt"></b><small id="lbs"></small></div>
+      <div class="ctl"><button type="button" id="lbn" aria-label="next"><svg class="i" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button><span class="n" id="lbc"></span><button type="button" id="lbp" aria-label="previous"><svg class="i" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button><button type="button" id="lbx" aria-label="close">✕</button></div></div>`);
+    const lb = $("#lb");
+    lb.onclick = e => { if (e.target === lb) closeCert() };
+    lb.oncontextmenu = e => e.preventDefault();
+    $("#lbx").onclick = closeCert;
+    $("#lbn").onclick = () => openCert((LBK + 1) % SHOWN.length);
+    $("#lbp").onclick = () => openCert((LBK - 1 + SHOWN.length) % SHOWN.length);
+    let x0 = null;
+    lb.addEventListener("touchstart", e => x0 = e.touches[0].clientX, {passive: true});
+    lb.addEventListener("touchend", e => { if (x0 === null) return; const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 50) (dx > 0 ? $("#lbn") : $("#lbp")).click(); x0 = null });
+  }
+  LBK = k; const c = CERTS[SHOWN[k]], L = en(), img = $("#lbimg");
+  img.style.animation = "none"; img.offsetHeight; img.style.animation = "";
+  img.src = c.img; $("#lbt").textContent = L ? c.te : c.ta; $("#lbs").textContent = (L ? c.ie : c.ia) + (c.d ? " · " + c.d : "");
+  $("#lbc").textContent = `${k + 1} / ${SHOWN.length}`;
+  $("#lb").classList.add("on"); document.body.style.overflow = "hidden";
+}
+function closeCert() { const lb = $("#lb"); if (lb) lb.classList.remove("on"); document.body.style.overflow = "" }
+addEventListener("keydown", e => {
+  const lb = $("#lb"); if (!lb || !lb.classList.contains("on")) return;
+  if (e.key === "Escape") closeCert();
+  if (e.key === "ArrowLeft") $(en() ? "#lbn" : "#lbn").click();
+  if (e.key === "ArrowRight") $("#lbp").click();
+});
 if ($("#certlist")) fetch("assets/docs/certs.json").then(r => r.json()).then(c => { CERTS = c; renderCerts() }).catch(() => {});
+
+// Books: tap to open the cover a little more
+$$(".book").forEach(b => b.onclick = () => { const on = !b.classList.contains("open"); $$(".book.open").forEach(x => x.classList.remove("open")); b.classList.toggle("open", on) });
 
 // View-only document viewer
 if ($$("[data-doc]").length) {

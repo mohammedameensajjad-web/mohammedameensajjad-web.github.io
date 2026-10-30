@@ -12,7 +12,13 @@
 <meta property="og:type" content="profile">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#050505">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-64.png" sizes="64x64" type="image/png">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="apple-mobile-web-app-title" content="محمد أمين">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/site.css">
@@ -20,7 +26,7 @@
 </head>
 <body data-page="about">
 <header class="nav"><div class="wrap"><div class="bar">
-  <a class="brand" href="index.html"><span class="mono">م</span><span data-en="Mohammed Ameen">محمد أمين</span></a>
+  <a class="brand" href="index.html"><img class="mono" src="assets/icon-192.png" alt=""><span data-en="Mohammed Ameen">محمد أمين</span></a>
   <nav class="links"><a href="index.html" data-nav="home" data-en="Home">الرئيسية</a><a href="about.html" data-nav="about" data-en="About">من أنا</a><a href="companies.html" data-nav="companies" data-en="Companies">شركاتي</a><a href="community.html" data-nav="community" data-en="Community">المجتمع</a><a href="contact.html" data-nav="contact" data-en="Contact">تواصل</a></nav>
   <button class="pill" id="lang" type="button">EN</button>
   <a class="pill go wa" href="#" target="_blank" data-en="WhatsApp">واتساب</a>
@@ -60,7 +66,7 @@
 <section class="panel tabpane" id="certs" hidden>
   <div class="row"><div><h2 class="h2" data-en="Proof, <em>not promises</em>">إثباتات، <em>مو وعود</em></h2></div><p class="muted" data-en="Every certificate opens for viewing. Personal details are hidden.">كل شهادة تنفتح للعرض، والبيانات الشخصية مخفية.</p></div>
   <div class="filters" id="cfilters"></div>
-  <div class="clist" id="certlist"></div>
+  <div class="cgrid" id="certlist"></div>
   <div class="btns" style="margin-top:16px"><button class="btn out" data-doc="certs" type="button" data-en="Browse all certificate pages">تصفّح صفحات كل الشهادات</button></div>
 </section>
 
@@ -74,7 +80,7 @@
   <h3 class="sub" data-en="My CV">سيرتي الذاتية</h3>
   <div class="cv"><div><h3 data-en="Curriculum Vitae · two pages">السيرة الذاتية · صفحتين</h3><p data-en="Experience, education, skills and certificates. View only.">الخبرة، والتعليم، والمهارات، والشهادات. للعرض فقط.</p></div><button class="btn pri" data-doc="cv" type="button" data-en="View CV">اعرض السيرة الذاتية</button></div>
   <h3 class="sub" data-en="12 books I applied, not just read">12 كتاب طبّقتها، مو بس قريتها</h3>
-  <div class="books"><div class="book"><b>Zero to One</b><small>Thiel</small></div><div class="book"><b>The E-Myth Revisited</b><small>Gerber</small></div><div class="book"><b>Traction</b><small>Wickman</small></div><div class="book"><b>The 1-Page Marketing Plan</b><small>Dib</small></div><div class="book"><b>The Ultimate Sales Machine</b><small>Holmes</small></div><div class="book"><b>How to Sell Anything</b><small>Girard</small></div><div class="book"><b>Show Your Work!</b><small>Kleon</small></div><div class="book"><b>The Power of Habit</b><small>Duhigg</small></div><div class="book"><b>Six Thinking Hats</b><small>de Bono</small></div><div class="book"><b>How to Win Friends</b><small>Carnegie</small></div><div class="book"><b>Influence</b><small>Cialdini</small></div><div class="book"><b>The 48 Laws of Power</b><small>Greene</small></div></div>
+  <div class="books"><button type="button" class="book"><span class="cover"><img src="assets/books/zero-to-one.webp" alt="Zero to One" loading="lazy"></span><b>Zero to One</b><small>Peter Thiel</small></button><button type="button" class="book"><span class="cover"><img src="assets/books/e-myth.webp" alt="The E-Myth Revisited" loading="lazy"></span><b>The E-Myth Revisited</b><small>Michael Gerber</small></button><button type="button" class="book"><span class="cover"><img src="assets/books/traction.webp" alt="Traction" loading="lazy"></span><b>Traction</b><small>Gino Wickman</small></button><button type="button" class="book"><span class="cover"><img src="assets/books/1-page-marketing.webp" alt="The 1-Page Marketing Plan" loading="lazy"></span><b>The 1-Page Marketing Plan</b><small>Allan Dib</small></button><button type="button" class="book"><span class="cover"><img src="assets/books/sales-machine.webp" alt="The Ultimate Sales Machine" loading="lazy"></span><b>The Ultimate Sales Machine</b><small>Chet Holmes</small></button><button type="button" class="book"><span class="cover"><img src="assets/books/sell-anything.webp" alt="How to Sell Anything to Anybody" loading="lazy"></span><b>How to Sell Anything to Anybody</b><small>Joe Girard</small></button><button type="button" class="book"><span class="cover"><img src="assets/books/show-your-work.webp" alt="Show Your Work!" loading="lazy"></span><b>Show Your Work!</b><small>Austin Kleon</small></button><button type="button" class="book"><span class="cover"><img src="assets/books/power-of-habit.webp" alt="The Power of Habit" loading="lazy"></span><b>The Power of Habit</b><small>Charles Duhigg</small></button><button type="button" class="book"><span class="cover"><img src="assets/books/six-hats.webp" alt="Six Thinking Hats" loading="lazy"></span><b>Six Thinking Hats</b><small>Edward de Bono</small></button><button type="button" class="book"><span class="cover"><img src="assets/books/win-friends.webp" alt="How to Win Friends and Influence People" loading="lazy"></span><b>How to Win Friends and Influence People</b><small>Dale Carnegie</small></button><button type="button" class="book"><span class="cover"><img src="assets/books/influence.webp" alt="Influence" loading="lazy"></span><b>Influence</b><small>Robert Cialdini</small></button><button type="button" class="book"><span class="cover"><img src="assets/books/48-laws.webp" alt="The 48 Laws of Power" loading="lazy"></span><b>The 48 Laws of Power</b><small>Robert Greene</small></button></div>
 </section>
 <section class="cta rv"><div><h2 data-en="Have an idea? Let's turn it into a working system">عندك فكرة؟ خلّينا نحوّلها لنظام يشتغل</h2><p data-en="Pick the right company and message me on the work WhatsApp.">اختار الشركة المناسبة وراسلني على واتساب العمل.</p></div>
   <div class="btns"><a class="btn" href="contact.html" data-en="Contact me">تواصل معي</a></div></section>

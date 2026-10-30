@@ -12,7 +12,13 @@
 <meta property="og:type" content="profile">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#050505">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-64.png" sizes="64x64" type="image/png">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="apple-mobile-web-app-title" content="محمد أمين">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/site.css">
@@ -20,7 +26,7 @@
 </head>
 <body data-page="contact">
 <header class="nav"><div class="wrap"><div class="bar">
-  <a class="brand" href="index.html"><span class="mono">م</span><span data-en="Mohammed Ameen">محمد أمين</span></a>
+  <a class="brand" href="index.html"><img class="mono" src="assets/icon-192.png" alt=""><span data-en="Mohammed Ameen">محمد أمين</span></a>
   <nav class="links"><a href="index.html" data-nav="home" data-en="Home">الرئيسية</a><a href="about.html" data-nav="about" data-en="About">من أنا</a><a href="companies.html" data-nav="companies" data-en="Companies">شركاتي</a><a href="community.html" data-nav="community" data-en="Community">المجتمع</a><a href="contact.html" data-nav="contact" data-en="Contact">تواصل</a></nav>
   <button class="pill" id="lang" type="button">EN</button>
   <a class="pill go wa" href="#" target="_blank" data-en="WhatsApp">واتساب</a>
@@ -47,9 +53,14 @@
       <div class="btns"><button class="btn pri" type="submit"><svg class="i" viewBox="0 0 24 24"><path d="M21 4 3 11l6 2 2 6 3-4 5 4z"/><path d="m9 13 9-6"/></svg><span data-en="Send on WhatsApp">أرسل على واتساب</span></button></div>
     </form>
     <div class="info">
-      <a class="wa" href="#" target="_blank"><span class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7z"/></svg></span><div><small data-en="Work number · WhatsApp">رقم العمل · واتساب</small><b>+964 787 600 4990</b></div></a>
-      <a href="mailto:mohammed.ameen.sajjad@gmail.com"><span class="ic"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m3 7 9 6 9-6"/></svg></span><div><small data-en="Email">البريد</small><b>mohammed.ameen.sajjad@gmail.com</b></div></a>
-      <a class="tg" data-id="" href="#" target="_blank"><span class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M21 4 3 11l6 2 2 6 3-4 5 4z"/><path d="m9 13 9-6"/></svg></span><div><small data-en="Telegram channel">قناة تلگرام</small><b>t.me/mas_note</b></div></a>
+      <div class="socials">
+        <a class="so wa" href="#" target="_blank" style="--c:#25d366"><span><svg class="i" viewBox="0 0 24 24"><path d="M3.5 20.5l1.4-4.2A8.5 8.5 0 1 1 8 19.3z"/><path d="M9 8.5c0 3 2.5 6 5.8 6.6l1.2-1.4-2-1-1 .9c-1-.4-2.2-1.6-2.6-2.6l.9-1-1-2z"/></svg></span><b data-en="WhatsApp">واتساب</b></a>
+        <a class="so" href="mailto:mohammed.ameen.sajjad@gmail.com" style="--c:#ffc300"><span><svg class="i" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m3 7 9 6 9-6"/></svg></span><b data-en="Email">البريد</b></a>
+        <a class="so tg" data-id="" href="#" target="_blank" style="--c:#29a9eb"><span><svg class="i" viewBox="0 0 24 24"><path d="M21 4 3 11l6 2 2 6 3-4 5 4z"/><path d="m9 13 9-6"/></svg></span><b data-en="Telegram">تلگرام</b></a>
+        <a class="so" href="https://www.instagram.com/247_mas" target="_blank" style="--c:#e1306c"><span><svg class="i" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17 7v.01"/></svg></span><b data-en="Instagram">إنستغرام</b></a>
+        <a class="so" href="https://www.linkedin.com/in/mohammed-ameen-%D9%85%D8%AD%D9%85%D8%AF-%D8%A3%D9%85%D9%8A%D9%86-b5b935246" target="_blank" style="--c:#0a66c2"><span><svg class="i" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg></span><b data-en="LinkedIn">لينكدإن</b></a>
+        <a class="so" href="https://www.youtube.com/@27_mas" target="_blank" style="--c:#ff0033"><span><svg class="i" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="m10 9 5 3-5 3z"/></svg></span><b data-en="YouTube">يوتيوب</b></a>
+      </div>
       <div class="qrrow"><div id="qr"></div><div><b data-en="The site in one scan">الموقع بمسحة وحدة</b><p data-en="Scan the code to open the site.">امسح الكود حتى ينفتح الموقع.</p><button id="vcard" type="button" data-en="Save my contact">احفظ جهة الاتصال</button></div></div>
     </div>
   </div>
