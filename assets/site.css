@@ -386,3 +386,11 @@ footer a:hover{color:var(--gold)}
 .shot .sc b{display:block;font:600 15px var(--display)}
 .shot .sc small{color:var(--muted);font-size:13px}
 @media (max-width:760px){.shots{grid-template-columns:1fr}.shot,.shot:nth-child(-n+2){grid-column:auto}}
+
+/* Article cards with covers */
+.post{padding:0;overflow:hidden;gap:0}
+.post .pcv{display:block;aspect-ratio:16/9;overflow:hidden;border-bottom:1px solid var(--line-2);background:#0b0b0c}
+.post .pcv img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.post:hover .pcv img{transform:scale(1.05)}
+.post h3,.post p,.post .lnk{margin-inline:18px}
+.post h3{margin-top:16px}.post p{margin-top:6px}.post .lnk{margin-block:12px 18px}
