@@ -246,3 +246,14 @@ if (cv && cv.getContext) {
   addEventListener("resize", () => { build(); if (still) draw() });
   if ("IntersectionObserver" in window && !still) new IntersectionObserver(es => { run = es[0].isIntersecting; cancelAnimationFrame(raf); if (run) raf = requestAnimationFrame(draw) }).observe(cv);
 }
+
+// Intro video in a modal, with sound (started by the visitor's tap)
+const vm = $("#vmodal"), iv = $("#introv");
+if (vm && iv) {
+  const close = () => { vm.classList.remove("on"); iv.pause(); document.body.style.overflow = "" };
+  $("#playintro").onclick = () => { vm.classList.add("on"); document.body.style.overflow = "hidden"; iv.currentTime = 0; iv.play().catch(() => {}) };
+  $("#vx").onclick = close;
+  vm.onclick = e => { if (e.target === vm) close() };
+  addEventListener("keydown", e => { if (e.key === "Escape" && vm.classList.contains("on")) close() });
+  iv.onended = close;
+}

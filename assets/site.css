@@ -394,3 +394,18 @@ footer a:hover{color:var(--gold)}
 .post:hover .pcv img{transform:scale(1.05)}
 .post h3,.post p,.post .lnk{margin-inline:18px}
 .post h3{margin-top:16px}.post p{margin-top:6px}.post .lnk{margin-block:12px 18px}
+
+/* Intro video */
+.vbtn{display:inline-flex;align-items:center;gap:14px;margin-top:18px;padding:8px 18px 8px 8px;border-radius:999px;border:1px solid var(--line);background:rgba(20,20,22,.8);cursor:pointer;text-align:start;transition:border-color .3s,transform .3s}
+[dir="rtl"] .vbtn{padding:8px 8px 8px 18px}
+.vbtn:hover{border-color:rgba(255,195,0,.6);transform:translateY(-2px)}
+.vbtn .pl{position:relative;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--gold),var(--amber));color:var(--gold-ink)}
+.vbtn .pl::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid rgba(255,195,0,.5);animation:ping 2.4s ease-out infinite}
+@keyframes ping{0%{transform:scale(.85);opacity:1}100%{transform:scale(1.35);opacity:0}}
+.vbtn .pl .i{fill:currentColor;stroke:none;width:18px;height:18px}
+.vbtn b{display:block;font:600 15px var(--display)}
+.vbtn small{color:var(--muted);font-size:12.5px}
+.vmodal{position:fixed;inset:0;z-index:96;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding:calc(16px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) calc(16px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.vmodal.on{display:flex}
+.vmodal video{width:min(1280px,100%);max-height:86vh;border-radius:16px;border:1px solid var(--line);box-shadow:0 30px 100px rgba(255,170,0,.18);background:#000;animation:zoomin .35s cubic-bezier(.2,.8,.2,1)}
+.vx{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));inset-inline-end:max(14px,env(safe-area-inset-right,0px));width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:var(--panel-2);color:var(--gold);cursor:pointer;font-size:18px}
