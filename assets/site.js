@@ -273,3 +273,16 @@ if (iv) {
 // Loading splash: fades once the page has loaded (or after 8 s at most)
 const sp = document.getElementById("splash");
 if (sp) { const hide = () => { sp.classList.add("done"); setTimeout(() => sp.remove(), 500) }; if (document.readyState === "complete") hide(); else { addEventListener("load", hide); setTimeout(hide, 8000) } }
+
+// Pointer spotlight and scroll progress
+if (matchMedia("(hover:hover) and (pointer:fine)").matches) {
+  addEventListener("pointermove", e => {
+    const el = e.target.closest && e.target.closest(".card,.cert,.door,.brand-card,.panel");
+    if (!el) return;
+    const r = el.getBoundingClientRect();
+    el.style.setProperty("--mx", (e.clientX - r.left) + "px"); el.style.setProperty("--my", (e.clientY - r.top) + "px");
+  }, {passive: true});
+}
+const prog = document.createElement("div"); prog.id = "prog"; document.body.appendChild(prog);
+const onScroll = () => { const h = document.documentElement.scrollHeight - innerHeight; prog.style.transform = `scaleX(${h > 0 ? scrollY / h : 0})` };
+addEventListener("scroll", onScroll, {passive: true}); onScroll();
