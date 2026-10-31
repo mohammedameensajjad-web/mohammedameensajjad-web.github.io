@@ -247,28 +247,12 @@ if (cv && cv.getContext) {
   if ("IntersectionObserver" in window && !still) new IntersectionObserver(es => { run = es[0].isIntersecting; cancelAnimationFrame(raf); if (run) raf = requestAnimationFrame(draw) }).observe(cv);
 }
 
-// Intro video: plays by itself when it scrolls into view. Browsers only allow sound after the visitor has tapped the page,
-// so it starts with sound if they already have, otherwise muted with a big "tap for sound" button.
-const iv = $("#introv");
-if (iv) {
-  const um = $("#unmute"), rp = $("#replay");
-  const withSound = () => { iv.muted = false; iv.currentTime = 0; um.hidden = true; rp.hidden = true; iv.play().catch(() => { iv.muted = true; um.hidden = false; iv.play().catch(() => {}) }) };
-  const auto = () => {
-    if (!iv.paused || iv.ended) return;
-    const active = navigator.userActivation && navigator.userActivation.hasBeenActive;
-    iv.muted = !active; um.hidden = active;
-    iv.play().catch(() => { iv.muted = true; um.hidden = false; iv.play().catch(() => {}) });
-  };
-  um.onclick = withSound;
-  rp.onclick = withSound;
-  iv.onclick = () => { if (iv.muted) withSound(); else if (iv.paused) iv.play(); else iv.pause() };
-  iv.onended = () => { rp.hidden = false; um.hidden = true };
-  if ("IntersectionObserver" in window && !STATIC) {
-    new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) auto(); else if (!iv.paused) iv.pause() }), {threshold: .45}).observe(iv);
-  }
-  const go = $("#playintro");
-  if (go) go.onclick = () => { $("#story").scrollIntoView({behavior: "smooth", block: "center"}); withSound() };
-}
+// Story videos (home and each company page): play muted when on screen, pause when off. Sound is in the controls.
+$$("video.autov").forEach(v => {
+  v.muted = true;
+  if ("IntersectionObserver" in window && !STATIC)
+    new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) v.play().catch(() => {}); else if (!v.paused) v.pause() }), {threshold: .4}).observe(v);
+});
 
 // Loading splash: fades once the page has loaded (or after 8 s at most)
 const sp = document.getElementById("splash");
