@@ -269,3 +269,7 @@ if (iv) {
   const go = $("#playintro");
   if (go) go.onclick = () => { $("#story").scrollIntoView({behavior: "smooth", block: "center"}); withSound() };
 }
+
+// Loading splash: fades once the page has loaded (or after 8 s at most)
+const sp = document.getElementById("splash");
+if (sp) { const hide = () => { sp.classList.add("done"); setTimeout(() => sp.remove(), 500) }; if (document.readyState === "complete") hide(); else { addEventListener("load", hide); setTimeout(hide, 8000) } }
